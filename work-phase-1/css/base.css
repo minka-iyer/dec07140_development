@@ -1,0 +1,8 @@
+/* Primary colours */
+:root {
+    --color-primary: #ffffff; /* Primary color */
+    --color-secondary: teal; /* Secondary color */
+    --color-dark: seagreen; /* Dark color */
+    --color-bright: aqua; /* Light color */
+}
+

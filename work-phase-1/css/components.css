@@ -1,0 +1,29 @@
+/* button styles */
+.button {
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 1rem;
+border: none;
+cursor: pointer;
+text-align: center;
+display: block;
+margin: 8px auto;
+}
+/* button color variants */
+.button-primary {
+background-color: var(--color-primary);
+color: black;
+}
+.button-secondary {
+background-color: var(--color-secondary);
+color: black;
+}
+.button-dark {
+background-color: var(--color-dark);
+color: black;
+}
+.button-bright {
+background-color: var(--color-bright);
+color: black;
+
+}
