@@ -4,5 +4,5 @@
  */
 
 function logMessage(pageName, message) {
-    console.log('From $pageName)
+    console.log(`From $pageName)
 }
