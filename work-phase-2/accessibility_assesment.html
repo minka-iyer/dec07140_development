@@ -28,11 +28,12 @@
             <h1>Accessibility Assessment</h1>
             <p class="lede">
                 Summaries of 13 WCAG success criteria and a rationale for which
-                apply to this project, linked to our Client &amp; User Needs.
+                apply to this project, linked to our Client and User Needs.
             </p>
         </header>
 
         <main id="main">
+            <div class="container">
             <!-- 1) Overview / What this page contains -->
             <section aria-labelledby="overview-heading">
                 <h2 id="overview-heading">Overview</h2>
@@ -43,7 +44,7 @@
                     previously identified Client and User Needs.
                 </p>
                 <details>
-                    <summary>Scope &amp; references used</summary>
+                    <summary>Scope and references used</summary>
                     <ul>
                         <li>
                             WCAG Quick Reference (focus on 13 criteria from
@@ -70,82 +71,80 @@
                 <h3>Principle: Perceivable</h3>
 
                 <article aria-labelledby="sc-111">
-                    <h4 id="sc-111">1.1.1 Alternative text for non-text content</h4>
+                    <h4 id="sc-111">1.1 Alternative text</h4>
                     <p class="aim">
                         <strong>Aim:</strong> Ensure non-text content has text
-                        alternatives.
+                        alternatives for screen reader users.
                     </p>
                     <ul class="actions">
                         <li>
-                            Provide concise, meaningful <code>alt</code> for
-                            informative images.
+                            Provide concise, meaningful alt text for images and graphics such as icons, flowcharts, infographics, logos, and buttons.
                         </li>
                         <li>
-                            Use empty <code>alt</code> for decorative images.
+                            Use empty alt code for decorative images.
                         </li>
-                        <li>Label form icons/controls programmatically.</li>
+                        <li>Label form icons/controls with text descriptions.</li>
                     </ul>
                 </article>
 
                 <article aria-labelledby="sc-132">
                     <h4 id="sc-132">1.3.2 Meaningful Sequence</h4>
                     <p class="aim">
-                        <strong>Aim:</strong> Reading/navigation order matches
-                        visual order.
+                        <strong>Aim:</strong> The order of content can be understood by more people.
                     </p>
                     <ul class="actions">
-                        <li>Use semantic HTML and logical DOM order.</li>
+                        <li>Use h1 and h3 headings in order so content flows logically. </li>
                         <li>
-                            Avoid layout that requires tabindex hacks for order.
+                            Pair related elements, such as label with input so forms read in the right sequence.
                         </li>
                     </ul>
                 </article>
 
                 <article aria-labelledby="sc-141">
-                    <h4 id="sc-141">1.4.1 Use More than Color</h4>
+                    <h4 id="sc-141">1.4.1 Avoid Colour-Only Cues</h4>
                     <p class="aim">
-                        <strong>Aim:</strong> Don’t rely on color alone to
+                        <strong>Aim:</strong> Don’t rely on colour alone to
                         convey meaning.
                     </p>
                     <ul class="actions">
                         <li>
-                            Add text, icons, or patterns in addition to color.
+                            Add text, icons, or patterns in addition to colour, especially for non-native English speakers.
                         </li>
                         <li>
-                            Ensure links are distinguishable beyond color (e.g.,
-                            underline).
+                            Use a contrast ratio of 3:1 between text and background and provide additional visual cues for hover features.
+                        </li>
+                        <li>
+                            Ensure that information conveyed by colour differences is also available through other means (e.g., text labels). 
                         </li>
                     </ul>
                 </article>
 
                 <article aria-labelledby="sc-143">
-                    <h4 id="sc-143">1.4.3 Contrast (Minimum)</h4>
+                    <h4 id="sc-143">1.4.3 Perceivable Text Contrast</h4>
                     <p class="aim">
-                        <strong>Aim:</strong> Body text meets minimum contrast
-                        thresholds.
+                        <strong>Aim:</strong> Text should meet minimum contrast
+                        thresholds for readability for more users.
                     </p>
                     <ul class="actions">
                         <li>
-                            Text vs. background ≥ 4.5:1 (normal) or 3:1 (large
-                            text).
+                            The visual presentation of text and images of text has a contrast ratio of at least 4.5:1
                         </li>
-                        <li>Test link text and iconography as well.</li>
+                        <li>Use high-contrast colors for essential text.</li>
                     </ul>
                 </article>
 
                 <article aria-labelledby="sc-144">
                     <h4 id="sc-144">1.4.4 Resize Text</h4>
                     <p class="aim">
-                        <strong>Aim:</strong> Content remains usable at 200%
+                        <strong>Aim:</strong> Content remains clearly visible and functional at 200%
                         zoom.
                     </p>
                     <ul class="actions">
                         <li>
-                            Use responsive units; avoid fixed pixel heights.
+                            Use responsive units (e.g., em, rem, %) for text sizing.
                         </li>
                         <li>
-                            Ensure no content overlap, truncation, or loss of
-                            function.
+                            Ensure no content loss of function occurs at 200% zoom.
                         </li>
                     </ul>
                 </article>
@@ -159,7 +158,7 @@
                         accessible.
                     </p>
                     <ul class="actions">
-                        <li>Ensure focusable controls; no keyboard traps.</li>
+                        <li>Ensure focusable controls that can be viewed by 'tabbing'.</li>
                         <li>Provide visible focus and logical tab order.</li>
                     </ul>
                 </article>
@@ -224,108 +223,88 @@
                         </li>
                         <li>Keep icon meanings and behaviors consistent.</li>
                     </ul>
-                </article>
-
-                <article aria-labelledby="sc-331">
-                    <h4 id="sc-331">3.3.1 Error Identification</h4>
-                    <p class="aim">
-                        <strong>Aim:</strong> Clearly describe input errors and
-                        how to fix them.
-                    </p>
-                    <ul class="actions">
-                        <li>
-                            Associate error messages with fields
-                            (aria-describedby).
-                        </li>
-                        <li>Provide suggestions to correct format/value.</li>
-                    </ul>
-                </article>
-
-                <article aria-labelledby="sc-332">
-                    <h4 id="sc-332">3.3.2 Labels or Instructions</h4>
-                    <p class="aim">
-                        <strong>Aim:</strong> Inputs have clear
-                        labels/instructions.
-                    </p>
-                    <ul class="actions">
-                        <li>
-                            Use explicit <code>&lt;label for&gt;</code> or
-                            <code>aria-label</code>.
-                        </li>
-                        <li>Provide format examples and helpful hints.</li>
-                    </ul>
-                </article>
-
-                <article aria-labelledby="sc-334">
-                    <h4 id="sc-334">
-                        3.3.4 Error Prevention (Legal, Financial, Data)
-                    </h4>
-                    <p class="aim">
-                        <strong>Aim:</strong> Prevent/allow recovery from
-                        critical errors.
-                    </p>
-                    <ul class="actions">
-                        <li>
-                            Confirmations for destructive/irreversible actions.
-                        </li>
-                        <li>Review screens and easy undo where possible.</li>
-                    </ul>
-                </article>
+                </article>   
             </section>
 
             <!-- 3) Which criteria are relevant & why (mapped to needs) -->
             <section aria-labelledby="relevance-heading">
-                <h2 id="relevance-heading">Relevance &amp; Rationale</h2>
+                <h2 id="relevance-heading">Relevance and Rationale</h2>
                 <p>
                     The following maps each selected Success Criteria to
                     specific Client/User Needs and gives a brief rationale.
                 </p>
-
-                <!-- Replace sample rows with your own needs and rationale -->
-                <table>
                     <caption>
                         Mapping: Success Criteria → Client/User Needs →
                         Rationale
                     </caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Success Criteria</th>
-                            <th scope="col">Linked Need(s)</th>
-                            <th scope="col">
-                                Rationale (why this matters here)
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1.1.1 Non-text Content</td>
-                            <td>
-                                Client: Showcase visuals; User: Screen reader
-                                users
-                            </td>
-                            <td>
-                                Alt text ensures imagery communicates meaning to
-                                non-visual users.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2.1.1 Keyboard</td>
-                            <td>User: Keyboard-only navigation</td>
-                            <td>
-                                All menus/forms remain operable without a mouse.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1.4.3 Contrast (Min)</td>
-                            <td>User: Readability in varied environments</td>
-                            <td>
-                                Meets minimum contrast for body text and links
-                                for legibility.
-                            </td>
-                        </tr>
-                        <!-- Add more rows per your chosen criteria -->
-                    </tbody>
-                </table>
+                    <table class="wcag-table">
+    <caption>WCAG 2.0 - Criteria Applied to This Site</caption>
+    <colgroup>
+        <col style="width:26%">
+        <col style="width:34%">
+        <col style="width:40%">
+    </colgroup>
+    <thead>
+        <tr>
+            <th scope="col">Criteria</th>
+            <th scope="col">User need</th>
+            <th scope="col">Rationale</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>1.1.1 Alternative Text (Non-text Content)</strong></td>
+            <td>Chan and Ivan - Screen-reader compatibility; Miryam - images/diagrams in transcripts.</td>
+            <td>Provide meaningful <code>alt</code> text (or <code>aria-label</code>) so non-visual users get the same information as sighted users.</td>
+        </tr>
+        <tr>
+            <td><strong>1.3.2 Meaningful Sequence</strong></td>
+            <td>All users - Ease of accessing interview content in the right order.</td>
+            <td>Ensure DOM order matches visual order (headings, question - response) so screen readers read it logically.</td>
+        </tr>
+        <tr>
+            <td><strong>1.4.1 Avoid Color-only Cues</strong></td>
+            <td>Chan - doesn’t miss cues when learning; Ivan - clear state changes; Miryam - highlighted quotes.</td>
+            <td>Pair colored highlights with text/labels/icons so meaning isn’t conveyed by color alone.</td>
+        </tr>
+        <tr>
+            <td><strong>1.4.3 Perceivable Text Contrast</strong></td>
+            <td>All - Comfortable reading; Chan - reduces fatigue; Ivan - predictable legibility.</td>
+            <td>Meet 4.5:1 contrast for text (e.g., blue tooltip with white text) to keep content readable.</td>
+        </tr>
+        <tr>
+            <td><strong>1.4.4 Resize Text (without loss)</strong></td>
+            <td>Chan - can zoom content; Miryam - long passages; Ivan - prefers larger, steady layouts.</td>
+            <td>Use relative units (rem/em) and fluid layouts so zooming to 200% doesn’t clip or overlap content.</td>
+        </tr>
+        <tr>
+            <td><strong>2.1.1 Keyboard Navigability</strong></td>
+            <td>Ivan - predictable, structured navigation; All - non-mouse operation.</td>
+            <td>All links, TOC, and interactive highlights are operable via keyboard (Tab/Shift+Tab/Enter/Escape).</td>
+        </tr>
+        <tr>
+            <td><strong>2.4.7 Focus Visible</strong></td>
+            <td>Ivan - doesn’t get lost while tabbing; Chan - clear indicator of where she is.</td>
+            <td>Provide a visible focus style (outline/underline) on links and interactive elements, including tooltips.</td>
+        </tr>
+        <tr>
+            <td><strong>3.1.5 Reading Level</strong></td>
+            <td>Chan - reduced jargon; Miryam - summaries for dense content.</td>
+            <td>Use plain language in UI; add short explanations for technical terms in tooltips/footnotes.</td>
+        </tr>
+        <tr>
+            <td><strong>3.2.3 Consistent Navigation</strong></td>
+            <td>All - quick orientation across pages/sections.</td>
+            <td>Keep TOC placement/labels consistent; include “Back to top” in each interview section.</td>
+        </tr>
+        <tr>
+            <td><strong>3.2.4 Consistent Identification</strong></td>
+            <td>All - recognize repeating components quickly.</td>
+            <td>Use the same styling/labeling for repeated elements (e.g., “Question”, “Response”, tooltip highlights).</td>
+        </tr>
+    </tbody>
+</table>
+
             </section>
 
             <!-- 4) Share / Review notes (optional reflective piece) -->
@@ -350,12 +329,13 @@
                         <a
                             href="https://www.w3.org/WAI/WCAG21/quickref/"
                             rel="noopener"
-                            >WCAG Quick Reference</a
-                        >
+                        >WCAG Quick Reference</a>
+
                     </li>
                     <!-- Add your lecture notes and any other sources you used -->
                 </ul>
             </section>
+            </div>
         </main>
 
         <footer role="contentinfo">

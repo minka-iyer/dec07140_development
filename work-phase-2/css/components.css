@@ -295,3 +295,85 @@ variable transparency */
     color: var(--accent-color);
     margin: 0 0 12px;
 }
+/* Wrapper gives horizontal scroll on small screens and nice margins */
+.wcag-wrap {
+    margin-block: 2rem; /* space above & below */
+    overflow-x: auto; /* avoid squishing on phones */
+}
+
+/* Card-like table with comfy spacing */
+.wcag-table {
+    width: 100%;
+    border-collapse: separate; /* lets us use border-spacing + rounded corners */
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    font-size: 1rem;
+    line-height: 1.55; /* more readable lines */
+}
+
+/* Caption tidy + aligned */
+.wcag-table caption {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+    color: #1f2a44;
+}
+
+/* Header row */
+.wcag-table thead th {
+    position: sticky; /* stays visible when scrolling long tables */
+    top: 0;
+    z-index: 1;
+    background: #f7f9fc;
+    color: #1f2a44;
+    font-weight: 700;
+    padding: 1rem 1.25rem; /* <— more space */
+    border-bottom: 1px solid #e6ebf2;
+}
+
+/* Body cells */
+.wcag-table td {
+    padding: 1rem 1.25rem; /* <— more space */
+    vertical-align: top;
+    border-top: 1px solid #eef1f5;
+}
+
+/* First column (criteria) bold for quick scanning */
+.wcag-table tbody td:first-child {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Zebra rows for readability */
+.wcag-table tbody tr:nth-child(odd) td {
+    background: #fbfdff;
+}
+
+/* Slightly larger bullets spacing inside cells with lists (if you add any) */
+.wcag-table td ul {
+    margin: 0.25rem 0 0 0.95rem;
+}
+
+/* Inline code styling inside cells */
+.wcag-table code {
+    background: #f2f4f7;
+    padding: 0 0.3em;
+    border-radius: 4px;
+    font-family: Nunito, monospace;
+    font-size: 0.94em;
+}
+
+/* Mobile tune-ups */
+@media (max-width: 720px) {
+    .wcag-table {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+    .wcag-table thead th,
+    .wcag-table td {
+        padding: 0.875rem 1rem; /* tighten slightly on small screens */
+    }
+}
