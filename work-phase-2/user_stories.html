@@ -4,17 +4,22 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>User Stories</title>
+        <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/reset.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-        <header>
-            <h1>User Stories</h1>
-        </header>
-        <main>
-            <nav class="toc m-b-3">
+        <div class="container">
+            <header>
+                <h1>User Stories</h1>
+            </header>
+            <main>
+                <nav class="toc m-b-3" aria-label="Interview table of contents">
                 <h2>Interviews</h2>
                 <ul>
                     <li><a href="#miryam">Miryam</a></li>
@@ -23,7 +28,7 @@
                 </ul>
             </nav>
             <section class="interviews">
-                <section id="miryam" class="interview m-b-5">
+                <section id="miryam" class="interview m-t-5 m-b-5">
                     <h5 class="user-name">Final-year PhD student</h5>
                     <p class="initial-prompt">
                         Act as Miryam, a final year PhD student in human-robot
@@ -308,8 +313,9 @@
                         jargon, so I stay quiet. My old C++ contacts have faded
                         after six years off. I haven’t built a new network yet
                         because meetups feel intimidating. I’m really missing a
-                        space where I can learn without feeling judged and meet
-                        other mums in tech.
+                        space where I can <span class="interactive-highlight-stories" 
+        data-userstory="As a mother re-entering the workforce after six years, I want a safe, non-judgmental online space to connect with other mothers in tech and learn about AI tools without jargon, so that I can rebuild my confidence and feel less overwhelmed while upskilling.">
+    learn without feeling judged and meet other mums in tech </span>.
                     </div>
                     <p class="question">
                         What importance do you place on having connections in
@@ -465,8 +471,9 @@
                         professional relationships — both inside and outside the
                         company — would help make my work visible and open more
                         doors. So yeah, I know connections matter a lot… but I
-                        also find it hard to build them in a way that feels
-                        natural for me.
+                        also find it <span class="interactive-highlight-stories" 
+        data-userstory="As a backend developer living with autism, I want a platform where I can showcase my work and measurable outputs clearly, so that I can attract opportunities where my skills are valued and avoid environments where I’m overlooked or talked over.">hard to build them in a way that feels
+                        natural for me </span>.
                     </div>
                     <p class="question">
                         In an ideal world, how would you like your work to be
@@ -694,5 +701,6 @@
 
             </section>
         </main>
+        </div>
     </body>
 </html>

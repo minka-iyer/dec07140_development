@@ -2,7 +2,12 @@
 /* Base Highlight Style */
 .interactive-highlight {
     position: relative; /* Allows for positioning of extra elements (e.g., tooltip numbers) */
-    background-color: rgba(255, 215, 0, 0.3); /* Light yellow highlight with 30% transparency */
+    background-color: rgba(
+        255,
+        215,
+        0,
+        0.3
+    ); /* Light yellow highlight with 30% transparency */
     cursor: pointer; /* Changes cursor to indicate interactivity */
     padding: 2px 5px; /* Adds small space inside the highlight for better readability */
     border-radius: 5px; /* Rounds the corners slightly for a softer look */
@@ -48,7 +53,7 @@
     border-radius: 12px;
     padding: 16px 18px;
     margin-block: 24px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,.06);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .value-title {
@@ -73,54 +78,57 @@
 
 /* Flip Card Base Styles */
 .flip-card {
-width: 280px;
-max-width: 100%;
-height: 180px;
-perspective: 1000px; /* Adds depth to make the flip look 3D */
-cursor: pointer; /* Adds indication of interactivity */
-outline: none; /* Removes default focus outline */
-margin: 0 auto; /* Centers the card within its container */
-color: white !important;
+    width: 280px;
+    max-width: 100%;
+    height: 180px;
+    perspective: 1000px; /* Adds depth to make the flip look 3D */
+    cursor: pointer; /* Adds indication of interactivity */
+    outline: none; /* Removes default focus outline */
+    margin: 0 auto; /* Centers the card within its container */
+    color: white !important;
 }
 /* Flip Card Inner - the rotating part of the card */
 .flip-card-inner {
-width: 100%;
-height: 100%;
-position: relative;
-transform-style: preserve-3d; /* creates a 3D space */
-transition: transform 0.5s ease-in-out;
-color:white !important;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* creates a 3D space */
+    transition: transform 0.5s ease-in-out;
+    color: white !important;
 }
 /* Front & Back Common Styles */
-.flip-card-front, .flip-card-back {
-position: absolute;
-width: 100%;
-height: 100%;
-backface-visibility: hidden;
-display: flex; /* we are using flex inside our cards */
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-border-radius: 10px;
-padding: 10px;
-font-size: 1rem;
-box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex; /* we are using flex inside our cards */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 /* set the colour for the front */
 .flip-card-front {
-background: var(--primary-color);
-color: white !important;
+    background: var(--primary-color);
+    color: white !important;
 }
 /* set the colour for the back */
 .flip-card-back {
-background: var(--secondary-color);
-color: white !important;
-transform: rotateY(180deg);
+    background: var(--secondary-color);
+    color: white !important;
+    transform: rotateY(180deg);
 }
 /* Ensure card text is white, overriding global p color */
 .flip-card-front,
-.flip-card-back { color: #fff; }
+.flip-card-back {
+    color: #fff;
+}
 
 .flip-card-front p,
 .flip-card-front strong,
@@ -134,7 +142,7 @@ transform: rotateY(180deg);
 .flip-card-back h1,
 .flip-card-back h2,
 .flip-card-back h3 {
-color: #fff;
+    color: #fff;
 }
 
 /* Flip Animation (Desktop Hover) */
@@ -152,7 +160,7 @@ color: #fff;
 .user-name {
     font-weight: bold;
     font-size: 1.2rem;
-    color: var(--secondary-color);
+    color: var(--accent-color);
 }
 .initial-prompt {
     font-style: italic;
@@ -176,54 +184,102 @@ color: #fff;
 
 /* using a colour variable but changing the opacity/transparency */
 .response {
-border-left: 2px solid var(--secondary-color);
-font-style: italic;
-background-color: color-mix(in srgb, var(--secondary-color) 10%, transparent); /* color
+    border-left: 2px solid var(--secondary-color);
+    font-style: italic;
+    background-color: color-mix(
+        in srgb,
+        var(--secondary-color) 10%,
+        transparent
+    ); /* color
 variable transparency */
 }
 
 /* INTERACTIVE HIGHLIGHTING FOR USER STORIES */
-/* Base Highlight Style */
+/* Highlighted text */
 .interactive-highlight-stories {
-    position: relative; /* Allows for positioning of extra elements (e.g., tooltip numbers) */
-    background-color: rgba(255, 215, 0, 0.3); /* Light yellow highlight with 30% transparency */
-    cursor: pointer; /* Changes cursor to indicate interactivity */
-    padding: 2px 5px; /* Adds small space inside the highlight for better readability */
-    border-radius: 5px; /* Rounds the corners slightly for a softer look */
-    transition: background 0.3s ease; /* Smooth transition effect when background changes */
+    position: relative;
+    cursor: help;
+    background: rgba(255, 215, 0, 0.28);
+    border-radius: 4px;
+    padding: 0 0.2em;
+    transition: background 0.15s ease;
+    outline: none;
 }
 
-/* Tooltip Styling for Highlighted Text */
+/* Tooltip bubble */
 .interactive-highlight-stories::after {
-    content: attr(data-card); /* See the explanation */
-    position: absolute; /* Positions the tooltip relative to the highlighted text */
-    top: -5px; /* Moves the tooltip slightly above the highlighted text */
-    right: -15px; /* Moves the tooltip slightly to the right of the highlighted text */
-    background: var(--accent-color);
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    width: 120px; /* Sets a fixed width for the tooltip */
-    height: 30px; /* Sets a fixed height, making the tooltip a perfect circle */
-    display: flex; /* Uses Flexbox to center the text inside the circle */
-    align-items: center; /* Vertically centers the text inside the tooltip */
-    justify-content: center; /* Horizontally centers the text inside the tooltip */
-    border-radius: 10%; /* Creates rounded corners */
-    opacity: 0; /* Initially hides the tooltip */
-    transition: opacity 0.3s ease; /* Smoothly fades in the tooltip by changing the opacity */
+    content: attr(data-userstory); /* read text from HTML attribute */
+    position: absolute;
+    left: 0; /* align with start of highlight */
+    top: calc(100% + 10px); /* sit just below the text */
+
+    /* sizing */
+    min-width: 22ch; /* prevents tiny narrow boxes */
+    max-width: 42ch; /* wraps text at a readable width */
+    width: auto; /* allow width to grow naturally */
+    height: auto; /* let height expand with text */
+
+    /* layout */
+    display: block;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem;
+    white-space: normal; /* allow wrapping */
+    word-break: normal;
+    overflow-wrap: anywhere; /* break long words if needed */
+
+    /* visuals */
+    background: var(
+        --tooltip-bg,
+        #2b6cb0
+    ); /* blue card (fallback if var not set) */
+    color: #fff;
+    font-size: 0.92rem;
+    line-height: 1.35;
+    border-radius: 10px; /* rounded corners */
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+
+    /* behavior */
+    z-index: 1000;
+    opacity: 0; /* hidden by default */
+    transform: translateY(4px);
+    pointer-events: none; /* ignore mouse */
+    transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
-/* Show Number on Hover (Desktop) */
+/* Little arrow under the highlight */
+.interactive-highlight-stories::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 100%;
+    border-width: 7px 7px 0 7px;
+    border-style: solid;
+    border-color: var(--tooltip-bg, #2b6cb0) transparent transparent transparent;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Show on hover/focus */
 @media (hover: hover) {
-    .interactive-highlight-stories:hover::after {
+    .interactive-highlight-stories:hover::after,
+    .interactive-highlight-stories:hover::before {
         opacity: 1;
+        transform: translateY(0);
     }
 }
-
-/* Show Number on Tap (Mobile) */
 .interactive-highlight-stories:focus::after,
-.interactive-highlight-stories:active::after {
+.interactive-highlight-stories:focus::before,
+.interactive-highlight-stories:active::after,
+.interactive-highlight-stories:active::before {
     opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: keyboard focus ring */
+.interactive-highlight-stories:focus-visible {
+    outline: 2px solid var(--tooltip-bg, #2b6cb0);
+    outline-offset: 2px;
 }
 
 .user-story-box {
@@ -232,7 +288,7 @@ variable transparency */
     border-radius: 12px;
     padding: 16px 18px;
     margin-block: 24px;
-    box-shadow: 2px 2px 6px rgba(0,0,0,.06);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .user-story-title {
