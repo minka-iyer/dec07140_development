@@ -313,57 +313,48 @@ variable transparency */
     line-height: 1.55; /* more readable lines */
 }
 
-/* Caption tidy + aligned */
-.wcag-table caption {
-    text-align: left;
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin: 0 0 0.75rem;
-    color: #1f2a44;
+/* (Optional) wrapper so the table can scroll on small screens */
+.wcag-wrap {
+    margin: 24px 0;
+    overflow-x: auto;
 }
 
-/* Header row */
-.wcag-table thead th {
-    position: sticky; /* stays visible when scrolling long tables */
-    top: 0;
-    z-index: 1;
-    background: #f7f9fc;
-    color: #1f2a44;
-    font-weight: 700;
-    padding: 1rem 1.25rem; /* <— more space */
-    border-bottom: 1px solid #e6ebf2;
+/* Basic table layout */
+.wcag-table {
+    width: 100%;
+    border-collapse: collapse; /* single borders */
 }
 
-/* Body cells */
+/* Cells */
+.wcag-table th,
 .wcag-table td {
-    padding: 1rem 1.25rem; /* <— more space */
+    padding: 1rem; /* space inside cells */
+    border: 1px solid #e3e3e3; /* light grid lines */
+    text-align: left;
     vertical-align: top;
-    border-top: 1px solid #eef1f5;
 }
 
-/* First column (criteria) bold for quick scanning */
+/* Header row — add color */
+.wcag-table thead th {
+    background: #e8f1ff; /* light blue */
+    color: #0b3d91; /* navy text */
+    font-weight: 700; /* bold headers */
+}
+
+/* First column (criteria) bold so it’s easy to scan */
 .wcag-table tbody td:first-child {
     font-weight: 700;
-    color: #0f172a;
 }
 
-/* Zebra rows for readability */
-.wcag-table tbody tr:nth-child(odd) td {
-    background: #fbfdff;
+/* Light zebra striping for readability */
+.wcag-table tbody tr:nth-child(odd) {
+    background: #fafcff;
 }
 
-/* Slightly larger bullets spacing inside cells with lists (if you add any) */
-.wcag-table td ul {
-    margin: 0.25rem 0 0 0.95rem;
-}
-
-/* Inline code styling inside cells */
-.wcag-table code {
-    background: #f2f4f7;
-    padding: 0 0.3em;
-    border-radius: 4px;
-    font-family: Nunito, monospace;
-    font-size: 0.94em;
+/* Optional: caption styling */
+.wcag-table caption {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 /* Mobile tune-ups */
