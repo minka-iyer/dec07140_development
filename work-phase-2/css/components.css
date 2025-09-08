@@ -368,3 +368,60 @@ variable transparency */
         padding: 0.875rem 1rem; /* tighten slightly on small screens */
     }
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+        "a b c"
+        ". d e"; /* center the bottom two */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    background: #fff8e7;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    display: block;
+    width: 100px; /* make icons larger */
+    height: 100px;
+    margin: 0 auto 15px;
+    object-fit: contain;
+}
+
+/* place items explicitly */
+.a {
+    grid-area: a;
+}
+.b {
+    grid-area: b;
+}
+.c {
+    grid-area: c;
+}
+.d {
+    grid-area: d;
+}
+.e {
+    grid-area: e;
+}
+
+/* Responsive: stack */
+@media (max-width: 700px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e";
+    }
+}
