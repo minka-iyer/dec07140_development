@@ -1,0 +1,50 @@
+.hero {
+    background-color: var(--background-color-2);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+}
+
+/* MENUS */
+/* Base styles */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* Base mobile nav styles */
+#nav-mobile {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#nav-desktop {
+    display: none;
+}
+
+/* Desktop nav styles */
+@media screen and (min-width: 768px) {
+    #nav-mobile {
+        display: none; /* hide mobile nav on desktop */
+    }
+
+    #nav-desktop {
+        display: block; /* show desktop nav */
+    }
+}
