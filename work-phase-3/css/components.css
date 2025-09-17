@@ -15,8 +15,9 @@
     color: var(--accent-color);
 }
 
-/* MENUS */
-/* Base styles */
+/* ------------------ */
+/* Shared nav styles  */
+/* ------------------ */
 nav ul {
     display: flex;
     flex-direction: row;
@@ -25,26 +26,86 @@ nav ul {
     padding: 0;
     margin: 0;
 }
-/* Base mobile nav styles */
+
+nav ul li {
+    flex: 1; /* makes items evenly share width */
+    text-align: center;
+}
+
+/* ------------------ */
+/* Mobile nav (default) */
+/* ------------------ */
 #nav-mobile {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100vw;
     background-color: var(--secondary-color);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
 }
 
+#nav-mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+#nav-mobile li {
+    flex: 1;
+    text-align: center;
+}
+
+#nav-mobile a {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* ------------------ */
+/* Desktop nav (hidden by default) */
+/* ------------------ */
 #nav-desktop {
     display: none;
 }
 
-/* Desktop nav styles */
+/* ------------------ */
+/* Desktop nav (≥768px) */
+/* ------------------ */
 @media screen and (min-width: 768px) {
     #nav-mobile {
-        display: none; /* hide mobile nav on desktop */
+        display: none; /* hide bottom bar */
     }
 
     #nav-desktop {
-        display: block; /* show desktop nav */
+        display: block; /* show top bar */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background-color: var(--secondary-color);
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    #nav-desktop ul {
+        justify-content: flex-end;
+        gap: 2rem; 
+        padding: 1rem 2rem;
+        transition: background-color 0.3s;
+    }
+
+    #nav-desktop a {
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    #nav-desktop a:hover {
+        text-decoration: underline;
+        background-color: rgba(255,255,255,0.2);
     }
 }
