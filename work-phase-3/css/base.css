@@ -5,7 +5,7 @@
     --accent-color: #2b7c85; /* Teal */
     --text-color: #333; /* Dark Grey */
     --background-color: #dff5f2; /* Minty green */
-    --background-color-2: #e6f7f9 /* Light aqua */
+    --background-color-2: #e6f7f9; /* Light aqua */
 }
 
 /* Global defaults */
@@ -53,7 +53,7 @@ h6 {
 p {
     font-size: 1rem;
     margin-bottom: 1rem;
-    font-family: "Lexend"; sans-serif;
+    font-family: "Lexend" sans-serif;
 }
 
 a {

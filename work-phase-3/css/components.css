@@ -1,3 +1,5 @@
+@import'./component_skeletons/accordion.css';
+
 .hero {
     background-color: var(--background-color-2);
     color: white;
@@ -108,4 +110,10 @@ nav ul li {
         text-decoration: underline;
         background-color: rgba(255,255,255,0.2);
     }
+}
+
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
