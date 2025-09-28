@@ -39,3 +39,17 @@
 .accordion-item.open {
     border: 2px solid green;
 }
+
+.accordion.nested .accordion-header {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--accent1-color);
+    border-radius: 10px 10px 0 0;
+}
+
+.accordion.nested .accordion-content {
+    color: var(--secondary-color);
+    border: 1px solid var(--accent1-color);
+    border-radius: 0 0 10px 10px;
+}
+
