@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/component_skeletons/accordion.css"
+        <link rel="stylesheet" href="css/component_skeletons/accordion.css" />
 
         <link
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
@@ -17,7 +17,7 @@
         <title>Site Map</title>
     </head>
     <body>
-        <!-- MENUS */ -->
+        <!-- MENUS -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
@@ -55,33 +55,173 @@
             </ul>
         </nav>
         <main>
-            <h1 class="m-t-5 m-b-3"> Site Map</h1>
+            <h1 class="m-t-5 m-b-3">Site Map</h1>
             <img
                 src="assets/Site map DECO A3.png"
                 class="responsive-img"
                 alt="Card sort  
 site map"
             />
-            <h3> In this exercise, I created a site map based on card sort activity to organise the content 
-                and structure of my webpage with the aim to create a user-friendly navigation structure.
-                The accordion shows the website structure. Expand each section to view pages and sub-pages, with
-                notes on user/client needs.
+            <h3>
+                In this exercise, I created a site map based on card sort
+                activity to organise the content and structure of my webpage
+                with the aim to create a user-friendly navigation structure. The
+                accordion shows the website structure. Expand each section to
+                view pages and sub-pages, with notes on user/client needs.
             </h3>
             <section class="accordion m-y-5">
                 <div class="accordion-item">
-                    <button class="accordion-header">▷Inspiration</button>
-                        <div class="accordion-content">
-                            <p class="m-y-3">
-                            Central hub for users to see and share inspiring content. Supports the client's goal of empowering users with knowledge and User story 'As a ...'. Note: this should be your content! These are your annotations (see L08 for details).
-                            </p>
+                    <button class="accordion-header">
+                        ▷ Community & Belonging
+                    </button>
+                    <div class="accordion-content">
+                        <p class="m-y-3">
+                            Groups event and forum features that support social
+                            cohesion and reduce isolation. Uses
+                            <strong>Gestalt principles of grouping</strong> to
+                            organise related elements, making it easier for
+                            users to discover opportunities for connection.
+                            Anonymous Q&A forums and stories hubs also provide
+                            safe spaces where questions and experiences are
+                            treated with respect, addressing
+                            <strong>Value 1: Social Cohesion</strong>.
+                        </p>
+                        <!-- Nested accordion for Events -->
+                        <div class="accordion nested">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    ▷ Events
+                                </button>
+                                <div class="accordion-content">
+                                    <ul>
+                                        <li><strong>Find an event:</strong>
+                                            Helps users discover events that match their interests and filter by location, supporting social connection and reducing isolation.
+                                        </li>
+                                        <li><strong>Post an event:</strong>
+                                            Empowers users to contribute and share activities, celebrating community identity and diversity.
+                                        </li>
+                                        <li><strong>Event calendar:</strong>
+                                            Provides a clear overview of upcoming activities, reducing cognitive load through familiar calendar mapping.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+
+                        <!-- Nested accordion for Forums -->
+                        <div class="accordion nested">
+                            <div class="accordion-item">
+                                <button class="accordion-header">
+                                    ▷ Forums
+                                </button>
+                                <div class="accordion-content">
+                                    <ul>
+                                        <li><strong>Anonymous Q&A Forum:</strong>
+                                            Safe space for asking questions without judgment, supporting inclusivity and respect.
+                                        </li>
+                                        <li><strong>Community Stories Hub:</strong>
+                                            Allows sharing of experiences to strengthen belonging and identity.
+                                        </li>
+                                        <li><strong>Interest-based Groups:</strong>
+                                            Connects people with shared passions, fostering meaningful relationships.
+                                        </li>
+                                        <li><strong>Member Profiles/About Me:</strong>
+                                            Builds visibility and recognition within the community, supporting stronger peer connections.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ▷ Learning & Resources
+                    </button>
+                    <div class="accordion-content">
+                        <p class="m-y-3">
+                            Provides quick access to credible, evidence-backed
+                            resources recommended by peers and experts. Aligns
+                            with
+                            <strong>user needs for trusted information</strong>
+                            and
+                            <strong>WCAG 1.3.2 (meaningful sequence)</strong> by
+                            ensuring a logical structure. Features such as a
+                            Resources Library and Tech Events Calendar reduce
+                            cognitive load by mapping to users’ mental models of
+                            where to find learning content <strong>(Conceptual Models)</strong
+                            >.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ▷ Boost Your Career
+                    </button>
+                    <div class="accordion-content">
+                        <p class="m-y-3">
+                            Creates opportunities for career advancement through
+                            <strong>innovative and intuitive platforms</strong>
+                            such as Employer Challenges, Hackathons, and CV
+                            review services. These allow users to
+                            <strong
+                                >showcase their skills outside conventional
+                                pathways</strong
+                            >, increasing visibility to employers. Features like
+                            badges and progress tracking also leverage
+                            <strong>feedback and micro-interactions</strong> to
+                            motivate engagement and align with
+                            <strong>Value 2: Enhanced Visibility</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ▷ Expand Your Network
+                    </button>
+                    <div class="accordion-content">
+                        <p class="m-y-3">
+                            Responds to
+                            <strong
+                                >user needs for meaningful networking</strong
+                            >
+                            beyond traditional events. Features like a Mentor
+                            Directory, Portfolio Showcase, and Peer Networking
+                            support <strong>Value 3: Inclusivity</strong> by
+                            ensuring diverse representation and accessibility.
+                            Visual cues and consistent layouts aid
+                            <strong
+                                >discoverability and conceptual mapping</strong
+                            >, while booking systems follow
+                            <strong>WCAG 2.1.1 (keyboard navigability)</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        ▷ Onboarding & Support
+                    </button>
+                    <div class="accordion-content">
+                        <p class="m-y-3">
+                            Positioned prominently with a welcoming colour
+                            scheme, this section helps new users feel supported
+                            and confident navigating the site. It avoids
+                            technical jargon, provides accessibility options
+                            (e.g., text-to-speech, high-contrast mode), and
+                            offers a clear feedback channel. This directly
+                            supports <strong>Project Goal 4</strong> (ethical,
+                            inclusive, culturally sensitive design) and aligns
+                            with
+                            <strong>WCAG 3.3.2 (labels & instructions)</strong>.
+                        </p>
+                    </div>
+                </div>
             </section>
         </main>
-        <script src="js/site_map.js"></script>
-    </body>
-</html>
-
+        <script type="module" src="js/site_map.js"></script>
     </body>
 </html>
