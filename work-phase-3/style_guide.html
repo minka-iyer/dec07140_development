@@ -3,27 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/style_guide.css">
         <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
             rel="stylesheet"
         />
     <link rel="icon" type ="image/x-icon" href = "assets/favicon_ico/">
     <title>Style Guide</title>
 </head>
 <body>
-    <nav id ="nav_mobile" aria-label="Main Navigation">
+    <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html" aria-current="page"
+                        ><span class="icon">🧭</span></a
+                    >
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-    </nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li>
+                    <a href="site_map.html" aria-current="page">Site Map</a>
+                </li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
 
-    <nav id ="nav-desktop" aria-label="Main Navigation">
-
-    </nav>
     <main>
-        <h1>Style Guide</h1>
+        <header class="hero">
+            <h1>Style Guide</h1>
+            <p class="intro">
+                This style guide outlines the visual and interaction rules for my porposed website for Connected Communities Initiative.
+                It ensures cohesion among typography, colour, layour, UI components, and imagery, aligining with the client's mission
+                of empowering communities via inclusive design and creating a seamless user experience.
+            </p>
+        </header>
+        <!-- CARD GRID -->
+    <section class="card-container">
+        <!-- Visceral Card -->
+        <article class="card">
+            <img src="assets/visceral.png" alt="Decorative icon for interactions" class="card-img">
+            <h2>Visceral Design</h2>
+            <p>Layouts, typography, and colour palette showcasing the visual foundation 
+            of our design proposal.</p>
+            <a href="visceral_design.html" class="btn">Explore</a>
+        </article>
+
+        <!-- Behavioural Card -->
+        <article class="card">
+            <img src="assets/behavioural.png" alt="Decorative icon for interactions" class="card-img">
+            <h2>Behavioural Design</h2>
+            <p>UI components and micro-interactions designed to support usability, 
+            accessibility, and smooth navigation.</p>
+            <a href="behavioural_design.html" class="btn">Explore</a>
+        </article>
+
+        <!-- Reflective Card -->
+        <article class="card">
+            <img src="assets/reflective.png" alt="Decorative icon for tone" class="card-img">
+            <h2>Reflective Design</h2>
+            <p>Imagery, tone, and brand alignment ensuring resonance with CCI’s 
+            mission and long-term impact.</p>
+            <a href="reflective_design.html" class="btn">Explore</a>
+        </article>
+        </section>
     </main>
+    <footer>
+        <p>
+            &copy; 2025 CCI Design Proposal | Student Project
+        </p>
+    </footer>
+    <script src="js/style_guide.js"></script>
 </body>
 </html>

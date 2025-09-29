@@ -2,7 +2,8 @@
 :root {
     --primary-color: #0c1446; /* Royal Blue */
     --secondary-color: #175873; /* Teal Green */
-    --accent-color: #2b7c85; /* Teal */
+    --accent-color-1: #2b7c85; /* Teal */
+    --accent-color-2: #9dbf9e; /* Green grey */
     --text-color: #333; /* Dark Grey */
     --background-color: #dff5f2; /* Minty green */
     --background-color-2: #e6f7f9; /* Light aqua */

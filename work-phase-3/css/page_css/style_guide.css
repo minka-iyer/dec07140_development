@@ -1,0 +1,113 @@
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero .intro {
+    max-width: 1400px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column; /* mobile-first: stack */
+    align-items: center; /* center align cards */
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* Card Component */
+.card {
+    background: var(--surface-color, #fff);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    width: 90%;
+    max-width: 350px;
+}
+
+.card h2 {
+    margin-bottom: 0.75rem;
+    font-size: 3rem;
+    margin: 1.5rem auto 0;
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 2rem;
+    margin: 1.5rem auto 0;
+    text-align: center;
+}
+
+/* Buttons inside cards */
+.card .btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    margin: 1.5rem auto 0; /* centers button */
+}
+.card-img {
+    width: 80px; /* fixed icon size */
+    height: 80px; /* keeps it consistent */
+    display: block;
+    object-fit: contain;
+    margin: 0 auto 1rem; /* centers the icon */
+}
+
+.card .btn:hover,
+.card .btn:focus {
+    background-color: var(--primary-color-dark, #08767a);
+    transform: translateY(-2px);
+}
+
+/* Card Hover Effect (micro-interaction) */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Layout: Desktop */
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row; /* switch to row layout */
+        justify-content: space-between;
+        align-items: stretch; /* makes cards equal height */
+    }
+
+    .card {
+        flex: 1 1 calc(33.33% - 1rem);
+        max-width: calc(33.33% - 1rem);
+        display: flex;
+        flex-direction: column; /* so content flows top-to-bottom */
+    }
+    /* pushes button down so it aligns across cards */
+    .card .btn {
+    margin-top: auto;
+    align-self: flex-start; /* keeps button aligned to left */
+    }
+
+    .card-img {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1.5rem;
+    }
+}
