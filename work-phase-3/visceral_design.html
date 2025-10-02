@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/visceral_design.css" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
             rel="stylesheet"
         />
         <link rel="icon" type="image/x-icon" href="assets/favicon_ico/" />
@@ -72,29 +72,54 @@
                     <section class="gallery m-t-3">
                         <img
                             src="assets/homepage_wireframe_desktop.jpg"
-                            alt="Homepage Wireframe for Desktop"
+                            alt="Homepage Wireframe for Desktop highlights the core features of the site, with the header, navigation bars,
+        cards denoting the main sections of the site, news, and key feature of employer challenges displayed prominently.
+        This links to the client need for intuitive navigation and clear pathways, the user story of wanting easy ways
+        to showcase skills, and accessibility principles of low jargon, clear hierarchy, and scannable layout that creates
+        a strong visceral first impression of professionalism."
                         />
+
                         <img
                             src="assets/homepage_Wireframe_mobile.jpg"
-                            alt="Homepage Wireframe for Mobile"
+                            alt="Homepage Wireframe for Mobile shows a simplified and accessible version of the site, with a collapsible menu
+        for navigation, stacked cards for core sections, and quick links to employer challenges. This reflects the client
+        need for mobile accessibility, the user story of accessing the platform on-the-go, and accessibility principles 
+        of large touch targets, minimal clutter, and responsive design for different screen sizes."
                         />
+
                         <img
                             src="assets/ec_wireframe_desktop.jpg"
-                            alt="Employer Challenges landing page for desktop"
+                            alt="Employer Challenges landing page for desktop highlights the key features and layout designed to address user
+        needs of finding suitable challenges quickly, with navigation, search, and filters by skill level and experience.
+        This ties to the client need of streamlining opportunities, the user need of browsing relevant challenges,
+        and accessibility principles of clear search/filter options and logical grouping of content to reduce cognitive load."
                         />
+
                         <img
                             src="assets/ec_wireframe_mobile.jpg"
-                            alt="Employer Challenges landing page for mobile"
+                            alt="Employer Challenges landing page for mobile shows a simplified flow with collapsible filters, easy scrolling
+        through challenges, and prominent call-to-action buttons. This links to the client need for inclusive mobile use,
+        the user need of wanting to apply quickly while short on time as a parent, and accessibility principles of large, clearly labelled
+        interactive elements, ensuring usability on small screens."
                         />
+
                         <img
                             src="assets/ecl_wireframe_desktop.jpg"
-                            alt="Employer Challenges List page for desktop"
+                            alt="Employer Challenges List page for desktop shows an organised grid of open challenges with filters, company
+        branding, time limits, and descriptions visible. This reflects the client need for employer visibility, the user
+        story of comparing multiple challenges at once, and accessibility principles of strong visual contrast, consistent
+        structure, and information hierarchy to support quick scanning."
                         />
+
                         <img
                             src="assets/ecl_wireframe_mobile.jpg"
-                            alt="Employer Challenges List page for mobile"
+                            alt="Employer Challenges List page for mobile provides a stacked, scrollable list of challenges with filters placed 
+        at the top for quick access. This connects to the client need for reach across devices, the user story of easily
+        reviewing opportunities on mobile, and accessibility principles such as responsive scaling, prioritised content,
+        and uncluttered layouts to maintain clarity."
                         />
                     </section>
+
                     <!-- Large Image Viewer -->
                     <aside class="viewer" id="viewer" aria-hidden="true">
                         <button
@@ -106,6 +131,129 @@
                         <img id="viewer-img" src="" alt="" />
                         <p id="viewer-caption"></p>
                     </aside>
+                </article>
+                <section class="color-scheme">
+                    <h2>Colour Scheme</h2>
+                    <p>
+                        Click on a colour to learn more about how it’s used in
+                        the design system.
+                    </p>
+
+                    <!-- Color Circles -->
+                    <div class="color-wheel">
+                        <div
+                            class="color-circle"
+                            style="background-color: #0c1446"
+                            data-label="Primary Royal Blue"
+                            data-code="#0c1446"
+                            data-use="Brand anchors, headings, strong accents"
+                        ></div>
+
+                        <div
+                            class="color-circle"
+                            style="background-color: #175873"
+                            data-label="Secondary Teal Green"
+                            data-code="#175873"
+                            data-use="Buttons, highlights, key UI elements"
+                        ></div>
+
+                        <div
+                            class="color-circle"
+                            style="background-color: #2b7c85"
+                            data-label="Accent Teal"
+                            data-code="#2b7c85"
+                            data-use="Callouts, interactive states, hover effects"
+                        ></div>
+
+                        <div
+                            class="color-circle"
+                            style="background-color: #9dbf9e"
+                            data-label="Accent Green Grey"
+                            data-code="#9dbf9e"
+                            data-use="Neutral backgrounds, dividers, balance"
+                        ></div>
+
+                        <div
+                            class="color-circle"
+                            style="background-color: #dff5f2"
+                            data-label="Background Minty Green"
+                            data-code="#dff5f2"
+                            data-use="Backgrounds, subtle areas"
+                        ></div>
+
+                        <div
+                            class="color-circle"
+                            style="background-color: #e6f7f9"
+                            data-label="Background Light Aqua"
+                            data-code="#e6f7f9"
+                            data-use="Subtle highlights, card backgrounds"
+                        ></div>
+                    </div>
+
+                    <!-- Info Box (starts empty, JS fills it in) -->
+                    <div class="color-info-box" id="color-info"></div>
+                </section>
+                <article class="typography-guide">
+                    <h2 class="section-heading">Typography</h2>
+                    <p class="intro-text">
+                        Our typography choices balance
+                        <strong>innovation</strong> with
+                        <strong>readability</strong>. Headings (H1 and H2) use
+                        <em>Michroma</em> for a futuristic, tech-forward
+                        aesthetic, while subheadings and body text use
+                        <em>Lexend</em> for accessibility and clarity.
+                    </p>
+
+                    <table class="typography-table">
+                        <tr>
+                            <td><h1>Heading 1 – Michroma</h1></td>
+                            <td class="description michroma">
+                                Used for: Page titles, main headers.<br />
+                                Style: Bold, 2.5rem.<br />
+                                Purpose: Creates strong first impressions and
+                                highlights the site’s forward-thinking,
+                                tech-driven identity.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h2>Heading 2 – Michroma</h2></td>
+                            <td class="description michroma">
+                                Used for: Section headings.<br />
+                                Style: Semi-bold, 2rem.<br />
+                                Purpose: Maintains consistency with H1 while
+                                emphasising key sections in a sleek, modern way.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h3>Heading 3 – Lexend</h3></td>
+                            <td class="description lexend">
+                                Used for: Sub-section headings.<br />
+                                Style: Normal weight, 1.5rem.<br />
+                                Purpose: Improves readability and provides
+                                hierarchy without overpowering main headings.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><h4>Heading 4 – Lexend</h4></td>
+                            <td class="description lexend">
+                                Used for: Minor labels, callouts, card
+                                titles.<br />
+                                Style: Normal weight, 1.2rem.<br />
+                                Purpose: Ensures clarity and supports
+                                scannability across components.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p class="lexend">Body Text – Lexend</p></td>
+                            <td class="description lexend">
+                                Used for: Paragraphs, lists, general content.<br />
+                                Style: Regular, 1rem.<br />
+                                Purpose: Highly legible, supporting
+                                accessibility and ease of reading across long
+                                passages of text.
+                            </td>
+                        </tr>
+                    </table>
                 </article>
             </header>
         </main>

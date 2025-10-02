@@ -1,0 +1,49 @@
+.color-wheel {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Circles with black border */
+.color-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black; /* ✅ new border */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Expanded state */
+.color-circle.active {
+    width: 140px;
+    height: 140px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Info Box below circles */
+.color-info-box {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #333;
+    background: #fff;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.color-info-box.visible {
+    display: block;
+}
+/* ✅ Mobile: stack vertically */
+@media (max-width: 768px) {
+    .color-wheel {
+        flex-direction: column;
+    }
+}

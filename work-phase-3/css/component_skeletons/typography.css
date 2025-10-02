@@ -1,0 +1,40 @@
+.typography-guide {
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.typography-guide .intro-text {
+    max-width: 70ch;
+    margin: 0 auto 2rem auto;
+    font-family: "Lexend", sans-serif;
+    line-height: 1.6;
+}
+
+.typography-table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.typography-table td {
+    padding: 1rem 2rem;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Ensure column 1 (headings) is narrower */
+.typography-table td:first-child {
+    width: 30%;
+    text-align: center;
+}
+
+/* Font matching */
+.description.michroma {
+    font-family: "Michroma", sans-serif;
+}
+
+.description.lexend {
+    font-family: "Lexend", sans-serif;
+}

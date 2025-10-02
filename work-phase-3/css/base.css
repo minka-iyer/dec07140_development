@@ -11,7 +11,6 @@
 
 /* Global defaults */
 body {
-    font-family: "Michroma", sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: var(--text-color);
@@ -26,6 +25,7 @@ h1 {
     font-weight: normal;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    font-family: Michroma, sans-serif;
 }
 
 h2 {
@@ -33,6 +33,8 @@ h2 {
     font-weight: normal;
     color: var(--secondary-color);
     margin-bottom: 0.75rem;
+    font-family: Michroma, sans-serif;
+
 }
 
 h3 {
@@ -40,6 +42,8 @@ h3 {
     font-weight: normal;
     color: var(--accent-color);
     margin-bottom: 0.5rem;
+    font-family: Lexend, sans-serif;
+
 }
 
 h4,
@@ -48,13 +52,14 @@ h6 {
     font-size: 1.25rem; /* smaller scale */
     font-weight: normal;
     color: var(--primary-color);
+    font-family: Lexend, sans-serif;
 }
 
 /* Paragraphs & links */
 p {
     font-size: 1rem;
     margin-bottom: 1rem;
-    font-family: "Lexend" sans-serif;
+    font-family: Lexend, sans-serif;
 }
 
 a {

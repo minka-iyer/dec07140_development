@@ -9,6 +9,7 @@ h2 {
 h3 {
     font-size: 1.6rem;
     color: var(--accent-color);
+    font-family: lexend, sans-serif;
 }
 p {
     color: var(--text-color);
