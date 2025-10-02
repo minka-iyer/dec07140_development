@@ -1,0 +1,156 @@
+.button-group {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2.5rem; /* bigger spacing between each stacked button */
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.button-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Primary button styling */
+.primary-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes text left, icon right */
+    background-color: #175873;
+    color: #ffffff;
+    font-family: "Michroma", sans-serif;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    max-width: 400px; /* keeps button from being too wide */
+    border: none;
+    border-radius: 50px; /* pill shape */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 1rem; /* space between text + icon */
+}
+
+.primary-btn:hover {
+    background-color: #2b7c85;
+    transform: scale(1.05);
+}
+
+.primary-btn:active {
+    background-color: #0c1446;
+    transform: scale(0.98);
+}
+
+.btn-text {
+    text-transform: uppercase;
+    flex-grow: 1; /* pushes icon to far right */
+    text-align: left;
+}
+
+.btn-icon {
+    width: 100px; /* adjust size */
+    height: 100px;
+}
+
+/* Annotation box — now aligned beside the button */
+.annotation {
+    display: none; /* hidden by default */
+    position: absolute; /* relative to .button-container */
+    top: 50%; /* vertically centered with button */
+    left: 105%; /* just to the right of button */
+    transform: translateY(-50%); /* perfect vertical centering */
+    width: 300px;
+    background: #ffffff;
+    border: 2px solid #0c1446; /* primary colour */
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    font-family: "Lexend", sans-serif;
+    font-size: 0.95rem;
+    color: #0c1446;
+    z-index: 1000;
+}
+
+.annotation p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+#close-dialog {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+.behavioural-buttons {
+    margin-top: 3rem;
+}
+
+.behavioural-buttons h2 {
+    font-family: "Michroma", sans-serif;
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--secondary-color);
+}
+
+/* Tertiary Button */
+.tertiary-btn {
+    background-color: var(--accent-color-1);
+    color: #fff;
+    font-family: "Lexend", sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tertiary-btn:hover {
+    background-color: var(--accent-color-2);
+    transform: scale(1.05);
+}
+
+.tertiary-btn:active {
+    background-color: var(--secondary-color);
+    transform: scale(0.95);
+}
+
+/* Utility buttons stacked properly */
+.utility-buttons {
+    display: flex;
+    gap: 1.5rem;         /* space between Search + Filters */
+    margin-top: 1rem;
+    justify-content: center; /* center them under the others */
+}
+
+.icon-btn {
+    background-color: var(--accent-color-2);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.icon-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-btn:hover {
+    background-color: var(--accent-color-1);
+    transform: scale(1.1);
+}
+
+.icon-btn:active {
+    background-color: var(--secondary-color);
+}

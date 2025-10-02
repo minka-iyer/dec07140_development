@@ -1,29 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/base.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
             rel="stylesheet"
         />
-    <link rel="icon" type ="image/x-icon" href = "assets/favicon_ico/">
-    <title>Behavioural Design/title>
-</head>
-<body>
-    <nav id ="nav_mobile" aria-label="Main Navigation">
+        <link rel="icon" type="image/x-icon" href="assets/favicon_ico/" />
+        <title>Behavioural Design</title>
+    </head>
+    <body>
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li>
+                    <a href="index.html"><span class="icon">🏠</span></a>
+                </li>
+                <li>
+                    <a href="site_map.html" aria-current="page"
+                        ><span class="icon">🧭</span></a
+                    >
+                </li>
+                <li>
+                    <a href="style_guide.html"><span class="icon">🎨</span></a>
+                </li>
+                <li>
+                    <a href="ethical_response.html"
+                        ><span class="icon">⚖️</span></a
+                    >
+                </li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        ><span class="icon">🤖</span></a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-    </nav>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li>
+                    <a href="site_map.html" aria-current="page">Site Map</a>
+                </li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
+        <main>
+            <header class="hero">
+                <h1 class="m-y-5">Behavioural Design</h1>
+                <p class="intro">
+                    The focus of this section of the Style Guide is on
+                    Behavioural Design, which addresses the user's interactions
+                    and experiences with a product or interface. It ensures that
+                    the design is intuitive, efficient, and enjoyable to use,
+                    ultimately leading to a positive overall experience.
+                    <br /><strong>Click on each of the buttons to learn more about their design and functionality.</strong>
+                </p>
+                <main>
+                    <!-- Employer Challenges Button -->
+                <div class = "button-group">
+                    <div class="button-container">
+                    <button id="employer-btn" class="primary-btn">
+                        <span class="btn-text">Submit Challenge Entry</span>
+                        <img
+                            src="assets/ec_button.svg"
+                            alt="Employer Challenges Icon"
+                            class="btn-icon"
+                        />
+                    </button>
 
-    <nav id ="nav-desktop" aria-label="Main Navigation">
+                    <!-- Annotation Dialog -->
+                    <div id="annotation-dialog" class="annotation">
+                        <button id="close-dialog">✖</button>
+                        <p>
+                            This call-to-action button signifies to the user that their response to the employer's challenge will be submitted, with the
+                            clear icon that symbolises problem solving. The
+                            feedback the user receives is threefold – the button
+                            ‘pops’ out, the colour changes, and the icon colour
+                            changes. It contains both the <em>primary</em> and <i>secondary</i>
+                            colours to denote the importance of the feature.
+                        </p>
+                    </div>
+                <br />
+                    <!-- Tertiary Action Button -->
+                    <div class="button-container">
+                    <button id="tertiary-btn" class="tertiary-btn">
+                        <span class="btn-text">How This Works</span>
+                    </button>
 
-    </nav>
-    <main>
-        <h1>Behavioural Design</h1>
-    </main>
-</body>
+                    <!-- Annotation Dialog -->
+                    <div id="annotation-tertiary" class="annotation">
+                        <button class="close-dialog">✖</button>
+                        <p>
+                        This button explains the process to the user in a clear way. It provides feedback
+                        through a colour shift when hovered and clicked, guiding the user while keeping
+                        the interaction intuitive. The use of the accent colour maintains consistency
+                        with the design scheme and signals supporting functionality.
+                        </p>
+                    </div>
+                    </div>
+
+                    <!-- Utility Button: Search -->
+                    <div class="button-container">
+                    <button id="search-btn" class="utility-btn">
+                        🔍 Search
+                    </button>
+
+                    <!-- Annotation Dialog -->
+                    <div id="annotation-search" class="annotation">
+                        <button class="close-dialog">✖</button>
+                        <p>
+                        This button signifies search functionality with the familiar magnifying glass icon,
+                        a strong signifier for users. The feedback is immediate with hover and click colour
+                        changes. It uses the secondary colour for visibility, denoting its importance in
+                        navigation.
+                        </p>
+                    </div>
+                    </div>
+
+                    <!-- Utility Button: Filters -->
+                    <div class="button-container">
+                    <button id="filter-btn" class="utility-btn">
+                        ⚙️ Filters
+                    </button>
+
+                    <!-- Annotation Dialog -->
+                    <div id="annotation-filter" class="annotation">
+                        <button class="close-dialog">✖</button>
+                        <p>
+                        This button allows users to refine results, with the gear icon acting as a clear
+                        signifier of settings or adjustments. Feedback comes through hover and click
+                        responses, ensuring users know their action was registered. The accent colour
+                        ties it visually into the wider system of interactive elements.
+                        </p>
+                    </div>
+                    </div>
+                    </div>
+                </main>
+            </header>
+        </main>
+        <script type="module" src="js/behavioural_design.js"></script>
+    </body>
 </html>
