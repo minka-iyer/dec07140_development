@@ -119,3 +119,54 @@ nav ul li {
     max-width: 100%;
     height: auto;
 }
+
+table {
+    margin: 0 auto;
+    text-align: center;
+}
+
+td img {
+    display: block;
+    margin: 0 auto;
+}
+.navigation-section {
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.navigation-section h2,
+.navigation-section h3 {
+    color: #175873;
+    margin-bottom: 10px;
+}
+
+.navigation-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.navigation-section th,
+.navigation-section td {
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.navigation-section img {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.annotation {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+}

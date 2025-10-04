@@ -16,6 +16,7 @@
         <title>Behavioural Design</title>
     </head>
     <body>
+        <!-- MOBILE NAV -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
                 <li>
@@ -42,6 +43,7 @@
             </ul>
         </nav>
 
+        <!-- DESKTOP NAV -->
         <nav id="nav-desktop" aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">WP3 Home</a></li>
@@ -53,6 +55,7 @@
                 <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
             </ul>
         </nav>
+
         <main>
             <header class="hero">
                 <h1 class="m-y-5">Behavioural Design</h1>
@@ -62,161 +65,289 @@
                     and experiences with a product or interface. It ensures that
                     the design is intuitive, efficient, and enjoyable to use,
                     ultimately leading to a positive overall experience.
-                    <br /><strong>Click on each of the buttons to learn more about their design and functionality.</strong>
+                    <br />
+                    <strong
+                        >Click on each of the buttons to learn more about their
+                        design and functionality.</strong
+                    >
                 </p>
-                <main>
+            </header>
+
+            <!-- BUTTONS -->
+            <section class="buttons">
                 <h2>Buttons</h2>
-                    <!-- Employer Challenges Button -->
-                <div class = "button-group">
+                <div class="button-group">
+                    <!-- Employer Challenges -->
                     <div class="button-container">
-                    <button id="employer-btn" class="primary-btn">
-                        <span class="btn-text">Submit Challenge Entry</span>
-                        <img
-                            src="assets/ec_button.svg"
-                            alt="Employer Challenges Icon"
-                            class="btn-icon"
-                        />
-                    </button>
-
-                    <!-- Annotation Dialog -->
-                    <div id="annotation-dialog" class="annotation">
-                        <button id="close-dialog">✖</button>
-                        <p>
-                            This call-to-action button signifies to the user that their response to the employer's challenge will be submitted, with the
-                            clear icon that symbolises problem solving. The
-                            feedback the user receives is threefold – the button
-                            ‘pops’ out, the colour changes, and the icon colour
-                            changes. It contains both the <em>primary</em> and <i>secondary</i>
-                            colours to denote the importance of the feature.
-                        </p>
+                        <button id="employer-btn" class="primary-btn">
+                            <span class="btn-text">Submit Challenge Entry</span>
+                            <img
+                                src="assets/ec_button.svg"
+                                alt="Employer Challenges Icon"
+                                class="btn-icon"
+                            />
+                        </button>
+                        <div id="annotation-dialog" class="annotation">
+                            <p>
+                                This call-to-action button signifies submission.
+                                Feedback is threefold: the button ‘pops’ out,
+                                the colour changes, and the icon colour changes.
+                                It combines primary and secondary colours to
+                                emphasise importance.
+                            </p>
+                        </div>
                     </div>
-                <br />
-                    <!-- Tertiary Action Button -->
+
+                    <!-- Tertiary -->
                     <div class="button-container">
-                    <button id="tertiary-btn" class="tertiary-btn">
-                        <span class="btn-text">How This Works</span>
-                    </button>
-
-                    <!-- Annotation Dialog -->
-                    <div id="annotation-tertiary" class="annotation">
-                        <button class="close-dialog">✖</button>
-                        <p>
-                        This button explains the process to the user in a clear way. It provides feedback
-                        through a colour shift when hovered and clicked, guiding the user while keeping
-                        the interaction intuitive. The use of the accent colour maintains consistency
-                        with the design scheme and signals supporting functionality.
-                        </p>
-                    </div>
+                        <button id="tertiary-btn" class="tertiary-btn">
+                            <span class="btn-text">How This Works</span>
+                        </button>
+                        <div id="annotation-tertiary" class="annotation">
+                            <p>
+                                This button explains the process in a clear way.
+                                Feedback comes via colour shifts on hover/click,
+                                guiding the user. Accent colour supports
+                                consistency across the design system.
+                            </p>
+                        </div>
                     </div>
 
-                    <!-- Utility Button: Search -->
+                    <!-- Search -->
                     <div class="button-container">
-                    <button id="search-btn" class="utility-btn">
-                        🔍 Search
-                    </button>
-
-                    <!-- Annotation Dialog -->
-                    <div id="annotation-search" class="annotation">
-                        <button class="close-dialog">✖</button>
-                        <p>
-                        This button signifies search functionality with the familiar magnifying glass icon,
-                        a strong signifier for users. The feedback is immediate with hover and click colour
-                        changes. It uses the secondary colour for visibility, denoting its importance in
-                        navigation.
-                        </p>
-                    </div>
+                        <button id="search-btn" class="utility-btn">
+                            🔍 Search
+                        </button>
+                        <div id="annotation-search" class="annotation">
+                            <p>
+                                Search uses the magnifying glass, a strong
+                                signifier. Feedback appears immediately with
+                                hover and click. Secondary colour ensures
+                                visibility and importance in navigation.
+                            </p>
+                        </div>
                     </div>
 
-                    <!-- Utility Button: Filters -->
+                    <!-- Filters -->
                     <div class="button-container">
-                    <button id="filter-btn" class="utility-btn">
-                        ⚙️ Filters
-                    </button>
+                        <button id="filter-btn" class="utility-btn">
+                            ⚙️ Filters
+                        </button>
+                        <div id="annotation-filter" class="annotation">
+                            <p>
+                                Filters use the gear icon, a recognised
+                                signifier for adjustments. Hover and click
+                                states provide clear feedback. Accent colour
+                                ties it visually into the system of interactive
+                                elements.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                    <!-- Annotation Dialog -->
-                    <div id="annotation-filter" class="annotation">
-                        <button class="close-dialog">✖</button>
-                        <p>
-                        This button allows users to refine results, with the gear icon acting as a clear
-                        signifier of settings or adjustments. Feedback comes through hover and click
-                        responses, ensuring users know their action was registered. The accent colour
-                        ties it visually into the wider system of interactive elements.
-                        </p>
-                    </div>
-                    </div>
-                    </div>
-                </main>
-                <div class = "cards">
-                    <h2>Cards</h2>
-                        <p>Cards designed to
-                            support smooth
-                            navigation in line with the colour palette and typography
-                            established in the Visceral Design section.
-                        </p>
-                        <table>
-                        <tr>
-                        <th><h2><strong>Initial State</strong></h2></th>
-                        <th><h2><strong>Hover/Clicked State</strong></h2></th>
-                        </tr>
-                        <tr>
+            <!-- CARDS -->
+            <section class="cards">
+                <h2>Cards</h2>
+                <p>
+                    Cards support smooth navigation and align with the colour
+                    palette and typography established in the Visceral Design
+                    section.
+                </p>
+                <table>
+                    <tr>
+                        <th>Initial State</th>
+                        <th>Hover/Clicked State</th>
+                    </tr>
+                    <tr>
                         <td>
-                        <img
-                            src="assets/community.png"
-                            alt="Card for community page on homepage"
-                        />
+                            <img
+                                src="assets/community.png"
+                                alt="Community card"
+                            />
                         </td>
                         <td>
-                        <img
-                            src="assets/community_hover.png"
-                            alt="Card for community page on homepage"
-                            class="hover-state"
-                        />
+                            <img
+                                src="assets/community_hover.png"
+                                alt="Community card hover"
+                                class="hover-state"
+                            />
                         </td>
-                        </tr>
-                        <tr>
+                    </tr>
+                    <tr>
                         <td>
-                        <img 
-                            src="assets/learn-2.png"
-                            alt="Card for learn page on homepage"
-                        />
+                            <img src="assets/learn-2.png" alt="Learn card" />
                         </td>
                         <td>
-                        <img
-                            src="assets/learn_hover.png"
-                            alt="Card for learn page on homepage"
-                            class="hover-state"
-                        />
+                            <img
+                                src="assets/learn_hover.png"
+                                alt="Learn card hover"
+                                class="hover-state"
+                            />
                         </td>
-                        </tr>
-                        <tr>
+                    </tr>
+                    <tr>
                         <td>
-                        <img
-                            src="assets/career.png"
-                            alt="Card for career page on homepage"
-                        />
+                            <img src="assets/career.png" alt="Career card" />
                         </td>
                         <td>
-                        <img
-                            src="assets/career_hover.png"
-                            alt="Card for career page on homepage"
-                            class="hover-state"
-                        />
+                            <img
+                                src="assets/career_hover.png"
+                                alt="Career card hover"
+                                class="hover-state"
+                            />
                         </td>
-                        </tr>
-                        <tr>
+                    </tr>
+                    <tr>
                         <td>
-                        <img
-                            src="assets/network.png"
-                            alt="Card for network page on homepage"
-                        />
+                            <img src="assets/network.png" alt="Network card" />
                         </td>
                         <td>
-                        <img
-                            src="assets/network_hover.png"
-                            alt="Card for network page on homepage"
-                            class="hover-state"
-                        />
+                            <img
+                                src="assets/network_hover.png"
+                                alt="Network card hover"
+                                class="hover-state"
+                            />
                         </td>
-                        </tr>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- LINKS -->
+            <section class="links">
+                <h2>Links</h2>
+                <p>
+                    Links are designed to support smooth navigation in line with
+                    the colour palette and typography established in the
+                    Visceral Design section.
+                </p>
+                <table>
+                    <tr>
+                        <th>Initial State</th>
+                        <th>Hover/Clicked State</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                src="assets/links.png"
+                                alt="Links initial state"
+                            />
+                        </td>
+                        <td>
+                            <img
+                                src="assets/links_hover.png"
+                                alt="Links hover state"
+                                class="hover-state"
+                            />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="annotation">
+                                Initial links use secondary colours and accents
+                                to maintain a cohesive design system. Typography
+                                is clear and legible (Michroma font).
+                            </p>
+                        </td>
+                        <td>
+                            <p class="annotation">
+                                On hover/click, links invert to background
+                                colour and text gains drop shadow. This provides
+                                feedback and signals interactivity.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- NAVIGATION -->
+            <section class="navigation-section">
+                <h2>Navigation</h2>
+                <p>
+                    Navigation menus support smooth movement across the site.
+                    They use active states, dropdowns, and mobile responsiveness
+                    to ensure usability and accessibility.
+                </p>
+
+                <h3>Desktop Navigation</h3>
+                <table>
+                    <tr>
+                        <th>Default Bar</th>
+                        <th>Expanded Dropdown</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                src="assets/desktop_menu.png"
+                                alt="Desktop nav bar"
+                            />
+                            <p class="annotation">
+                                Active state (highlighted item) supports
+                                discoverability. Consistent top placement
+                                matches user expectations (WCAG 3.2.3).
+                            </p>
+                        </td>
+                        <td>
+                            <img
+                                src="assets/desktop_menu_expanded.png"
+                                alt="Desktop nav expanded"
+                            />
+                            <p class="annotation">
+                                Dropdowns group related content (Events,
+                                Forums), reflecting user mental models. Hover
+                                feedback clarifies interactivity (WCAG 1.3.2).
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                <h3>Mobile Navigation</h3>
+                <table>
+                    <tr>
+                        <th>Collapsed</th>
+                        <th>Expanded</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                src="assets/hamburger_menu.png"
+                                alt="Hamburger collapsed"
+                            />
+                            <p class="annotation">
+                                Hamburger icon conserves space on mobile.
+                                Familiar signifier makes navigation easy to
+                                locate.
+                            </p>
+                        </td>
+                        <td>
+                            <img
+                                src="assets/menu_mobile.png"
+                                alt="Hamburger expanded"
+                            />
+                            <p class="annotation">
+                                Expanded vertical list maintains consistency
+                                with desktop. Large tap targets support
+                                accessibility (WCAG 2.5.5).
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img
+                                src="assets/menu_expanded_mobile.png"
+                                alt="Mobile dropdowns"
+                            />
+                            <p class="annotation">
+                                Dropdowns (Events, Forums) reveal related links
+                                in a vertical list, supporting user mental
+                                models. Hover/active states improve
+                                discoverability.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+        <script type = "module" src="js/behavioural_design.js"></script>
     </body>
 </html>
