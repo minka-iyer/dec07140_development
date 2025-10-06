@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/base.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/reflective_design.css" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
             rel="stylesheet"
         />
-    <link rel="icon" type ="image/x-icon" href = "assets/favicon_ico/">
-    <title>Reflective Design</title>
-</head>
-<body>
-    <nav id ="nav_mobile" aria-label="Main Navigation">
+        <title>Reflective Design</title>
+    </head>
 
-    </nav>
+    <body>
+        <!-- MOBILE NAV -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">🏠</a></li>
+                <li><a href="site_map.html" aria-current="page">🧭</a></li>
+                <li><a href="style_guide.html">🎨</a></li>
+                <li><a href="ethical_response.html">⚖️</a></li>
+                <li><a href="genai_mt_acknowledgement.html">🤖</a></li>
+            </ul>
+        </nav>
 
-    <nav id ="nav-desktop" aria-label="Main Navigation">
+        <!-- DESKTOP NAV -->
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li>
+                    <a href="site_map.html" aria-current="page">Site Map</a>
+                </li>
+                <li><a href="style_guide.html">Style Guide</a></li>
+                <li><a href="ethical_response.html">Ethics Response</a></li>
+                <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
+            </ul>
+        </nav>
 
-    </nav>
-    <main>
+        <main>
+            <header class="hero">
+                <h1 class="m-y-5">Behavioural Design</h1>
+                <p class="intro">
+                    This section demonstrates how users interact with the design
+                    through visual feedback and navigation flow.
+                    <br />
+                    <strong
+                        >Click each button to display its design
+                        annotation.</strong
+                    >
+                </p>
+            </header>
         <h1> Reflective Design</h1>
     </main>
 </body>

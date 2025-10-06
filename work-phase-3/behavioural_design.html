@@ -203,11 +203,17 @@
                 </table>
             </section>
         </main>
-        <form id="community-form" enctype="multipart/form-data">
-            <!-- Full Name -->
-            <label for="name">Full Name</label>
-            <input
-                type="text"
+        <section class="form-section">
+            <div class="form-wrapper">
+                <h1>Form Design</h1>
+                <h3 class="form-description">
+                    The “Join the Community” form enables users to easily submit their details and join the CCI community. It demonstrates behavioural-level design by providing immediate feedback, built-in validation, and accessible interaction cues that build trust and confidence. The form connects to a real API using modular JavaScript for scalability and maintainability.
+                </h3>
+            <form id="community-form" enctype="multipart/form-data">
+                <!-- Full Name -->
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
                 id="name"
                 name="name"
                 required
@@ -256,6 +262,8 @@
                 Join the Community
             </button>
         </form>
+    </div>
+    </section>
 
         <!-- Feedback message area -->
         <p id="form-feedback" aria-live="polite"></p>

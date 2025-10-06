@@ -1,3 +1,7 @@
+/* ------------------ */
+/* Form Element Styling */
+/* ------------------ */
+
 form small {
     display: block;
     color: #666;
@@ -28,9 +32,62 @@ button {
     border-radius: 6px;
     cursor: pointer;
     margin-top: 1rem;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: var(--accent-color);
+}
+
+/* ------------------ */
+/* Layout & Positioning */
+/* ------------------ */
+
+body {
+    background-color: var(--background-color-2);
+    font-family: "Lexend", sans-serif;
+}
+
+form {
+    margin: 4rem auto; 
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+/* Center the form section heading and description */
+h2, h3 {
+    text-align: center;
+}
+
+.form-description {
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+
+/* ------------------ */
+/* Feedback Styling */
+/* ------------------ */
+
 #form-feedback {
+    text-align: center;
     margin-top: 1.5rem;
     font-weight: 500;
+    display: block;
+}
+
+
+/* ------------------ */
+/* Wrapper Styling */
+/* ------------------ */
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
