@@ -225,6 +225,49 @@
                     height="500"
                 ></iframe>
             </section>
+            <section id="community-list" class="content-section">
+                <h3> Community Reflections</h3>
+                <p> Below are the voices and messages shared by our community members: </p>
+            </section>
+            <h2>Accessibility Audit</h2>
+                    <p>
+                        This accessibility assessment was conducted using the IBM Equal Access Accessibility Checker Chrome extension. Below are three key issues identified and the actions planned to address them in the final implementation.
+                    </p>
+
+                    <article class="accessibility-issue">
+                        <h3>Issue 1: Missing Landmark Elements</h3>
+                        <ul>
+                        <li><strong>WCAG Criterion:</strong> 1.3.1 Info and Relationships (Level A)</li>
+                        <li><strong>Affected Element:</strong> Main content not wrapped in a landmark element</li>
+                        <li><strong>Impact:</strong> Screen-reader users cannot easily navigate between sections of the page.</li>
+                        <li><strong>Planned Fix:</strong> Wrap primary page content inside semantic landmarks such as main,header, and footer; to define structure clearly.</li>
+                    </ul>
+                    </article>
+
+                    <article class="accessibility-issue">
+    <h3>Issue 2: Headings Outside of Landmarks</h3>
+    <ul>
+            <li><strong>WCAG Criterion:</strong> 2.4.6 Headings and Labels (Level AA)</li>
+            <li><strong>Affected Element:</strong> <code>&lt;h1&gt;</code> heading located outside of any <code>&lt;main&gt;</code> or <code>&lt;section&gt;</code></li>
+            <li><strong>Impact:</strong> Disrupts logical document flow, causing confusion for users navigating via screen readers.</li>
+            <li><strong>Planned Fix:</strong> Move all headings inside relevant landmark regions (e.g., within <code>&lt;main&gt;</code>) and maintain a consistent heading hierarchy.</li>
+            </ul>
+        </article>
+
+        <article class="accessibility-issue">
+            <h3>Issue 3: Table Headers Not Properly Defined</h3>
+            <ul>
+            <li><strong>WCAG Criterion:</strong> 1.3.1 Info and Relationships (Level A)</li>
+            <li><strong>Affected Element:</strong> Complex table missing <code>&lt;th&gt;</code> and <code>scope</code> attributes</li>
+            <li><strong>Impact:</strong> Screen readers cannot associate table headers with their corresponding cells, making the table content inaccessible.</li>
+            <li><strong>Planned Fix:</strong> Add appropriate <code>&lt;th scope="col"&gt;</code> and <code>&lt;th scope="row"&gt;</code> tags to define relationships between headers and cells.</li>
+            </ul>
+        </article>
+                    <p class="reflection">
+                        Addressing these issues will improve the site’s navigation, readability, and accessibility for users with assistive technologies. In the final implementation, I will continue validating each page using the IBM Equal Access Checker to ensure compliance with WCAG 2.2 standards.
+                    </p>
+                    </section>
         </main>
+        <script type="module" src="js/view.js"></script>
     </body>
 </html>

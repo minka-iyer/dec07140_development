@@ -130,3 +130,5 @@ iframe {
         max-width: 100%;
     }
 }
+
+@import '../component_skeletons/accessibility_audit.css';
