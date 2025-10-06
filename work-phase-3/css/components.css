@@ -1,5 +1,8 @@
 @import "./component_skeletons/accordion.css";
 
+/* ===================================== */
+/*               HERO SECTION             */
+/* ===================================== */
 .hero {
     background-color: var(--background-color-2);
     color: var(--text-color);
@@ -17,9 +20,11 @@
     color: var(--accent-color);
 }
 
-/* ------------------ */
-/* Shared nav styles  */
-/* ------------------ */
+/* ===================================== */
+/*              NAVIGATION                */
+/* ===================================== */
+
+/* Shared nav styles */
 nav ul {
     display: flex;
     flex-direction: row;
@@ -30,13 +35,11 @@ nav ul {
 }
 
 nav ul li {
-    flex: 1; /* makes items evenly share width */
+    flex: 1;
     text-align: center;
 }
 
-/* ------------------ */
 /* Mobile nav (default) */
-/* ------------------ */
 #nav-mobile {
     position: fixed;
     bottom: 0;
@@ -67,23 +70,19 @@ nav ul li {
     font-family: Michroma, sans-serif;
 }
 
-/* ------------------ */
 /* Desktop nav (hidden by default) */
-/* ------------------ */
 #nav-desktop {
     display: none;
 }
 
-/* ------------------ */
 /* Desktop nav (≥768px) */
-/* ------------------ */
 @media screen and (min-width: 768px) {
     #nav-mobile {
-        display: none; /* hide bottom bar */
+        display: none;
     }
 
     #nav-desktop {
-        display: block; /* show top bar */
+        display: block;
         position: fixed;
         top: 0;
         left: 0;
@@ -114,6 +113,9 @@ nav ul li {
     }
 }
 
+/* ===================================== */
+/*            GENERAL TABLES              */
+/* ===================================== */
 .responsive-img {
     display: block;
     max-width: 100%;
@@ -129,44 +131,149 @@ td img {
     display: block;
     margin: 0 auto;
 }
-.navigation-section {
-    margin: 40px auto;
-    max-width: 1000px;
-    text-align: center;
+
+/* ===================================== */
+/*            ANNOTATION STYLES           */
+/* ===================================== */
+
+/* --- 1. Interactive button annotations --- */
+.button-container .annotation {
+    display: none;
+    background: #f4f8f8;
+    border-left: 4px solid #175873;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #222;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.navigation-section h2,
-.navigation-section h3 {
-    color: #175873;
-    margin-bottom: 10px;
+.button-container .annotation.visible {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
 }
 
+.annotation .close-dialog {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* --- 2. Static annotations (always visible for nav + links) --- */
+.navigation-section .annotation,
+.links .annotation {
+    display: block;
+    background: none;
+    border-left: 3px solid #175873;
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #222;
+    line-height: 1.5;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================================== */
+/*          NAVIGATION IMAGES FIX         */
+/* ===================================== */
+
+/* Scaled desktop navigation screenshots (5× size, still responsive) */
+.nav-large {
+    width: 1500px;
+    max-width: 90vw;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Table alignment + centering */
 .navigation-section table {
+    margin: 0 auto;
+    text-align: center;
+    table-layout: fixed;
     width: 100%;
-    border-collapse: collapse;
-    margin: 20px auto;
 }
 
 .navigation-section th,
 .navigation-section td {
-    padding: 20px;
-    text-align: center;
+    width: 50%;
     vertical-align: top;
+    padding: 20px;
+    overflow: hidden;
 }
 
-.navigation-section img {
-    max-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-    display: block;
-    margin: 0 auto 10px auto;
+/* ===================================== */
+/*            BUTTON LAYOUT               */
+/* ===================================== */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
-.annotation {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #333;
-    text-align: left;
-    max-width: 300px;
-    margin: 0 auto;
+.button-container {
+    position: relative;
+    text-align: center;
+}
+
+/* ===================================== */
+/*            GENERAL CLEANUP             */
+/* ===================================== */
+.annotation p {
+    margin: 0;
+}
+@media (max-width: 1024px) {
+    .nav-large {
+        width: 1000px;
+        max-width: 95vw;
+    }
+
+    .navigation-section th,
+    .navigation-section td {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Mobile scaling */
+@media (max-width: 600px) {
+    .nav-large {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .navigation-section table {
+        table-layout: auto;
+    }
+
+    .navigation-section th,
+    .navigation-section td {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navigation-section img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .annotation {
+        max-width: 90%;
+    }
 }

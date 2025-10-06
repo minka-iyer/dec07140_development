@@ -1,5 +1,4 @@
 export function initButtons() {
-    // Grab all button-containers
     const containers = document.querySelectorAll(".button-container");
 
     containers.forEach((container) => {
@@ -8,14 +7,13 @@ export function initButtons() {
         const closeBtn = container.querySelector(".close-dialog");
 
         if (button && dialog && closeBtn) {
-            // Show dialog
             button.addEventListener("click", () => {
-                dialog.style.display = "block";
+                dialog.classList.add("visible");
             });
 
-            // Hide dialog
-            closeBtn.addEventListener("click", () => {
-                dialog.style.display = "none";
+            closeBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                dialog.classList.remove("visible");
             });
         }
     });

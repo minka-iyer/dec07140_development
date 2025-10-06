@@ -12,34 +12,18 @@
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
             rel="stylesheet"
         />
-        <link rel="icon" type="image/x-icon" href="assets/favicon_ico/" />
         <title>Behavioural Design</title>
     </head>
+
     <body>
         <!-- MOBILE NAV -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
-                <li>
-                    <a href="index.html"><span class="icon">🏠</span></a>
-                </li>
-                <li>
-                    <a href="site_map.html" aria-current="page"
-                        ><span class="icon">🧭</span></a
-                    >
-                </li>
-                <li>
-                    <a href="style_guide.html"><span class="icon">🎨</span></a>
-                </li>
-                <li>
-                    <a href="ethical_response.html"
-                        ><span class="icon">⚖️</span></a
-                    >
-                </li>
-                <li>
-                    <a href="genai_mt_acknowledgement.html"
-                        ><span class="icon">🤖</span></a
-                    >
-                </li>
+                <li><a href="index.html">🏠</a></li>
+                <li><a href="site_map.html" aria-current="page">🧭</a></li>
+                <li><a href="style_guide.html">🎨</a></li>
+                <li><a href="ethical_response.html">⚖️</a></li>
+                <li><a href="genai_mt_acknowledgement.html">🤖</a></li>
             </ul>
         </nav>
 
@@ -60,294 +44,222 @@
             <header class="hero">
                 <h1 class="m-y-5">Behavioural Design</h1>
                 <p class="intro">
-                    The focus of this section of the Style Guide is on
-                    Behavioural Design, which addresses the user's interactions
-                    and experiences with a product or interface. It ensures that
-                    the design is intuitive, efficient, and enjoyable to use,
-                    ultimately leading to a positive overall experience.
+                    This section demonstrates how users interact with the design
+                    through visual feedback and navigation flow.
                     <br />
                     <strong
-                        >Click on each of the buttons to learn more about their
-                        design and functionality.</strong
+                        >Click each button to display its design
+                        annotation.</strong
                     >
                 </p>
             </header>
 
             <!-- BUTTONS -->
             <section class="buttons">
-                <h2>Buttons</h2>
+                <h1>Buttons</h1>
                 <div class="button-group">
-                    <!-- Employer Challenges -->
                     <div class="button-container">
-                        <button id="employer-btn" class="primary-btn">
-                            <span class="btn-text">Submit Challenge Entry</span>
+                        <button class="primary-btn">
+                            Submit Challenge Entry
                             <img
                                 src="assets/ec_button.svg"
-                                alt="Employer Challenges Icon"
+                                alt="Icon"
                                 class="btn-icon"
                             />
                         </button>
-                        <div id="annotation-dialog" class="annotation">
+                        <div class="annotation hidden">
+                            <button class="close-dialog">✖</button>
                             <p>
                                 This call-to-action button signifies submission.
-                                Feedback is threefold: the button ‘pops’ out,
-                                the colour changes, and the icon colour changes.
-                                It combines primary and secondary colours to
-                                emphasise importance.
+                                It provides feedback through movement, colour
+                                change, and icon shift. Uses both primary and
+                                secondary colours to indicate importance.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Tertiary -->
                     <div class="button-container">
-                        <button id="tertiary-btn" class="tertiary-btn">
-                            <span class="btn-text">How This Works</span>
-                        </button>
-                        <div id="annotation-tertiary" class="annotation">
+                        <button class="tertiary-btn">How This Works</button>
+                        <div class="annotation hidden">
+                            <button class="close-dialog">✖</button>
                             <p>
-                                This button explains the process in a clear way.
-                                Feedback comes via colour shifts on hover/click,
-                                guiding the user. Accent colour supports
+                                Explains processes clearly and uses accent
+                                colour feedback on hover/click. Maintains
                                 consistency across the design system.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Search -->
                     <div class="button-container">
-                        <button id="search-btn" class="utility-btn">
-                            🔍 Search
-                        </button>
-                        <div id="annotation-search" class="annotation">
+                        <button class="utility-btn">🔍 Search</button>
+                        <div class="annotation hidden">
+                            <button class="close-dialog">✖</button>
                             <p>
-                                Search uses the magnifying glass, a strong
-                                signifier. Feedback appears immediately with
-                                hover and click. Secondary colour ensures
-                                visibility and importance in navigation.
+                                Search button uses a universal icon for
+                                recognition. Immediate colour feedback improves
+                                clarity and visibility.
                             </p>
                         </div>
                     </div>
 
-                    <!-- Filters -->
                     <div class="button-container">
-                        <button id="filter-btn" class="utility-btn">
-                            ⚙️ Filters
-                        </button>
-                        <div id="annotation-filter" class="annotation">
+                        <button class="utility-btn">⚙️ Filters</button>
+                        <div class="annotation hidden">
+                            <button class="close-dialog">✖</button>
                             <p>
-                                Filters use the gear icon, a recognised
-                                signifier for adjustments. Hover and click
-                                states provide clear feedback. Accent colour
-                                ties it visually into the system of interactive
-                                elements.
+                                The gear icon represents settings and
+                                adjustments. Hover and click interactions signal
+                                responsiveness.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- CARDS -->
-            <section class="cards">
-                <h2>Cards</h2>
-                <p>
-                    Cards support smooth navigation and align with the colour
-                    palette and typography established in the Visceral Design
-                    section.
-                </p>
-                <table>
-                    <tr>
-                        <th>Initial State</th>
-                        <th>Hover/Clicked State</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img
-                                src="assets/community.png"
-                                alt="Community card"
-                            />
-                        </td>
-                        <td>
-                            <img
-                                src="assets/community_hover.png"
-                                alt="Community card hover"
-                                class="hover-state"
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="assets/learn-2.png" alt="Learn card" />
-                        </td>
-                        <td>
-                            <img
-                                src="assets/learn_hover.png"
-                                alt="Learn card hover"
-                                class="hover-state"
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="assets/career.png" alt="Career card" />
-                        </td>
-                        <td>
-                            <img
-                                src="assets/career_hover.png"
-                                alt="Career card hover"
-                                class="hover-state"
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="assets/network.png" alt="Network card" />
-                        </td>
-                        <td>
-                            <img
-                                src="assets/network_hover.png"
-                                alt="Network card hover"
-                                class="hover-state"
-                            />
-                        </td>
-                    </tr>
-                </table>
-            </section>
-
-            <!-- LINKS -->
-            <section class="links">
-                <h2>Links</h2>
-                <p>
-                    Links are designed to support smooth navigation in line with
-                    the colour palette and typography established in the
-                    Visceral Design section.
-                </p>
-                <table>
-                    <tr>
-                        <th>Initial State</th>
-                        <th>Hover/Clicked State</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img
-                                src="assets/links.png"
-                                alt="Links initial state"
-                            />
-                        </td>
-                        <td>
-                            <img
-                                src="assets/links_hover.png"
-                                alt="Links hover state"
-                                class="hover-state"
-                            />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p class="annotation">
-                                Initial links use secondary colours and accents
-                                to maintain a cohesive design system. Typography
-                                is clear and legible (Michroma font).
-                            </p>
-                        </td>
-                        <td>
-                            <p class="annotation">
-                                On hover/click, links invert to background
-                                colour and text gains drop shadow. This provides
-                                feedback and signals interactivity.
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </section>
-
             <!-- NAVIGATION -->
             <section class="navigation-section">
-                <h2>Navigation</h2>
-                <p>
-                    Navigation menus support smooth movement across the site.
-                    They use active states, dropdowns, and mobile responsiveness
-                    to ensure usability and accessibility.
-                </p>
+                <h1>Navigation</h1>
+                <h3>
+                    Navigation menus demonstrate consistent hierarchy, hover
+                    states, and mobile responsiveness.
+                </h3>
 
-                <h3>Desktop Navigation</h3>
+                <h2>Desktop Navigation</h2>
                 <table>
                     <tr>
-                        <th>Default Bar</th>
-                        <th>Expanded Dropdown</th>
+                        <th><h3>Default Bar</h3></th>
+                        <th><h3>Expanded Dropdown</h3></th>
                     </tr>
                     <tr>
                         <td>
                             <img
                                 src="assets/desktop_menu.png"
                                 alt="Desktop nav bar"
+                                class="nav-large"
                             />
-                            <p class="annotation">
-                                Active state (highlighted item) supports
-                                discoverability. Consistent top placement
-                                matches user expectations (WCAG 3.2.3).
-                            </p>
+                            <h3>
+                                Default navigation shows clear top-level
+                                categories. The active item stands out for
+                                orientation and discoverability.
+                            </h3>
                         </td>
                         <td>
                             <img
                                 src="assets/desktop_menu_expanded.png"
-                                alt="Desktop nav expanded"
+                                alt="Expanded dropdown menu"
+                                class="nav-large"
                             />
-                            <p class="annotation">
-                                Dropdowns group related content (Events,
-                                Forums), reflecting user mental models. Hover
-                                feedback clarifies interactivity (WCAG 1.3.2).
-                            </p>
+                            <h3>
+                                Dropdown reveals related links in a logical
+                                hierarchy, improving navigation predictability
+                                and consistency.
+                            </h3>
                         </td>
                     </tr>
                 </table>
 
-                <h3>Mobile Navigation</h3>
+                <h2>Mobile Navigation</h2>
                 <table>
                     <tr>
-                        <th>Collapsed</th>
-                        <th>Expanded</th>
+                        <th><h3>Collapsed</h3></th>
+                        <th><h3>Expanded</h3></th>
                     </tr>
                     <tr>
                         <td>
                             <img
                                 src="assets/hamburger_menu.png"
-                                alt="Hamburger collapsed"
+                                alt="Collapsed hamburger menu"
                             />
-                            <p class="annotation">
-                                Hamburger icon conserves space on mobile.
-                                Familiar signifier makes navigation easy to
-                                locate.
-                            </p>
+                            <h3>
+                                Hamburger icon conserves space on smaller
+                                screens while staying familiar to users.
+                            </h3>
                         </td>
                         <td>
                             <img
                                 src="assets/menu_mobile.png"
-                                alt="Hamburger expanded"
+                                alt="Expanded mobile navigation"
                             />
-                            <p class="annotation">
-                                Expanded vertical list maintains consistency
-                                with desktop. Large tap targets support
-                                accessibility (WCAG 2.5.5).
-                            </p>
+                            <h3>
+                                Expanded view reveals links in vertical order,
+                                consistent with desktop design and accessible
+                                via large tap targets.
+                            </h3>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <img
                                 src="assets/menu_expanded_mobile.png"
-                                alt="Mobile dropdowns"
+                                alt="Expanded mobile dropdowns"
                             />
-                            <p class="annotation">
-                                Dropdowns (Events, Forums) reveal related links
-                                in a vertical list, supporting user mental
-                                models. Hover/active states improve
-                                discoverability.
-                            </p>
+                            <h3>
+                                Dropdowns show nested pages (Events, Forums),
+                                following user mental models with visual cues
+                                and hover feedback.
+                            </h3>
                         </td>
                     </tr>
                 </table>
             </section>
         </main>
-        <script type = "module" src="js/behavioural_design.js"></script>
+        <form id="community-form" enctype="multipart/form-data">
+            <!-- Full Name -->
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                aria-describedby="nameHelp"
+            />
+            <small id="nameHelp">Required — please enter your full name.</small>
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                aria-describedby="emailHelp"
+            />
+            <small id="emailHelp"
+                >Required — must be a valid email address.</small
+            >
+
+            <!-- Message -->
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                aria-describedby="messageHelp"
+            ></textarea>
+            <small id="messageHelp"
+                >Optional — include a short introduction or message.</small
+            >
+
+            <!-- Photo Upload -->
+            <label for="photo">Upload Photo</label>
+            <input
+                type="file"
+                id="photo"
+                name="photo"
+                accept="image/*"
+                aria-describedby="photoHelp"
+            />
+            <small id="photoHelp"
+                >Optional — upload an image file (max 10 MB).</small
+            >
+
+            <button type="submit" class="btn btn-primary">
+                Join the Community
+            </button>
+        </form>
+
+        <!-- Feedback message area -->
+        <p id="form-feedback" aria-live="polite"></p>
+
+        <script type="module" src="js/behavioural_design.js"></script>
     </body>
 </html>
