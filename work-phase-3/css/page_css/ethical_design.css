@@ -1,0 +1,53 @@
+/* Ethical reasoning card layout */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    max-width: 900px;
+    padding: 0 1rem;
+}
+
+.value-box {
+    background-color: var(--background-color-1, #f9fafb);
+    color: var(--text-color, #222);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.value-box h3 {
+    font-family: "Michroma", sans-serif;
+    color: var(--accent-color, #175873);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.value-box h4 {
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color, #175873);
+}
+
+.value-box p,
+.value-box li {
+    font-family: "Lexend", sans-serif;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #333;
+}
+
+.value-box ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.value-box strong {
+    color: #175873;
+}
