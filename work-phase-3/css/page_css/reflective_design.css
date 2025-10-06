@@ -1,0 +1,132 @@
+body {
+    background-color: var(--background-color-2);
+    color: var(--text-color);
+    font-family: "Lexend", sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(
+        to bottom right,
+        var(--background-color),
+        var(--background-color-2)
+    );
+    text-align: center;
+    padding: 5rem 2rem;
+    border-bottom: 2px solid var(--accent-color-2);
+}
+
+.hero h1 {
+    font-family: "Michroma", sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+/* --- Section Defaults --- */
+.content-section {
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.content-section h2 {
+    font-family: "Michroma", sans-serif;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--accent-color-1);
+    padding-bottom: 0.5rem;
+}
+
+.content-section article,
+.content-section p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* --- Imagery Grid --- */
+figure {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.02);
+}
+
+figcaption {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    display: inline-block;
+    max-width: 600px;
+}
+
+/* --- Homepage Text (blockquote) --- */
+blockquote {
+    background-color: var(--background-color);
+    border-left: 5px solid var(--accent-color-1);
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    font-style: italic;
+    color: var(--secondary-color);
+    border-radius: 8px;
+    max-width: 700px;
+}
+
+.annotation {
+    margin-top: 1rem;
+    background-color: var(--background-color-2);
+    padding: 1rem 1.5rem;
+    border-left: 4px solid var(--accent-color-2);
+    border-radius: 6px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+/* --- Dynamic Content Section --- */
+iframe {
+    border: 2px solid var(--accent-color-1);
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 0 1.5rem;
+    }
+
+    figure img {
+        max-width: 100%;
+    }
+}
