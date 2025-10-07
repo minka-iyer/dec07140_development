@@ -2,6 +2,8 @@
 /* Mobile */
 .container {
     min-height: 100vh;
+    max-width: 1200px;
+    text-align: center;
     width: 90vw;
     margin: 0 auto;
 }

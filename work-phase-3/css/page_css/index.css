@@ -17,7 +17,7 @@
     color: var(--text-color);
 }
 
-/* ---------- Card Container ---------- */
+/* Card Container */
 .card-container {
     display: flex;
     flex-wrap: wrap; /* allows wrapping */
@@ -67,8 +67,8 @@
     .card {
         flex: 1 1 30%; /* roughly 3 cards per row */
         max-width: 400px;
-        text-align: left;
-        align-items: flex-start;
+        text-align: center;
+        align-items: center;
     }
 
     .card-img {

@@ -13,7 +13,11 @@
             href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
             rel="stylesheet"
         />
-        <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico" />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon-16x16.png"
+        />
         <title>Site Map</title>
     </head>
     <body>
@@ -55,6 +59,13 @@
                 <li><a href="genai_mt_acknowledgement.html">GenAI</a></li>
             </ul>
         </nav>
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">WP3 Home</a></li>
+                <li aria-current="page">Site Map</li>
+            </ol>
+        </nav>
 
         <main>
             <h1 class="m-t-5 m-b-3">Site Map</h1>
@@ -69,6 +80,24 @@
                 with the aim to create a user-friendly navigation structure. The
                 accordion shows the website structure. Expand each section to
                 view pages and sub-pages, with notes on user/client needs.
+            </h3>
+            <h3>
+                This hierarchy groups pages by user goals rather than technical categories, aligning with
+                cognitive load theory and Gestalt principles of proximity and similarity. Each top-level section
+                (e.g. "Community & Belonging") represents a distinct user intent - connecting, learning, advancing
+                careers, networking, or seeking help - making navigation intuitive and task-oriented.
+                <br />
+                The consistent two-tier structure (main page → subpages) minimizes decision fatigue by limiting
+                visible options per level, supporting WCAG 2.2 Guideline 2.4.6: Headings and Labels for clear
+                structure. Logical sequencing ensures users can predict where to find information, while parallel 
+                naming patterns (“Find,” “Post,” “Learn,” “Boost”) reinforce discoverability.
+                <br />
+                From an accessibility perspective, this structure supports keyboard and screen-reader navigation
+                through semantic HTML and clear heading levels.
+                Reusable patterns (accordions, consistent icons, ARIA-labelled navigation) reduce cognitive
+                friction for neurodiverse users. Placing Onboarding & Support as the final section ensures help 
+                resources are always one click away, reflecting inclusive design and the WCAG Principle of 
+                Operable—allowing all users to navigate, understand, and interact without barriers.
             </h3>
 
             <section class="accordion m-y-5">

@@ -277,3 +277,57 @@ td img {
         max-width: 90%;
     }
 }
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+    position: relative;
+    z-index: 2000; /* Above nav and hero */
+    display: flex;
+    align-items: center;
+
+    margin-top: 6rem; /* pushes below fixed nav */
+    margin-left: 2rem;
+
+    font-family: "Lexend", sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li::after {
+    content: "›";
+    margin: 0 0.4rem;
+    color: var(--accent-color);
+}
+
+.breadcrumb li:last-child::after {
+    content: "";
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+.breadcrumb [aria-current="page"] {
+    color: var(--accent-color);
+    font-weight: 600;
+}
