@@ -17,21 +17,11 @@
     color: var(--text-color);
 }
 
-/* Card Container */
-.card-container {
-    display: flex;
-    flex-wrap: wrap; /* allows wrapping */
-    flex-direction: column; /* stack by default */
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
-}
-
 /* ---------- Card Component ---------- */
 .card {
     background: var(--surface-color, #fff);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     width: 100%; /* full width on mobile */
@@ -41,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 .card .btn {
     display: inline-block;
@@ -52,36 +43,60 @@
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.25s ease, transform 0.2s ease;
-    margin: 1.5rem auto 0; /* centers button */
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+/* ---------- Mobile Fix (≤767 px) ---------- */
+@media (max-width: 767px) {
+    .card-container {
+        gap: 3rem; /* extra gap between stacked cards */
+    }
+
+    .card {
+        padding-bottom: 2.5rem; /* ensure internal spacing for button */
+    }
+
+    .card .btn {
+        position: relative;
+        bottom: 0;
+        margin-top: 1.8rem;
+    }
+    .card-img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin: 0 auto 1rem;
+        display: block;
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
 }
 
 /* ---------- Desktop (≥768 px) ---------- */
 @media (min-width: 768px) {
     .card-container {
-        flex-direction: row; /* horizontal layout */
-        justify-content: center;
+        display: flex !important;
+        flex-direction: row !important; /* ensure side-by-side cards */
         flex-wrap: wrap;
-        gap: 2rem;
+        justify-content: center;
+        gap: 2.5rem;
+        align-items: stretch;
     }
 
     .card {
-        flex: 1 1 30%; /* roughly 3 cards per row */
-        max-width: 400px;
-        text-align: center;
-        align-items: center;
+        max-width: 360px;
+        text-align: left;
+        align-items: flex-start;
     }
 
-    .card-img {
+    .card img,
+    .card .card-img {
         width: 120px;
         height: 120px;
         object-fit: contain;
-        margin: 0 auto 1rem;
         display: block;
-        margin-bottom: 1rem;
-    }
-
-    .card .btn {
-        margin-top: auto;
-        align-self: flex-start;
+        margin: 0 auto 1.2rem;
     }
 }
