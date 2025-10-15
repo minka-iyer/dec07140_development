@@ -122,7 +122,7 @@
     background-color: var(--secondary-color);
     transform: scale(0.95);
 }
-
+    
 /* Utility buttons stacked properly */
 .utility-buttons {
     display: flex;

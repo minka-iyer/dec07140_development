@@ -1,0 +1,76 @@
+/* Root color variables */
+:root {
+    --primary-color: #0c1446; /* Royal Blue */
+    --secondary-color: #175873; /* Teal Green */
+    --accent-color-1: #2b7c85; /* Teal */
+    --accent-color-2: #9dbf9e; /* Green grey */
+    --text-color: #333; /* Dark Grey */
+    --background-color: #dff5f2; /* Minty green */
+    --background-color-2: #e6f7f9; /* Light aqua */
+}
+
+/* Global defaults */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem; /* ~40px */
+    font-weight: normal;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-family: Michroma, sans-serif;
+}
+
+h2 {
+    font-size: 2rem; /* ~32px */
+    font-weight: normal;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    font-family: Michroma, sans-serif;
+
+}
+
+h3 {
+    font-size: 1.5rem; /* ~24px */
+    font-weight: normal;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-family: Lexend, sans-serif;
+
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1.25rem; /* smaller scale */
+    font-weight: normal;
+    color: var(--primary-color);
+    font-family: Lexend, sans-serif;
+}
+
+/* Paragraphs & links */
+p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: Lexend, sans-serif;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+strong {
+    font-weight: bold;
+}

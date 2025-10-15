@@ -1,0 +1,14 @@
+.btn-outline {
+    border: 2px solid var(--secondary-color);
+    background: transparent;
+    color: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-family: Lexend, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-outline:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
