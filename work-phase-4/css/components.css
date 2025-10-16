@@ -1,5 +1,5 @@
 /* ===================================== */
-/*        DESKTOP NAV (TOP FIXED)        */
+/*         DESKTOP NAVBAR STYLES         */
 /* ===================================== */
 
 #nav-desktop {
@@ -15,26 +15,27 @@
         top: 0;
         left: 0;
         width: 100vw;
-        background-color: rgba(23, 88, 115, 0.9);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        height: 70px;
+        background-color: var(--secondary-color);
         z-index: 1000;
-        padding: 0.6rem 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .nav-container {
-        width: 100%;
+        width: 90%;
         max-width: 1400px;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
+    /* --- LOGO --- */
     .nav-logo img {
-        height: 40px;
+        height: 200px;
         width: auto;
         object-fit: contain;
+        filter: brightness(0) invert(1); /* keeps it white on teal */
         transition: transform 0.2s ease;
     }
 
@@ -42,16 +43,17 @@
         transform: scale(1.05);
     }
 
+    /* --- NAV LINKS --- */
     .nav-links {
         display: flex;
-        gap: 2.2rem;
+        gap: 2rem;
         list-style: none;
         margin: 0;
         padding: 0;
     }
 
     .nav-links a {
-        color: white;
+        color: #ffffff;
         font-family: "Michroma", sans-serif;
         font-size: 1rem;
         text-decoration: none;
@@ -60,55 +62,7 @@
 
     .nav-links a:hover {
         color: var(--background-color);
-        text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-    }
-}
-
-/* ===================================== */
-/*        MOBILE NAV (BOTTOM FIXED)      */
-/* ===================================== */
-
-#nav-mobile {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    background-color: var(--secondary-color);
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.15);
-    z-index: 999;
-}
-
-#nav-mobile ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    padding: 0.5rem 0;
-    margin: 0;
-}
-
-#nav-mobile li {
-    flex: 1;
-    text-align: center;
-}
-
-#nav-mobile a {
-    display: block;
-    font-size: 1.6rem;
-    color: white;
-    font-family: "Michroma", sans-serif;
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.3s ease;
-}
-
-#nav-mobile a:hover {
-    transform: scale(1.1);
-    color: var(--background-color);
-}
-
-@media screen and (min-width: 768px) {
-    #nav-mobile {
-        display: none;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
     }
 }
 
@@ -205,11 +159,24 @@ ABOUT SECTION IMAGE FIX
     padding: 2rem;
     box-shadow: 0 0 10px rgba(43, 124, 133, 0.15);
     transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 20px var(--accent-color-1);
+}
+.card-image {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 70%;
+    height: auto;
+    object-fit: contain;
+    align-self: center;
 }
 
 /* Footer */

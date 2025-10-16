@@ -22,71 +22,52 @@
         />
         <title>Work Phase 4</title>
     </head>
-    <header>
-        <!-- MOBILE NAV -->
-        <nav id="nav-mobile" aria-label="Main Navigation">
-            <a href="index.html" class="nav-logo-mobile">
-                <img src="assets/CCI.png" alt="CCI Logo" />
-            </a>
-            <ul>
-                <li>
-                    <a href="find_an_event.html"
-                        ><span class="icon">🗓️</span></a
-                    >
-                </li>
-                <li>
-                    <a href="community_stories.html"
-                        ><span class="icon">🗣️</span></a
-                    >
-                </li>
-                <li>
-                    <a href="employer_challenges.html"
-                        ><span class="icon">🧩</span></a
-                    >
-                </li>
-                <li>
-                    <a href="portfolio_showcase.html"
-                        ><span class="icon">🖼️</span></a
-                    >
-                </li>
-                <li>
-                    <a href="badges_progress_tracking.html"
-                        ><span class="icon">🏅</span></a
-                    >
-                </li>
-            </ul>
-        </nav>
+    header>
+            <!-- MOBILE NAV -->
+            <!-- HEADER -->
+                <!-- DESKTOP NAV -->
+                <nav id="nav-desktop" aria-label="Main Navigation">
+                    <a href="index.html" class="nav-logo">
+                            <img src="assets/CCI.png" alt="CCI Logo" />
+                        </a>
+                        <ul class="nav-links">
+                            <li>
+                                <a href="find_an_event.html">Find an Event</a>
+                            </li>
+                            <li>
+                                <a href="community_stories.html"
+                                    >Community Stories Hub</a
+                                >
+                            </li>
+                            <li>
+                                <a href="employer_challenges.html"
+                                    >Employer Challenges</a
+                                >
+                            </li>
+                            <li>
+                                <a href="portfolio_showcase.html"
+                                    >Portfolio Showcase</a
+                                >
+                            </li>
+                            <li>
+                                <a href="badges_progress_tracking.html"
+                                    >Badges & Progress</a
+                                >
+                            </li>
+                        </ul>
+                </nav>
 
-        <!-- DESKTOP NAV -->
-        <nav id="nav-desktop" aria-label="Main Navigation">
-            <div class="nav-container">
-                <a href="index.html" class="nav-logo">
-                    <img src="assets/CCI.png" alt="CCI Logo" />
-                </a>
-                <ul class="nav-links">
-                    <li><a href="find_an_event.html">Find an Event</a></li>
-                    <li>
-                        <a href="community_stories.html"
-                            >Community Stories Hub</a
-                        >
-                    </li>
-                    <li>
-                        <a href="employer_challenges.html"
-                            >Employer Challenges</a
-                        >
-                    </li>
-                    <li>
-                        <a href="portfolio_showcase.html">Portfolio Showcase</a>
-                    </li>
-                    <li>
-                        <a href="badges_progress_tracking.html"
-                            >Badges & Progress</a
-                        >
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+                <!-- MOBILE NAV -->
+                <nav id="nav-mobile" aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="find_an_event.html">🗓️</a></li>
+                        <li><a href="community_stories.html">🗣️</a></li>
+                        <li><a href="employer_challenges.html">🧩</a></li>
+                        <li><a href="portfolio_showcase.html">🖼️</a></li>
+                        <li><a href="badges_progress_tracking.html">🏅</a></li>
+                    </ul>
+                </nav>
+        </header>
 
     <body>
         <!-- ===== HERO SECTION ===== -->
@@ -100,44 +81,117 @@
         </section>
 
         <!-- ===== PAST CHALLENGES SECTION ===== -->
-        <section class="past-challenges">
-            <h2>Past Challenges and Success Stories</h2>
-            <div class="card-grid">
-                <!-- Example card -->
-                <article class="challenge-card">
-                    <img
-                        src="images/placeholder1.jpg"
-                        alt="Challenge thumbnail"
-                    />
-                    <div class="card-content">
-                        <h3>GreenTech Sustainability Hack</h3>
-                        <p>
-                            Students helped develop low-carbon solutions for a
-                            local business.
-                        </p>
-                    </div>
+        <section class="success-stories">
+            <div class="section-header">
+                <h2>Stories from Our Community</h2>
+                <p>How students and innovators turned employer challenges into real-world impact.</p>
+            </div>
+
+            <div class="stories-grid">
+                <!-- Manya -->
+                <article class="story-card">
+                <img src="assets/employer_challenges/greentech.jpg" alt="GreenTech Sustainability" class="story-image" />
+                <div class="story-content">
+                    <h3>GreenTech Sustainability</h3>
+                    <p>“I gained hands-on experience related to my degree, mentorship, and my dream job right out of college!”</p>
+                    <p class="author">Manya, MCompSci</p>
+                    <button class="learn-more" data-story="greentech">Learn more</button>
+                </div>
                 </article>
 
-                <article class="challenge-card">
-                    <img
-                        src="images/placeholder2.jpg"
-                        alt="Challenge thumbnail"
-                    />
-                    <div class="card-content">
-                        <h3>Health Data Visualization</h3>
-                        <p>
-                            Co-designed an interactive dashboard for health
-                            analytics.
-                        </p>
-                    </div>
+                <!-- Gina -->
+                <article class="story-card">
+                <img src="assets/employer_challenges/gina.jpg" alt="Health Data Visualization" class="story-image" />
+                <div class="story-content">
+                    <h3>Health Data Visualization</h3>
+                    <p>“Co-designed an interactive dashboard for a health analytics startup and now I’m here.”</p>
+                    <p class="author">Gina, BDataSci</p>
+                    <button class="learn-more" data-story="healthdata">Learn more</button>
+                </div>
                 </article>
 
-                <!-- Duplicate as needed -->
+                <!-- Amira (Story #1: AI for Accessibility) -->
+                <article class="story-card">
+                <img src="assets/employer_challenges/amira.jpg" alt="AI for Accessibility" class="story-image" />
+                <div class="story-content">
+                    <h3>AI for Accessibility</h3>
+                    <p>“Our team built a voice-to-text prototype for a local council, improving access for residents with hearing loss.”</p>
+                    <p class="author">Amira, MUXDesign</p>
+                    <button class="learn-more" data-story="ai-accessibility">Learn more</button>
+                </div>
+                </article>
+
+                <!-- Sam(Story #5: Bioinformatics for Public Health) -->
+                <article class="story-card">
+                <img src="assets/employer_challenges/sam.jpg" alt="Bioinformatics for Public Health" class="story-image" />
+                <div class="story-content">
+                    <h3>Bioinformatics for Public Health</h3>
+                    <p>“Our project on antimicrobial resistance prediction was intense — but it landed me a mentorship with a leading researcher at CSIRO.”</p>
+                    <p class="author">Sam, MBioTech</p>
+                    <button class="learn-more" data-story="bioinformatics">Learn more</button>
+                </div>
+                </article>
+            </div>
+
+            <!-- MODALS -->
+            <div id="greentech" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/greentech_full.jpg" alt="GreenTech Sustainability" />
+                <h3>GreenTech Sustainability Hack</h3>
+                <p>
+                    During the GreenTech challenge, Manya worked with a multidisciplinary
+                    team to develop low-carbon strategies for a regional business. The
+                    experience provided direct mentorship and ultimately helped her secure
+                    her first full-time role.
+                </p>
+                </div>
+            </div>
+
+            <div id="healthdata" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/healthdata_full.jpg" alt="Health Data Visualization" />
+                <h3>Health Data Visualization Challenge</h3>
+                <p>
+                    Gina collaborated on designing a live data dashboard for a health
+                    analytics startup. Her innovative visualizations impressed the founders,
+                    leading to an internship that transitioned into a full-time data analyst role.
+                </p>
+                </div>
+            </div>
+
+            <div id="ai-accessibility" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="assets/employer_challenges/ai_accessibility_full.jpg" alt="AI for Accessibility" />
+                <h3>AI for Accessibility Challenge</h3>
+                <p>
+                    Amira and her team collaborated with local government mentors to co-design
+                    a voice-to-text prototype that improved accessibility for residents with hearing loss.
+                    The project led her to a UX internship focused on inclusive design.
+                </p>
+                </div>
+            </div>
+
+            <div id="bioinformatics" class="modal">
+                <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="assets/employer_challenges/bioinformatics_full.jpg" alt="Bioinformatics for Public Health" />
+                <h3>Bioinformatics for Public Health Challenge</h3>
+                <p>
+                    Sam' team analyzed public genome datasets to identify antimicrobial resistance markers.
+                    His precision and teamwork impressed the judging panel, earning her a mentorship
+                    with a leading CSIRO researcher in computational biology.
+                </p>
+                </div>
             </div>
         </section>
+
 
         <footer>
             <p>© 2025 Connect Communities Initiative</p>
         </footer>
+    <script src="js/employer_challenges.js"></script>
     </body>
 </html>
