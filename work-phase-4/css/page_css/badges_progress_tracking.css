@@ -1,0 +1,145 @@
+.progress-section {
+    text-align: center;
+    font-family: "Lexend", sans-serif;
+    background-color: #dff5f2;
+    padding: 2rem;
+}
+.progress-container {
+    width: 60%;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 14px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    background: linear-gradient(
+        90deg,
+        var(--secondary-color),
+        var(--accent-color-1)
+    );
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.6s ease;
+}
+
+.progress-text {
+    font-family: "Lexend", sans-serif;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    opacity: 0.9;
+}
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 1.5rem;
+}
+
+.badge {
+    position: relative;
+    text-align: center;
+    cursor: default;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.badge img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Normal hover for unlocked badges */
+.badge:not(.locked):hover img {
+    transform: scale(1.05);
+}
+.badge::after {
+    content: attr(data-info);
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(12, 20, 70, 0.9);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.badge:hover::after {
+    opacity: 1;
+}
+
+/* Locked badges */
+.locked img {
+    filter: grayscale(100%) brightness(0.6);
+    opacity: 0.8;
+}
+
+/* Hover overlay text using data attribute */
+.locked::after {
+    content: attr(data-hover);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(12, 20, 70, 0.85);
+    color: white;
+    font-size: 0.85rem;
+    padding: 0.75rem;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.locked:hover::after {
+    opacity: 1;
+}
+
+.badge p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.badge-info-btn {
+    background-color: var(--accent-color-2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    font-family: "Lexend", sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.badge-info-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}

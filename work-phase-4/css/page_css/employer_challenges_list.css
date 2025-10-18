@@ -1,0 +1,363 @@
+/* --- Layout --- */
+.challenge-list {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Lexend", sans-serif;
+    padding: 2rem 5%;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-family: "Michroma", sans-serif;
+    color: var(--primary-color);
+    font-size: 2.2rem;
+}
+
+.page-header p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.challenge-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.search-bar input {
+    width: 260px;
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--accent-color-1);
+    border-radius: 25px;
+    background-color: var(--background-color-2);
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-bar input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(23, 88, 115, 0.2);
+}
+
+.sort-dropdown select {
+    padding: 0.6rem 1rem;
+    border-radius: 25px;
+    border: 2px solid var(--accent-color-2);
+    background-color: var(--background-color-2);
+    color: var(--text-color);
+}
+
+/* --- Body layout --- */
+.challenge-body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+}
+
+.filters {
+    background: var(--background-color-2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1.5px solid var(--accent-color-2);
+}
+
+.filters h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: "Michroma", sans-serif;
+}
+
+.filter-group h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.filter-group label {
+    display: block;
+    margin: 0.3rem 0;
+    cursor: pointer;
+}
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(340px, 1fr)
+    ); /* ensures 3 per row on large screens */
+    gap: 2rem;
+    justify-content: center;
+    align-items: start;
+}
+
+/* --- Challenge Cards --- */
+.challenge-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--background-color-2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 2px solid var(--accent-color-2);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    height: 280px; /* fixed height for consistency */
+    overflow: hidden;
+}
+
+.challenge-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.challenge-status {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.challenge-status.active {
+    color: var(--accent-color-1);
+}
+
+.challenge-status.upcoming {
+    color: var(--secondary-color);
+}
+
+.challenge-status.completed {
+    color: #666;
+}
+
+challenge-card h3 {
+    font-family: "Lexend", sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 0.4rem;
+    font-size: 1.1rem;
+}
+
+.challenge-card p {
+    flex-grow: 1;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+.employer-logo {
+    width: 70px;
+    height: auto;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0.7;
+    max-height: 40px;
+    object-fit: contain;
+}
+
+.view-btn {
+    background: linear-gradient(
+        90deg,
+        var(--accent-color-1),
+        var(--secondary-color)
+    );
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.view-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(
+        90deg,
+        var(--secondary-color),
+        var(--accent-color-1)
+    );
+}
+
+/* --- Responsive --- */
+@media (min-width: 1024px) {
+    .challenge-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .challenge-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .challenge-grid {
+        grid-template-columns: 1fr;
+    }
+    .challenge-card {
+        height: auto; /* let cards expand naturally on mobile */
+        min-height: 250px;
+    }
+}
+
+/* ===== HERO SECTION ===== */
+.employer-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--background-color);
+    padding: 3rem 5%;
+    margin-top: 2rem;
+    border-radius: 20px;
+    position: relative;
+}
+
+.hero-text {
+    max-width: 50%;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-family: "Michroma", sans-serif;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.hero-graphic {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+/* --- Animated SVG styling --- */
+.animated-hero {
+    width: 150px;
+    height: auto;
+    opacity: 0.9;
+}
+
+.path-line {
+    stroke: var(--secondary-color);
+    stroke-width: 4;
+    stroke-dasharray: 8;
+    animation: dashMove 4s linear infinite;
+}
+
+.path-dot {
+    fill: var(--accent-color-1);
+    opacity: 0.9;
+}
+
+.trophy {
+    stroke: var(--accent-color-1);
+    stroke-width: 5;
+    fill: none;
+    stroke-linecap: round;
+    animation: trophyGlow 2.2s ease-in-out infinite alternate;
+}
+
+.head {
+    fill: var(--primary-color);
+    animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+/* Runner circle (moves subtly along y-axis) */
+.runner {
+    fill: var(--accent-color-2);
+    animation: runnerBounce 1.2s ease-in-out infinite;
+}
+
+/* --- Keyframes --- */
+@keyframes dashMove {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 16;
+    }
+}
+
+@keyframes trophyGlow {
+    0% {
+        stroke: var(--accent-color-1);
+        filter: drop-shadow(0 0 0 var(--accent-color-1));
+    }
+    100% {
+        stroke: #ffffff;
+        filter: drop-shadow(0 0 8px var(--accent-color-1));
+    }
+}
+
+@keyframes pulseGlow {
+    0%,
+    100% {
+        fill: var(--primary-color);
+    }
+    50% {
+        fill: var(--accent-color-1);
+    }
+}
+
+@keyframes runnerBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* --- Button --- */
+.track-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    font-family: "Lexend", sans-serif;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.track-btn:hover {
+    background-color: var(--accent-color-1);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .employer-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-graphic {
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .animated-hero {
+        width: 120px;
+    }
+}
