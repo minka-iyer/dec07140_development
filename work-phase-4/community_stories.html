@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="css/page_css/community_stories.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="assets/favicon_io/favicon-16x16.png"
+        />
+        <title>Work Phase 4</title>
+    </head>
+    <header>
+        <!-- MOBILE NAV -->
+        <!-- HEADER -->
+        <!-- DESKTOP NAV -->
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/CCI.png" alt="CCI Logo" />
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="find_an_event.html">Find an Event</a>
+                </li>
+                <li>
+                    <a href="community_stories.html">Community Stories Hub</a>
+                </li>
+                <li>
+                    <a href="employer_challenges.html">Employer Challenges</a>
+                </li>
+                <li>
+                    <a href="portfolio_showcase.html">Portfolio Showcase</a>
+                </li>
+                <li>
+                    <a href="badges_progress_tracking.html"
+                        >Badges & Progress</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <!-- MOBILE NAV -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li><a href="find_an_event.html">🗓️</a></li>
+                <li><a href="community_stories.html">🗣️</a></li>
+                <li><a href="employer_challenges.html">🧩</a></li>
+                <li><a href="portfolio_showcase.html">🖼️</a></li>
+                <li><a href="badges_progress_tracking.html">🏅</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <main>
+            <!-- ===== HERO SECTION ===== -->
+            <section class="intro">
+                <h1>Community Stories Hub</h1>
+                <h2>Hear from our courageous community.</h2>
+                <h3>
+                    Whether it’s a series of setbacks or challenges that were
+                    overcome, every voice deserves to be heard.
+                </h3>
+            </section>
+            <!-- Main content grid -->
+            <!-- Stories container (dynamic content) -->
+            <section class="stories-section">
+                <div id="stories-container" class="stories-container">
+                    <p>Loading community stories...</p>
+                </div>
+
+                <!-- Share your story form -->
+                <aside class="share-story">
+                    <h3>Share your story</h3>
+
+                    <form id="postForm" enctype="multipart/form-data">
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label for="author_name">Name</label>
+                            <input
+                                type="text"
+                                id="author_name"
+                                name="author_name"
+                                required
+                            />
+                        </div>
+
+                        <!-- Post title -->
+                        <div class="form-group">
+                            <label for="post_title">Post title</label>
+                            <input
+                                type="text"
+                                id="post_title"
+                                name="post_title"
+                                required
+                            />
+                        </div>
+
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="4"
+                                placeholder="Write your story here..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Photo uploads -->
+                        <div class="form-group photo-uploads">
+                            <label
+                                >Upload up to 5 photos (max 10 MB each)</label
+                            >
+                            <input type="file" name="photo1" accept="image/*" />
+                            <input type="file" name="photo2" accept="image/*" />
+                            <input type="file" name="photo3" accept="image/*" />
+                            <input type="file" name="photo4" accept="image/*" />
+                            <input type="file" name="photo5" accept="image/*" />
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                        <p
+                            id="form-feedback"
+                            class="feedback-text"
+                            aria-live="polite"
+                        ></p>
+                    </form>
+                </aside>
+            </section>
+        </main>
+        <footer>
+            <p>© 2025 Connect Communities Initiative</p>
+        </footer>
+        <script type="module" src="./js/community_stories.js"></script>
+    </body>
+</html>
