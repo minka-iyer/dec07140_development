@@ -59,6 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 '<p class="text-danger">Unable to load community members.</p>';
             return;
         }
+        if (Array.isArray(data) && data.length === 0) {
+        container.innerHTML = `
+            <p>No stories found.<br>
+            Your submission was successful but the provided endpoint
+            is not retrieiving data at the moment.</p>`;
+        return;
+    }
 
         container.innerHTML = ""; // clear placeholder
 
