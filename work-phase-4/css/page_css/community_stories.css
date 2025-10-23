@@ -20,48 +20,79 @@
 
 /* === COMMUNITY STORIES PAGE === */
 
-/* --- Overall layout --- */
+/* --- Main grid: stories left, form right --- */
 .stories-section {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* stories wider, form narrower */
+    grid-template-columns: 2fr 1fr;
     gap: 2.618rem; /* golden ratio spacing */
     align-items: start;
-    margin: 4rem auto;
     max-width: 1200px;
+    margin: 3rem auto;
     padding: 0 2rem;
 }
 
-/* --- Story cards container --- */
+/* --- Stories container --- */
 .stories-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 cards per row */
-    gap: 2rem;
-}
-
-.story-card {
-    background-color: #fff;
-    border-radius: 16px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-    padding: 1.5rem;
-    transition: transform 0.3s ease;
-}
-
-.story-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Images in story cards */
-.story-images {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
 }
 
-.story-images img {
-    width: 48%;
-    border-radius: 8px;
+/* --- Story Card --- */
+.story-card {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1.618rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* card image */
+.story-card img {
+    width: 100%;
+    height: 240px;
     object-fit: cover;
+    border-top-left-radius: 1.618rem;
+    border-top-right-radius: 1.618rem;
+    transition: transform 0.4s ease;
+}
+
+/* title */
+.story-card h5 {
+    margin: 0;
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+    font-family: "Lexend", sans-serif;
+    color: var(--primary-color);
+    background-color: var(--background-color-2)
+}
+
+/* description (always visible, full text) */
+.story-card .card-body {
+    background-color: var(--accent-color-2);
+    color: var(--text-color);
+    padding: 1rem 1.2rem 1.5rem;
+    border-bottom-left-radius: 1.618rem;
+    border-bottom-right-radius: 1.618rem;
+}
+
+.card-body p {
+    font-family: "Lexend", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* hover animation for visual depth */
+.story-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.story-card:hover img {
+    transform: scale(1.03);
 }
 
 /* --- Form --- */
@@ -129,12 +160,22 @@ input[type="file"] {
     color: #c32f27;
 }
 
-/* --- Responsive --- */
+/* --- Responsive (mobile-first adjustments) --- */
 @media (max-width: 900px) {
     .stories-section {
         grid-template-columns: 1fr;
     }
+
     .stories-container {
-        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .story-card {
+        max-width: 500px;
+    }
+
+    .share-story {
+        width: 100%;
+        margin-top: 2rem;
     }
 }

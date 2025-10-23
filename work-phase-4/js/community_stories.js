@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- GET stories ---
     async function loadStories() {
+        container.innerHTML = "<p>Loading community stories...</p>";
+
         const data = await fetchGetData(
             "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/multiphotopost",
             {
@@ -70,15 +72,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         container.innerHTML = ""; // clear placeholder
 
+        // ✅ Updated: now supports displaying up to 5 photos dynamically
         data.forEach((story) => {
             const card = document.createElement("div");
-            card.className = "card mb-3";
+            card.className = "card story-card";
+
+            // Gather available photo URLs
+            const photos = [
+                story.photo1,
+                story.photo2,
+                story.photo3,
+                story.photo4,
+                story.photo5,
+            ].filter(Boolean); // remove undefined/null entries
+
+            // Create HTML for images if they exist
+            const imageHTML = photos
+                .map(
+                    (url) =>
+                        `<img src="${url}" alt="Story image" class="story-img" loading="lazy"/>`
+                )
+                .join("");
+
+            // Build story card HTML
             card.innerHTML = `
+                <div class="story-images">${imageHTML}</div>
                 <div class="card-body">
                     <h5 class="card-title">${story.author_name || story.name || "Anonymous"}</h5>
                     <h6 class="card-subtitle mb-2">${story.post_title || ""}</h6>
                     <p class="card-text">${
-                        story.description || story.message || "No message provided."
+                        story.description ||
+                        story.message ||
+                        "No message provided."
                     }</p>
                 </div>
             `;
