@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- GET stories (DECO-provided GetModule logic) ---
+    // --- GET stories ---
     async function loadStories() {
         const data = await fetchGetData(
             "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/multiphotopost",
@@ -56,27 +56,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!data) {
             container.innerHTML =
-                '<p class="text-danger">Unable to load community members.</p>';
+                '<p class="text-danger">Unable to load community stories.</p>';
             return;
         }
+
         if (Array.isArray(data) && data.length === 0) {
-        container.innerHTML = `
-            <p>No stories found.<br>
-            Your submission was successful but the provided endpoint
-            is not retrieiving data at the moment.</p>`;
-        return;
-    }
+            container.innerHTML = `
+                <p>No stories found.<br>
+                Your submission was successful but the provided endpoint
+                is not retrieving data at the moment.</p>`;
+            return;
+        }
 
         container.innerHTML = ""; // clear placeholder
 
-        data.forEach((member) => {
+        data.forEach((story) => {
             const card = document.createElement("div");
             card.className = "card mb-3";
             card.innerHTML = `
                 <div class="card-body">
-                    <h5 class="card-title">${member.name}</h5>
+                    <h5 class="card-title">${story.author_name || story.name || "Anonymous"}</h5>
+                    <h6 class="card-subtitle mb-2">${story.post_title || ""}</h6>
                     <p class="card-text">${
-                        member.message || "No message provided."
+                        story.description || story.message || "No message provided."
                     }</p>
                 </div>
             `;
