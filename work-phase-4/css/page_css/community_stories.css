@@ -4,15 +4,13 @@
     color: #fff;
     border-radius: 1rem;
     text-align: center;
-    padding: 2rem 3.236rem; /* golden ratio spacing */
-    margin-bottom: 2.618rem; /* golden ratio spacing */
+    padding: 2rem 3.236rem;
+    margin-bottom: 2.618rem;
 }
-
 .intro h2 {
     font-size: 1.75rem;
     margin-bottom: 1rem;
 }
-
 .intro p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -20,37 +18,37 @@
 
 /* === COMMUNITY STORIES PAGE === */
 
-/* --- Main grid: stories left, form right --- */
+/* Two-column layout: stories left, form right */
 .stories-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 2.618rem; /* golden ratio spacing */
+    gap: 2.618rem;
     align-items: start;
     max-width: 1200px;
     margin: 3rem auto;
     padding: 0 2rem;
 }
 
-/* --- Stories container --- */
+/* Left column: stack cards vertically (no overlap) */
 .stories-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
-/* --- Story Card --- */
+/* ---------- STORY CARD STATES ---------- */
+/* PRE-HOVER (collapsed): image + title only */
 .story-card {
-    width: 100%;
-    background-color: #fff;
+    background: #fff;
     border-radius: 1.618rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     overflow: hidden;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
     cursor: pointer;
 }
 
-/* card image */
+/* cover image */
 .story-card img {
     width: 100%;
     height: 240px;
@@ -60,51 +58,69 @@
     transition: transform 0.4s ease;
 }
 
-/* title */
+/* title (always visible) */
 .story-card h5 {
     margin: 0;
     padding: 1rem 1.2rem;
-    font-size: 1.1rem;
-    font-family: "Lexend", sans-serif;
+    background: #f8fdfd;
     color: var(--primary-color);
-    background-color: var(--background-color-2)
+    font-family: "Lexend", sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.4;
+    z-index: 2;
+    position: relative;
 }
 
-/* description (always visible, full text) */
+/* description is hidden by default (collapsed height) */
 .story-card .card-body {
-    background-color: var(--accent-color-2);
-    color: var(--text-color);
-    padding: 1rem 1.2rem 1.5rem;
+    background: var(--accent-color-2);
+    color: var(--text-color, #222);
     border-bottom-left-radius: 1.618rem;
     border-bottom-right-radius: 1.618rem;
+
+    /* collapsed */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1.2rem;
+    transition: max-height 0.45s ease, opacity 0.35s ease, padding 0.35s ease;
 }
 
 .card-body p {
-    font-family: "Lexend", sans-serif;
-    line-height: 1.6;
     margin: 0;
+    line-height: 1.6;
+    font-family: "Lexend", sans-serif;
 }
 
-/* hover animation for visual depth */
-.story-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+/* POST-HOVER / EXPANDED (reveal full text) */
+.story-card:hover,
+.story-card:focus-within {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+.story-card:hover img,
+.story-card:focus-within img {
+    transform: scale(1.02);
 }
 
-.story-card:hover img {
-    transform: scale(1.03);
+/* reveal: grow to accommodate long text (large max-height) */
+.story-card:hover .card-body,
+.story-card:focus-within .card-body {
+    max-height: 1000px; /* effectively 'auto' for smooth animation */
+    opacity: 1;
+    padding: 1rem 1.2rem 1.5rem;
 }
 
-/* --- Form --- */
+/* --- Form (right column) --- */
 .share-story {
-    background-color: #e6f7f9;
+    background: #e6f7f9;
     border: 1px solid rgba(23, 88, 115, 0.3);
     border-radius: 16px;
     padding: 2rem;
     color: #0c1446;
     font-family: "Lexend", sans-serif;
 }
-
 .share-story h3 {
     font-family: "Michroma", sans-serif;
     font-size: 1.3rem;
@@ -112,17 +128,14 @@
     margin-bottom: 1.5rem;
     color: var(--primary-color);
 }
-
 .form-group {
     margin-bottom: 1.2rem;
 }
-
 .form-group label {
     display: block;
     font-weight: 600;
     margin-bottom: 0.3rem;
 }
-
 input[type="text"],
 textarea,
 input[type="file"] {
@@ -133,26 +146,20 @@ input[type="file"] {
     font-family: "Lexend", sans-serif;
     font-size: 0.95rem;
 }
-
-/* --- Submit button --- */
 .submit-btn {
-    display: block;
     width: 100%;
-    background-color: #0c1446;
-    color: white;
+    background: #0c1446;
+    color: #fff;
     border: none;
     border-radius: 8px;
     padding: 0.8rem;
     font-weight: 600;
-    font-family: "Lexend", sans-serif;
-    transition: background-color 0.3s ease;
     cursor: pointer;
+    transition: background 0.25s ease;
 }
-
 .submit-btn:hover {
-    background-color: #175873;
+    background: #175873;
 }
-
 .feedback-text {
     text-align: center;
     font-size: 0.9rem;
@@ -160,22 +167,25 @@ input[type="file"] {
     color: #c32f27;
 }
 
-/* --- Responsive (mobile-first adjustments) --- */
+/* ---------- MOBILE ---------- */
 @media (max-width: 900px) {
     .stories-section {
         grid-template-columns: 1fr;
     }
-
-    .stories-container {
-        align-items: center;
-    }
-
-    .story-card {
-        max-width: 500px;
-    }
-
     .share-story {
-        width: 100%;
         margin-top: 2rem;
+        width: 100%;
+    }
+    .story-card {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+    /* tap-to-reveal on touch devices without hover */
+    @media (hover: none) {
+        .story-card:active .card-body {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 1rem 1.2rem 1.5rem;
+        }
     }
 }
