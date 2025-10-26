@@ -66,20 +66,20 @@
     <body>
         <main>
             <!-- ===== HERO SECTION ===== -->
-            <section class="intro">
-                <h1>Find an Event</h1>
-                <h2>What vibe are we searching for?</h2>
-                <h3>
-                    Whether it’s a series of setbacks or challenges that were
-                    overcome, every voice deserves to be heard.
-                </h3>
+            <section class="events-hero">
+                <div class="hero-content">
+                    <h1>Best Events in Brisbane</h1>
+                    <img src = "assets/events/hero banner events.png"/>
+                    <p>
+                        Whether you’re new in town or just exploring, discover
+                        events that connect, inspire, and celebrate community.
+                    </p>
+                    <button class="location-btn">📍 Brisbane</button>
+                </div>
             </section>
+
             <section class="events-page">
                 <!-- Sidebar Filters -->
-                <button class="filter-toggle" aria-label="Toggle filters">
-                    ☰ Filters
-                </button>
-
                 <aside class="filters">
                     <h2>Filter Events</h2>
 
@@ -108,10 +108,10 @@
                     </div>
                 </aside>
 
-                <!-- Main Event Listings -->
+                <!-- Event Listings -->
                 <main class="events-content">
                     <div class="event-header">
-                        <h1>Find an Event</h1>
+                        <h2>Find an Event</h2>
                         <div class="search-sort">
                             <input type="text" placeholder="Search events..." />
                             <select>
@@ -123,51 +123,36 @@
                     </div>
 
                     <section class="event-section">
-                        <h2>Sports</h2>
+                        <h3>Sports</h3>
                         <div class="event-grid">
                             <article class="event-card">
-                                <h3>Social Soccer Match</h3>
-                                <p>
-                                    Join fellow students for a friendly 5v5
-                                    soccer game.
-                                </p>
-                                <span>Location: UQ Fields</span>
-                                <button>View Details</button>
+                                <img
+                                    src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
+                                    alt="Soccer match"
+                                />
+                                <div class="card-body">
+                                    <h4>Social Soccer Match</h4>
+                                    <p>
+                                        Join fellow students for a friendly 5 v
+                                        5 game.
+                                    </p>
+                                    <span>UQ Fields</span>
+                                </div>
                             </article>
 
                             <article class="event-card">
-                                <h3>Running Club Meetup</h3>
-                                <p>
-                                    Weekly run around the river loop, open to
-                                    all fitness levels.
-                                </p>
-                                <span>Location: UQ Lakes</span>
-                                <button>View Details</button>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="event-section">
-                        <h2>Cultural</h2>
-                        <div class="event-grid">
-                            <article class="event-card">
-                                <h3>International Food Fair</h3>
-                                <p>
-                                    Experience cuisines from around the world
-                                    prepared by students.
-                                </p>
-                                <span>Location: Great Court</span>
-                                <button>View Details</button>
-                            </article>
-
-                            <article class="event-card">
-                                <h3>Film & Art Night</h3>
-                                <p>
-                                    Showcasing local student artists and short
-                                    films.
-                                </p>
-                                <span>Location: Schonell Theatre</span>
-                                <button>View Details</button>
+                                <img
+                                    src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74"
+                                    alt="Running meetup"
+                                />
+                                <div class="card-body">
+                                    <h4>Running Club Meetup</h4>
+                                    <p>
+                                        Weekly river-loop run for all fitness
+                                        levels.
+                                    </p>
+                                    <span>UQ Lakes</span>
+                                </div>
                             </article>
                         </div>
                     </section>
