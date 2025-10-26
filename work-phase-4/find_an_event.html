@@ -23,8 +23,6 @@
         <title>Work Phase 4</title>
     </head>
     <header>
-        <!-- MOBILE NAV -->
-        <!-- HEADER -->
         <!-- DESKTOP NAV -->
         <nav id="nav-desktop" aria-label="Main Navigation">
             <a href="index.html" class="nav-logo">
@@ -54,7 +52,7 @@
         <!-- MOBILE NAV -->
         <nav id="nav-mobile" aria-label="Main Navigation">
             <ul>
-                <li><a href="find_an_event.html">🗓️</a></li>
+                <li><a href="find_an_event.html">📅</a></li>
                 <li><a href="community_stories.html">🗣️</a></li>
                 <li><a href="employer_challenges.html">🧩</a></li>
                 <li><a href="portfolio_showcase.html">🖼️</a></li>
@@ -69,9 +67,9 @@
             <section class="events-hero">
                 <div class="hero-content">
                     <h1>Best Events in Brisbane</h1>
-                    <img src = "assets/events/hero banner events.png"/>
+                    <img src="assets/events/hero banner events.png" alt="Community gathering"/>
                     <p>
-                        Whether you’re new in town or just exploring, discover
+                        Whether you're new in town or just exploring, discover
                         events that connect, inspire, and celebrate community.
                     </p>
                     <button class="location-btn">📍 Brisbane</button>
@@ -86,7 +84,8 @@
                     <div class="filter-group">
                         <h4>Event Type</h4>
                         <label><input type="checkbox" /> Sports</label>
-                        <label><input type="checkbox" /> Parties</label>
+                        <label><input type="checkbox" /> Professional Development</label>
+                        <label><input type="checkbox" /> Wellness</label>
                         <label><input type="checkbox" /> Cultural</label>
                         <label><input type="checkbox" /> Markets</label>
                         <label><input type="checkbox" /> Workshops</label>
@@ -122,6 +121,7 @@
                         </div>
                     </div>
 
+                    <!-- SPORTS SECTION -->
                     <section class="event-section">
                         <h3>Sports</h3>
                         <div class="event-grid">
@@ -133,10 +133,9 @@
                                 <div class="card-body">
                                     <h4>Social Soccer Match</h4>
                                     <p>
-                                        Join fellow students for a friendly 5 v
-                                        5 game.
+                                        Join fellow students for a friendly 5 v 5 game.
                                     </p>
-                                    <span>UQ Fields</span>
+                                    <span>📍 UQ Fields</span>
                                 </div>
                             </article>
 
@@ -148,10 +147,181 @@
                                 <div class="card-body">
                                     <h4>Running Club Meetup</h4>
                                     <p>
-                                        Weekly river-loop run for all fitness
-                                        levels.
+                                        Weekly river-loop run for all fitness levels.
                                     </p>
-                                    <span>UQ Lakes</span>
+                                    <span>📍 UQ Lakes</span>
+                                </div>
+                            </article>
+
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff"
+                                    alt="Beach volleyball"
+                                />
+                                <div class="card-body">
+                                    <h4>Beach Volleyball Tournament</h4>
+                                    <p>
+                                        Fun tournament for all skill levels. Teams of 4.
+                                    </p>
+                                    <span>📍 South Bank Beach</span>
+                                </div>
+                            </article>
+
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1461897104016-0b3b00cc81ee"
+                                    alt="Basketball game"
+                                />
+                                <div class="card-body">
+                                    <h4>3-on-3 Basketball</h4>
+                                    <p>
+                                        Pick-up basketball games every Friday evening.
+                                    </p>
+                                    <span>📍 UQ Sport Courts</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- PROFESSIONAL DEVELOPMENT SECTION -->
+                    <section class="event-section">
+                        <h3>Professional Development</h3>
+                        <div class="event-grid">
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+                                    alt="Career workshop"
+                                />
+                                <div class="card-body">
+                                    <h4>Resume Writing Workshop</h4>
+                                    <p>
+                                        Learn to craft a standout resume with career advisors.
+                                    </p>
+                                    <span>📍 Student Centre</span>
+                                </div>
+                            </article>
+
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1515187029135-18ee286d815b"
+                                    alt="Networking event"
+                                />
+                                <div class="card-body">
+                                    <h4>Industry Networking Night</h4>
+                                    <p>
+                                        Connect with professionals from Brisbane's top companies.
+                                    </p>
+                                    <span>📍 Great Court</span>
+                                </div>
+                            </article>
+
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998"
+                                    alt="Interview preparation"
+                                />
+                                <div class="card-body">
+                                    <h4>Mock Interview Sessions</h4>
+                                    <p>
+                                        Practice interviews with feedback from recruiters.
+                                    </p>
+                                    <span>📍 Careers Building</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- WELLNESS SECTION -->
+                    <section class="event-section">
+                        <h3>Wellness</h3>
+                        <div class="event-grid">
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1506126613408-eca07ce68773"
+                                    alt="Yoga class"
+                                />
+                                <div class="card-body">
+                                    <h4>Sunrise Yoga Sessions</h4>
+                                    <p>
+                                        Start your day with mindful movement by the lake.
+                                    </p>
+                                    <span>📍 UQ Lakes</span>
+                                </div>
+                            </article>
+
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1545205597-3d9d02c29597"
+                                    alt="Meditation session"
+                                />
+                                <div class="card-body">
+                                    <h4>Mindfulness & Meditation</h4>
+                                    <p>
+                                        Weekly guided meditation for stress relief.
+                                    </p>
+                                    <span>📍 Wellness Centre</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- CULTURAL SECTION -->
+                    <section class="event-section">
+                        <h3>Cultural</h3>
+                        <div class="event-grid">
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3"
+                                    alt="Art exhibition"
+                                />
+                                <div class="card-body">
+                                    <h4>Student Art Exhibition</h4>
+                                    <p>
+                                        Showcasing diverse artwork from talented students.
+                                    </p>
+                                    <span>📍 UQ Art Museum</span>
+                                </div>
+                            </article>
+
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1"
+                                    alt="Food festival"
+                                />
+                                <div class="card-body">
+                                    <h4>International Food Festival</h4>
+                                    <p>
+                                        Taste cuisines from around the world in one place.
+                                    </p>
+                                    <span>📍 Great Court</span>
+                                </div>
+                            </article>
+
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae"
+                                    alt="Music performance"
+                                />
+                                <div class="card-body">
+                                    <h4>Live Music Night</h4>
+                                    <p>
+                                        Enjoy performances from local student bands.
+                                    </p>
+                                    <span>📍 Union Building</span>
+                                </div>
+                            </article>
+
+                            <article class="event-card">
+                                <img
+                                    src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618"
+                                    alt="Cultural celebration"
+                                />
+                                <div class="card-body">
+                                    <h4>Cultural Celebration Day</h4>
+                                    <p>
+                                        Celebrate diversity with traditional performances and activities.
+                                    </p>
+                                    <span>📍 Forgan Smith Lawn</span>
                                 </div>
                             </article>
                         </div>
@@ -162,13 +332,6 @@
         <footer>
             <p>© 2025 Connect Communities Initiative</p>
         </footer>
-        <script>
-            const toggleBtn = document.querySelector(".filter-toggle");
-            const filters = document.querySelector(".filters");
-
-            toggleBtn.addEventListener("click", () => {
-                filters.classList.toggle("active");
-            });
-        </script>
+        <script src="js/events.js"></script>
     </body>
 </html>
