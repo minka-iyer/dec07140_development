@@ -3,7 +3,7 @@
     .nav-links {
         gap: 1rem;
     }
-    
+
     .nav-links a {
         font-size: 0.75rem;
     }
@@ -13,11 +13,11 @@
     #nav-desktop {
         padding: 0 3rem;
     }
-    
+
     .nav-links {
         gap: 2rem;
     }
-    
+
     .nav-links a {
         font-size: 0.9rem;
     }
@@ -38,7 +38,11 @@
     left: 0;
     width: 100%;
     height: 70px;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #1e5a66 100%);
+    background: linear-gradient(
+        135deg,
+        var(--secondary-color) 0%,
+        #1e5a66 100%
+    );
     z-index: 1000;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
@@ -63,7 +67,8 @@
 
 .nav-logo:hover img {
     transform: scale(1.05);
-    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+    filter: brightness(0) invert(1)
+        drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
 }
 
 /* Hamburger Menu Button */
@@ -107,7 +112,11 @@
     width: 80%;
     max-width: 300px;
     height: calc(100vh - 70px);
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #1e5a66 100%);
+    background: linear-gradient(
+        135deg,
+        var(--secondary-color) 0%,
+        #1e5a66 100%
+    );
     list-style: none;
     margin: 0;
     padding: 2rem 0;
@@ -171,20 +180,20 @@
         height: 75px;
         padding: 0 1.5rem;
     }
-    
+
     .nav-logo img {
         height: 60px;
     }
-    
+
     .hamburger {
         display: flex;
     }
-    
+
     .nav-links {
         top: 75px;
         height: calc(100vh - 75px);
     }
-    
+
     .nav-overlay {
         top: 75px;
         height: calc(100vh - 75px);
@@ -197,16 +206,16 @@
         height: 85px;
         padding: 0 2rem;
     }
-    
+
     .nav-logo img {
         height: 75px;
     }
-    
+
     /* Hide hamburger on desktop */
     .hamburger {
         display: none;
     }
-    
+
     /* Show horizontal nav on desktop */
     .nav-links {
         position: static;
@@ -221,26 +230,26 @@
         align-items: center;
         overflow-y: visible;
     }
-    
+
     .nav-links li {
         border-bottom: none;
     }
-    
+
     .nav-links a {
         padding: 0.5rem 0;
         font-size: 0.8rem;
         white-space: nowrap;
     }
-    
+
     .nav-links a:hover {
         padding-left: 0;
         background: transparent;
         transform: translateY(-2px);
     }
-    
+
     /* Animated underline effect */
     .nav-links a::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
@@ -253,7 +262,7 @@
     .nav-links a:hover::after {
         width: 100%;
     }
-    
+
     /* Hide overlay on desktop */
     .nav-overlay {
         display: none;
@@ -265,15 +274,15 @@
     #nav-desktop {
         padding: 0 3rem;
     }
-    
+
     .nav-logo img {
         height: 80px;
     }
-    
+
     .nav-links {
         gap: 2rem;
     }
-    
+
     .nav-links a {
         font-size: 0.9rem;
     }
@@ -297,7 +306,11 @@
         left: 0;
         width: 100%;
         height: 85px;
-        background: linear-gradient(135deg, var(--secondary-color) 0%, #1e5a66 100%);
+        background: linear-gradient(
+            135deg,
+            var(--secondary-color) 0%,
+            #1e5a66 100%
+        );
         z-index: 1000;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         backdrop-filter: blur(10px);
@@ -322,7 +335,8 @@
 
     .nav-logo:hover img {
         transform: scale(1.05) rotate(-2deg);
-        filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+        filter: brightness(0) invert(1)
+            drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
     }
 
     /* --- NAV LINKS --- */
@@ -354,7 +368,7 @@
 
     /* Animated underline effect */
     .nav-links a::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
@@ -378,7 +392,11 @@
 /* HERO SECTION - ENHANCED CTA */
 /* ===================================== */
 .hero {
-    background: linear-gradient(135deg, var(--background-color) 0%, #b8e5e8 100%);
+    background: linear-gradient(
+        135deg,
+        var(--background-color) 0%,
+        #b8e5e8 100%
+    );
     padding: calc(85px + 4rem) 2rem 4rem;
     text-align: center;
 }
@@ -428,13 +446,18 @@
 
 /* Shine effect on hover */
 .cta-btn::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
     transition: left 0.5s ease;
 }
 
@@ -482,13 +505,18 @@
 
 /* Subtle gradient border on hover */
 .card::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     border-radius: 1.618rem;
     padding: 2px;
-    background: linear-gradient(135deg, var(--accent-color-1), var(--accent-color-2));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    background: linear-gradient(
+        135deg,
+        var(--accent-color-1),
+        var(--accent-color-2)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     opacity: 0;
@@ -641,7 +669,11 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #1e5a66 100%);
+    background: linear-gradient(
+        135deg,
+        var(--secondary-color) 0%,
+        #1e5a66 100%
+    );
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
     z-index: 1000;
     padding: 0.8rem 0;
@@ -671,4 +703,35 @@ footer {
     #nav-mobile {
         display: none;
     }
+}
+
+.terms-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.618rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.terms-container h1,
+.terms-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.618rem;
+}
+
+.site-footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.site-footer a {
+    color: var(--accent-color-1);
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
 }

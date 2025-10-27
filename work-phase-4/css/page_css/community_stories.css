@@ -1,39 +1,50 @@
-/* --- Intro Section --- */
+/* --- Intro Section (clean image-based hero) --- */
 .intro {
-    background: linear-gradient(135deg, var(--accent-color-2) 0%, #8db09e 100%);
-    color: #fff;
-    border-radius: 1.618rem;
+    background: none;
+    padding: 0;
+    margin: 0 auto;
     text-align: center;
-    padding: 2.5rem 2rem;
-    margin: calc(70px + 2rem) auto 2.618rem;
-    max-width: 1200px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
 }
 
-@media screen and (min-width: 768px) {
-    .intro {
-        margin-top: calc(75px + 2rem);
-        padding: 3rem 3.236rem;
+.intro img,
+.intro-banner {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem; /* Remove top margin completely */
+    border-radius: 1rem;
+}
+
+/* Mobile-first adjustments */
+@media (min-width: 480px) {
+    .intro img,
+    .intro-banner {
+        width: 80%;
+        max-width: 650px;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 768px) {
     .intro {
-        margin-top: calc(85px + 2rem);
+        padding-top: 0.5rem; /* Minimal padding from header */
+    }
+
+    .intro img,
+    .intro-banner {
+        width: 75%;
+        max-width: 800px;
+        margin: 0 auto 2rem;
     }
 }
 
-.intro h2 {
-    font-family: "Michroma", sans-serif;
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-}
-
-.intro p {
-    font-size: 1.05rem;
-    line-height: 1.618;
-    opacity: 0.95;
+@media (min-width: 1024px) {
+    .intro img,
+    .intro-banner {
+        width: 65%;
+        max-width: 900px;
+    }
 }
 
 /* === COMMUNITY STORIES PAGE === */
@@ -58,102 +69,165 @@
 }
 
 /* ---------- STORY CARD STATES ---------- */
-/* PRE-HOVER (collapsed): image + name/title visible */
+/* 60/30/10 COLOR DISTRIBUTION:
+   60% - Light mint/teal backgrounds (dominant)
+   30% - Medium teal/turquoise (secondary)
+   10% - Accent colors for interactive elements
+*/
+
+/* PRE-HOVER (collapsed): centered name/title with subtle background */
 .story-card {
-    background: #fff;
+    background: #f0f9fa; /* 60% - Dominant soft mint background */
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
     cursor: pointer;
     max-width: 650px;
 }
 
-/* Cover image - smaller */
-.story-card img {
+/* Story images container */
+.story-images {
     width: 100%;
-    height: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+/* Single image takes full width */
+.story-images img:only-child {
+    width: 100%;
+    height: 220px;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-/* Name and title container - ALWAYS VISIBLE */
-.story-card h5 {
-    margin: 0;
-    padding: 1rem 1.2rem;
-    background: linear-gradient(135deg, #f0f9fa 0%, #e8f5f7 100%);
-    color: var(--primary-color);
-    font-family: "Lexend", sans-serif;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    z-index: 2;
+/* Multiple images: first one prominent, others smaller */
+.story-images img:not(:only-child):first-child {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.story-images img:not(:only-child):not(:first-child) {
+    width: calc(50% - 0.25rem);
+    height: 120px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Card body contains everything */
+.story-card .card-body {
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    background: transparent;
     position: relative;
-    border-bottom: 2px solid rgba(59, 214, 232, 0.2);
+    transition: all 0.4s ease;
 }
 
-.story-card h5 .author-name {
-    display: block;
-    font-weight: 700;
+/* Name (card-title) - Always visible as white pill */
+.story-card .card-title {
+    display: inline-block;
+    font-weight: 600;
     font-size: 1.05rem;
-    margin-bottom: 0.3rem;
-    color: var(--secondary-color);
+    padding: 0.5rem 1.2rem;
+    margin: 0;
+    background: white;
+    color: #0c4a6e; /* 30% - Secondary teal for text */
+    border-radius: 2rem;
+    font-family: "Lexend", sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s ease;
 }
 
-.story-card h5 .story-title {
-    display: block;
+/* Post title (card-subtitle) - Always visible as white pill */
+.story-card .card-subtitle {
+    display: inline-block;
     font-weight: 400;
     font-size: 0.9rem;
-    color: var(--accent-color-2);
-    font-style: italic;
+    padding: 0.4rem 1rem;
+    margin: 0;
+    background: white;
+    color: #0c4a6e; /* 30% - Secondary teal for text */
+    border-radius: 2rem;
+    font-style: normal;
+    font-family: "Lexend", sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s ease;
 }
 
-/* Description is hidden by default (collapsed height) */
-.story-card .card-body {
-    background: var(--accent-color-2);
+/* Description text - Hidden by default */
+.story-card .card-text {
+    background: #7dd3c0; /* 30% - Secondary teal for expanded content */
     color: #ffffff;
+    border-radius: 0.8rem;
+    margin: 0.5rem 0 0;
+    line-height: 1.7;
+    font-family: "Lexend", sans-serif;
+    font-size: 0.95rem;
+    width: 100%;
     
     /* collapsed */
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    padding: 0 1.2rem;
-    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
-}
-
-.card-body p {
-    margin: 0;
-    line-height: 1.618;
-    font-family: "Lexend", sans-serif;
-    font-size: 0.95rem;
+    padding: 0;
+    transition: max-height 0.4s ease, opacity 0.35s ease, padding 0.35s ease;
 }
 
 /* POST-HOVER / EXPANDED (reveal full text) */
 .story-card:hover,
 .story-card:focus-within {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background: #e6f7f9; /* Slightly lighter on hover */
 }
 
 .story-card:hover img,
 .story-card:focus-within img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* Reveal: grow to accommodate text */
-.story-card:hover .card-body,
-.story-card:focus-within .card-body {
+/* Expand name/title pills to full width bars on hover */
+.story-card:hover .card-title,
+.story-card:focus-within .card-title {
+    width: calc(100% - 2rem);
+    border-radius: 0.8rem;
+    padding: 0.6rem 1.2rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.story-card:hover .card-subtitle,
+.story-card:focus-within .card-subtitle {
+    width: calc(100% - 2rem);
+    border-radius: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Reveal description on hover */
+.story-card:hover .card-text,
+.story-card:focus-within .card-text {
     max-height: 800px;
     opacity: 1;
-    padding: 1.2rem 1.2rem 1.5rem;
+    padding: 1.2rem 1.5rem;
 }
 
 /* --- Form (right column) --- */
 .share-story {
-    background: linear-gradient(135deg, #e6f7f9 0%, #d9f0f3 100%);
-    border: 1px solid rgba(59, 214, 232, 0.3);
+    background: #e6f7f9; /* 60% - Dominant light mint background */
+    border: 1px solid rgba(125, 211, 192, 0.3);
     border-radius: 1rem;
     padding: 2rem;
-    color: var(--primary-color);
+    color: #0c4a6e; /* 30% - Secondary teal for text */
     font-family: "Lexend", sans-serif;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     position: sticky;
@@ -161,12 +235,13 @@
 }
 
 .share-story h3 {
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
     font-size: 1.3rem;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: var(--primary-color);
-    letter-spacing: 1px;
+    color: #0c4a6e; /* 30% - Secondary teal */
+    letter-spacing: 0.5px;
 }
 
 .form-group {
@@ -177,27 +252,28 @@
     display: block;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--secondary-color);
+    color: #0c4a6e; /* 30% - Secondary teal */
     font-size: 0.95rem;
 }
 
 input[type="text"],
 textarea {
     width: 100%;
-    border: 1px solid rgba(59, 214, 232, 0.3);
+    border: 1px solid rgba(125, 211, 192, 0.4);
     border-radius: 0.5rem;
     padding: 0.8rem;
     font-family: "Lexend", sans-serif;
     font-size: 0.95rem;
     transition: all 0.2s ease;
     background: white;
+    box-sizing: border-box;
 }
 
 input[type="text"]:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--accent-color-1);
-    box-shadow: 0 0 0 3px rgba(59, 214, 232, 0.1);
+    border-color: #3bd6e8; /* 10% - Accent cyan for focus states */
+    box-shadow: 0 0 0 3px rgba(59, 214, 232, 0.15);
 }
 
 textarea {
@@ -205,7 +281,31 @@ textarea {
     resize: vertical;
 }
 
-/* Enhanced file upload section */
+/* Photo uploads styling */
+.photo-uploads {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.photo-uploads label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #0c4a6e;
+    font-size: 0.95rem;
+}
+
+.photo-uploads input[type="file"] {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    border: 1px solid rgba(125, 211, 192, 0.4);
+    border-radius: 0.5rem;
+    background: white;
+    font-family: "Lexend", sans-serif;
+}
+
+/* Enhanced file upload section (if using custom wrapper) */
 .file-upload-section {
     margin-bottom: 1.5rem;
 }
@@ -214,14 +314,14 @@ textarea {
     display: block;
     font-weight: 600;
     margin-bottom: 0.8rem;
-    color: var(--secondary-color);
+    color: #0c4a6e; /* 30% - Secondary teal */
     font-size: 0.95rem;
 }
 
 .file-upload-wrapper {
     position: relative;
     background: white;
-    border: 2px dashed rgba(59, 214, 232, 0.4);
+    border: 2px dashed rgba(125, 211, 192, 0.5);
     border-radius: 0.5rem;
     padding: 1.5rem;
     text-align: center;
@@ -230,7 +330,7 @@ textarea {
 }
 
 .file-upload-wrapper:hover {
-    border-color: var(--accent-color-1);
+    border-color: #3bd6e8; /* 10% - Accent cyan */
     background: rgba(59, 214, 232, 0.05);
 }
 
@@ -246,18 +346,18 @@ textarea {
 
 .upload-icon {
     font-size: 2rem;
-    color: var(--accent-color-1);
+    color: #3bd6e8; /* 10% - Accent cyan */
     margin-bottom: 0.5rem;
 }
 
 .upload-text {
-    color: var(--secondary-color);
+    color: #0c4a6e; /* 30% - Secondary teal */
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
 }
 
 .upload-subtext {
-    color: #6b7280;
+    color: #64748b;
     font-size: 0.8rem;
 }
 
@@ -272,14 +372,14 @@ textarea {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 0.8rem;
-    background: rgba(59, 214, 232, 0.1);
+    background: rgba(125, 211, 192, 0.15);
     border-radius: 0.4rem;
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
 }
 
 .file-item-name {
-    color: var(--secondary-color);
+    color: #0c4a6e; /* 30% - Secondary teal */
     font-weight: 500;
     flex: 1;
     overflow: hidden;
@@ -303,7 +403,7 @@ textarea {
 
 .submit-btn {
     width: 100%;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, #7dd3c0 0%, #3bd6e8 100%); /* 30% secondary + 10% accent gradient */
     color: #fff;
     border: none;
     border-radius: 0.5rem;
@@ -313,12 +413,13 @@ textarea {
     transition: all 0.3s ease;
     font-size: 1rem;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 12px rgba(12, 20, 70, 0.2);
+    box-shadow: 0 4px 12px rgba(59, 214, 232, 0.25);
+    font-family: "Antonio", sans-serif;
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(12, 20, 70, 0.3);
+    box-shadow: 0 6px 20px rgba(59, 214, 232, 0.35);
 }
 
 .submit-btn:active {
@@ -343,74 +444,105 @@ textarea {
     background: rgba(220, 38, 38, 0.1);
 }
 
+/* Loading state styling */
+.stories-container > p {
+    text-align: center;
+    color: #0c4a6e;
+    font-family: "Lexend", sans-serif;
+    padding: 2rem;
+}
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 900px) {
     .stories-section {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-    
+
     .share-story {
         position: static;
         margin-top: 2rem;
         width: 100%;
     }
-    
+
     .story-card {
         max-width: 100%;
         margin: 0 auto;
     }
-    
-    .story-card img {
-        height: 160px;
+
+    .story-images img:only-child,
+    .story-images img:not(:only-child):first-child {
+        height: 200px;
     }
-    
-    /* Tap-to-reveal on touch devices without hover */
+
+    .story-images img:not(:only-child):not(:first-child) {
+        height: 100px;
+    }
+
+    /* Tap-to-reveal on touch devices */
     @media (hover: none) {
-        .story-card:active .card-body {
+        .story-card:active .card-text {
             max-height: 800px;
             opacity: 1;
-            padding: 1.2rem 1.2rem 1.5rem;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .story-card:active .card-title,
+        .story-card:active .card-subtitle {
+            width: calc(100% - 2rem);
+            border-radius: 0.8rem;
         }
     }
 }
 
 @media (max-width: 640px) {
     .intro {
-        padding: 2rem 1.5rem;
-        margin: calc(70px + 1.5rem) 1rem 2rem;
+        padding: 0.5rem 1rem;
     }
-    
+
+    .intro img,
+    .intro-banner {
+        margin: 0 auto 1.5rem;
+        width: 95%;
+    }
+
     .intro h2 {
         font-size: 1.4rem;
     }
-    
+
     .intro p {
         font-size: 0.95rem;
     }
-    
+
     .stories-section {
         padding: 0 1rem;
+        margin-top: 1rem;
     }
-    
+
     .share-story {
         padding: 1.5rem;
     }
-    
-    .story-card img {
-        height: 140px;
+
+    .story-images img:only-child,
+    .story-images img:not(:only-child):first-child {
+        height: 160px;
     }
-    
-    .story-card h5 {
-        padding: 0.8rem 1rem;
+
+    .story-images img:not(:only-child):not(:first-child) {
+        height: 80px;
+    }
+
+    .story-card .card-body {
+        padding: 1.2rem 1rem;
+    }
+
+    .story-card .card-title {
+        font-size: 1rem;
+        padding: 0.45rem 1rem;
+    }
+
+    .story-card .card-subtitle {
         font-size: 0.85rem;
-    }
-    
-    .story-card h5 .author-name {
-        font-size: 0.95rem;
-    }
-    
-    .story-card h5 .story-title {
-        font-size: 0.85rem;
+        padding: 0.35rem 0.9rem;
     }
 }

@@ -21,46 +21,35 @@ body {
 
 /* Headings */
 h1 {
-    font-size: 2.5rem; /* ~40px */
-    font-weight: normal;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: var(--primary-color);
     margin-bottom: 1rem;
-    font-family: Michroma, sans-serif;
+    font-family: 'Antonio', 'Lexend', sans-serif;
 }
 
 h2 {
-    font-size: 2rem; /* ~32px */
-    font-weight: normal;
+    font-size: 2rem;
+    font-weight: 600;
     color: var(--secondary-color);
     margin-bottom: 0.75rem;
-    font-family: Michroma, sans-serif;
-
+    font-family: 'Antonio', 'Lexend', sans-serif;
 }
 
 h3 {
-    font-size: 1.5rem; /* ~24px */
-    font-weight: normal;
-    color: var(--accent-color);
-    margin-bottom: 0.5rem;
-    font-family: Lexend, sans-serif;
-
-}
-
-h4,
-h5,
-h6 {
-    font-size: 1.25rem; /* smaller scale */
-    font-weight: normal;
-    color: var(--primary-color);
-    font-family: Lexend, sans-serif;
-}
-
-/* Paragraphs & links */
-p {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    font-family: Lexend, sans-serif;
+    font-weight: 500;
+    color: var(--accent-color-1);
+    margin-bottom: 0.5rem;
+    font-family: 'Lexend', sans-serif;
 }
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'Lexend', sans-serif;
+}
+
 
 a {
     color: var(--secondary-color);
