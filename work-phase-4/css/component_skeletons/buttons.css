@@ -12,3 +12,21 @@
     background: var(--secondary-color);
     color: #fff;
 }
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes text left, icon right */
+    background-color: #175873;
+    color: #ffffff;
+    font-family: "Antonio", sans-serif;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    max-width: 400px; /* keeps button from being too wide */
+    border: none;
+    border-radius: 50px; /* pill shape */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 1rem; /* space between text + icon */
+}
