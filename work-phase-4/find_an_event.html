@@ -20,75 +20,80 @@
             type="image/x-icon"
             href="assets/favicon_io/favicon-16x16.png"
         />
-        <title>Work Phase 4</title>
+        <title>Find an Event | Connect Communities Initiative</title>
     </head>
-    <header>
-        <!-- DESKTOP NAV -->
-        <nav id="nav-desktop" aria-label="Main Navigation">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/CCI.png" alt="CCI Logo" />
-            </a>
-            <ul class="nav-links">
-                <li>
-                    <a href="find_an_event.html">Find an Event</a>
-                </li>
-                <li>
-                    <a href="community_stories.html">Community Stories Hub</a>
-                </li>
-                <li>
-                    <a href="employer_challenges.html">Employer Challenges</a>
-                </li>
-                <li>
-                    <a href="portfolio_showcase.html">Portfolio Showcase</a>
-                </li>
-                <li>
-                    <a href="badges_progress_tracking.html"
-                        >Badges & Progress</a
-                    >
-                </li>
-            </ul>
-        </nav>
-
-        <!-- MOBILE NAV -->
-        <nav id="nav-mobile" aria-label="Main Navigation">
-            <ul>
-                <li><a href="find_an_event.html">📅</a></li>
-                <li><a href="community_stories.html">🗣️</a></li>
-                <li><a href="employer_challenges.html">🧩</a></li>
-                <li><a href="portfolio_showcase.html">🖼️</a></li>
-                <li><a href="badges_progress_tracking.html">🏅</a></li>
-            </ul>
-        </nav>
-    </header>
 
     <body>
+        <header>
+            <!-- DESKTOP NAV -->
+            <nav id="nav-desktop" aria-label="Main Navigation">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/CCI.png" alt="CCI Logo" />
+                </a>
+                <ul class="nav-links">
+                    <li>
+                        <a href="find_an_event.html" class="active"
+                            >Find an Event</a
+                        >
+                    </li>
+                    <li>
+                        <a href="community_stories.html"
+                            >Community Stories Hub</a
+                        >
+                    </li>
+                    <li>
+                        <a href="employer_challenges.html"
+                            >Employer Challenges</a
+                        >
+                    </li>
+                    <li>
+                        <a href="portfolio_showcase.html">Portfolio Showcase</a>
+                    </li>
+                    <li>
+                        <a href="badges_progress_tracking.html"
+                            >Badges & Progress</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- MOBILE NAV -->
+            <nav id="nav-mobile" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="find_an_event.html">📅</a></li>
+                    <li><a href="community_stories.html">🗣️</a></li>
+                    <li><a href="employer_challenges.html">🧩</a></li>
+                    <li><a href="portfolio_showcase.html">🖼️</a></li>
+                    <li><a href="badges_progress_tracking.html">🏅</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <main>
             <!-- ===== HERO SECTION ===== -->
             <section class="events-hero">
-                <!-- Removed the gradient and grid overlay; now shows just the image -->
                 <img
                     src="assets/events/find_an_event.png"
                     alt="Community gathering"
                 />
-
-                <!-- Added new hero text below image -->
                 <div class="hero-subtext">
-                    <p>Discover events that match your vibe and curiosity.</p>
+                    <h2>Find an event that suits your taste and energy.</h2>
                 </div>
             </section>
 
+            <!-- ===== PAGE GRID ===== -->
             <section class="events-page">
                 <!-- Sidebar Filters -->
                 <aside class="filters">
                     <h2>Event Type</h2>
 
-                    <!-- Event Type Buttons -->
-                    <button class="filter-btn">
+                    <!-- Filter Buttons -->
+                    <button class="filter-btn" data-filter="sports">
                         <span>Sports</span>
                         <img src="assets/icons/sports.png" alt="Sports icon" />
                     </button>
 
-                    <button class="filter-btn">
+                    <button class="filter-btn" data-filter="professional">
                         <span>Professional Development</span>
                         <img
                             src="assets/icons/pd.png"
@@ -96,7 +101,7 @@
                         />
                     </button>
 
-                    <button class="filter-btn">
+                    <button class="filter-btn" data-filter="wellness">
                         <span>Wellness</span>
                         <img
                             src="assets/icons/wellness.png"
@@ -104,7 +109,7 @@
                         />
                     </button>
 
-                    <button class="filter-btn">
+                    <button class="filter-btn" data-filter="cultural">
                         <span>Cultural</span>
                         <img
                             src="assets/icons/cultural.png"
@@ -112,7 +117,7 @@
                         />
                     </button>
 
-                    <!-- Location & Date still under filters -->
+                    <!-- Location & Date -->
                     <div class="filter-group">
                         <h4>Location</h4>
                         <select>
@@ -129,7 +134,7 @@
                     </div>
                 </aside>
 
-                <!-- Event Listings -->
+                <!-- ===== MAIN EVENT CONTENT ===== -->
                 <main class="events-content">
                     <div class="event-header">
                         <h2>Find an Event</h2>
@@ -144,10 +149,15 @@
                     </div>
 
                     <!-- SPORTS SECTION -->
-                    <section class="event-section">
+                    <!-- SPORTS -->
+                    <!-- SPORTS -->
+                    <section class="event-section" data-category="sports">
                         <h3>Sports</h3>
                         <div class="event-grid">
-                            <article class="event-card">
+                            <article
+                                class="event-card"
+                                data-link="https://events.com/sports/register"
+                            >
                                 <img
                                     src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d"
                                     alt="Soccer match"
@@ -162,7 +172,10 @@
                                 </div>
                             </article>
 
-                            <article class="event-card">
+                            <article
+                                class="event-card"
+                                data-link="https://events.com/sports/register"
+                            >
                                 <img
                                     src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74"
                                     alt="Running meetup"
@@ -176,44 +189,17 @@
                                     <span>📍 UQ Lakes</span>
                                 </div>
                             </article>
-
-                            <article class="event-card">
-                                <img
-                                    src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff"
-                                    alt="Beach volleyball"
-                                />
-                                <div class="card-body">
-                                    <h4>Beach Volleyball Tournament</h4>
-                                    <p>
-                                        Fun tournament for all skill levels.
-                                        Teams of 4.
-                                    </p>
-                                    <span>📍 South Bank Beach</span>
-                                </div>
-                            </article>
-
-                            <article class="event-card">
-                                <img
-                                    src="https://images.unsplash.com/photo-1461897104016-0b3b00cc81ee"
-                                    alt="Basketball game"
-                                />
-                                <div class="card-body">
-                                    <h4>3-on-3 Basketball</h4>
-                                    <p>
-                                        Pick-up basketball games every Friday
-                                        evening.
-                                    </p>
-                                    <span>📍 UQ Sport Courts</span>
-                                </div>
-                            </article>
                         </div>
                     </section>
 
-                    <!-- PROFESSIONAL DEVELOPMENT SECTION -->
-                    <section class="event-section">
+                    <!-- PROFESSIONAL DEVELOPMENT -->
+                    <section class="event-section" data-category="professional">
                         <h3>Professional Development</h3>
                         <div class="event-grid">
-                            <article class="event-card">
+                            <article
+                                class="event-card"
+                                data-link="https://events.com/professional/register"
+                            >
                                 <img
                                     src="https://images.unsplash.com/photo-1552664730-d307ca884978"
                                     alt="Career workshop"
@@ -228,7 +214,10 @@
                                 </div>
                             </article>
 
-                            <article class="event-card">
+                            <article
+                                class="event-card"
+                                data-link="https://events.com/professional/register"
+                            >
                                 <img
                                     src="https://images.unsplash.com/photo-1515187029135-18ee286d815b"
                                     alt="Networking event"
@@ -237,34 +226,22 @@
                                     <h4>Industry Networking Night</h4>
                                     <p>
                                         Connect with professionals from
-                                        Brisbane's top companies.
+                                        Brisbane's top firms.
                                     </p>
                                     <span>📍 Great Court</span>
-                                </div>
-                            </article>
-
-                            <article class="event-card">
-                                <img
-                                    src="https://images.unsplash.com/photo-1531482615713-2afd69097998"
-                                    alt="Interview preparation"
-                                />
-                                <div class="card-body">
-                                    <h4>Mock Interview Sessions</h4>
-                                    <p>
-                                        Practice interviews with feedback from
-                                        recruiters.
-                                    </p>
-                                    <span>📍 Careers Building</span>
                                 </div>
                             </article>
                         </div>
                     </section>
 
-                    <!-- WELLNESS SECTION -->
-                    <section class="event-section">
+                    <!-- WELLNESS -->
+                    <section class="event-section" data-category="wellness">
                         <h3>Wellness</h3>
                         <div class="event-grid">
-                            <article class="event-card">
+                            <article
+                                class="event-card"
+                                data-link="https://events.com/wellness/register"
+                            >
                                 <img
                                     src="https://images.unsplash.com/photo-1506126613408-eca07ce68773"
                                     alt="Yoga class"
@@ -279,7 +256,10 @@
                                 </div>
                             </article>
 
-                            <article class="event-card">
+                            <article
+                                class="event-card"
+                                data-link="https://events.com/wellness/register"
+                            >
                                 <img
                                     src="https://images.unsplash.com/photo-1545205597-3d9d02c29597"
                                     alt="Meditation session"
@@ -296,11 +276,14 @@
                         </div>
                     </section>
 
-                    <!-- CULTURAL SECTION -->
-                    <section class="event-section">
+                    <!-- CULTURAL -->
+                    <section class="event-section" data-category="cultural">
                         <h3>Cultural</h3>
                         <div class="event-grid">
-                            <article class="event-card">
+                            <article
+                                class="event-card"
+                                data-link="https://events.com/cultural/register"
+                            >
                                 <img
                                     src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3"
                                     alt="Art exhibition"
@@ -315,7 +298,10 @@
                                 </div>
                             </article>
 
-                            <article class="event-card">
+                            <article
+                                class="event-card"
+                                data-link="https://events.com/cultural/register"
+                            >
                                 <img
                                     src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1"
                                     alt="Food festival"
@@ -329,44 +315,16 @@
                                     <span>📍 Great Court</span>
                                 </div>
                             </article>
-
-                            <article class="event-card">
-                                <img
-                                    src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae"
-                                    alt="Music performance"
-                                />
-                                <div class="card-body">
-                                    <h4>Live Music Night</h4>
-                                    <p>
-                                        Enjoy performances from local student
-                                        bands.
-                                    </p>
-                                    <span>📍 Union Building</span>
-                                </div>
-                            </article>
-
-                            <article class="event-card">
-                                <img
-                                    src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618"
-                                    alt="Cultural celebration"
-                                />
-                                <div class="card-body">
-                                    <h4>Cultural Celebration Day</h4>
-                                    <p>
-                                        Celebrate diversity with traditional
-                                        performances and activities.
-                                    </p>
-                                    <span>📍 Forgan Smith Lawn</span>
-                                </div>
-                            </article>
                         </div>
                     </section>
                 </main>
             </section>
         </main>
+
         <footer>
             <p>© 2025 Connect Communities Initiative</p>
         </footer>
+
         <script src="js/events.js"></script>
     </body>
 </html>

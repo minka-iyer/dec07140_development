@@ -1,189 +1,123 @@
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // Get all filter elements
-    const eventTypeCheckboxes = document.querySelectorAll('.filter-group input[type="checkbox"]');
-    const locationSelect = document.querySelector('.filter-group select');
-    const dateInput = document.querySelector('.filter-group input[type="date"]');
-    const searchInput = document.querySelector('.search-sort input[type="text"]');
-    const sortSelect = document.querySelector('.search-sort select');
-    
-    // Get all event cards and sections
-    const eventSections = document.querySelectorAll('.event-section');
-    const eventCards = document.querySelectorAll('.event-card');
-    
-    // Add event listeners
-    eventTypeCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', filterEvents);
-    });
-    
-    if (locationSelect) {
-        locationSelect.addEventListener('change', filterEvents);
-    }
-    
-    if (dateInput) {
-        dateInput.addEventListener('change', filterEvents);
-    }
-    
-    if (searchInput) {
-        searchInput.addEventListener('input', filterEvents);
-    }
-    
-    if (sortSelect) {
-        sortSelect.addEventListener('change', sortEvents);
-    }
-    
-    // Main filter function
-    function filterEvents() {
-        // Get selected event types
-        const selectedTypes = Array.from(eventTypeCheckboxes)
-            .filter(cb => cb.checked)
-            .map(cb => cb.parentElement.textContent.trim().toLowerCase());
-        
-        // Get selected location
-        const selectedLocation = locationSelect ? locationSelect.value : 'All Locations';
-        
-        // Get search query
-        const searchQuery = searchInput ? searchInput.value.toLowerCase() : '';
-        
-        // Get selected date
-        const selectedDate = dateInput ? dateInput.value : '';
-        
-        // Filter each section
-        eventSections.forEach(section => {
-            const sectionType = section.querySelector('h3').textContent.trim().toLowerCase();
-            const cards = section.querySelectorAll('.event-card');
-            let visibleCards = 0;
-            
-            // Check if this section type is selected (or if no types are selected, show all)
-            const showSection = selectedTypes.length === 0 || selectedTypes.includes(sectionType);
-            
-            if (showSection) {
-                cards.forEach(card => {
-                    const title = card.querySelector('h4').textContent.toLowerCase();
-                    const description = card.querySelector('p').textContent.toLowerCase();
-                    const location = card.querySelector('span').textContent.toLowerCase();
-                    
-                    // Check if card matches all filters
-                    let showCard = true;
-                    
-                    // Search filter
-                    if (searchQuery && !title.includes(searchQuery) && !description.includes(searchQuery)) {
-                        showCard = false;
-                    }
-                    
-                    // Location filter
-                    if (selectedLocation !== 'All Locations' && !location.includes(selectedLocation.toLowerCase())) {
-                        showCard = false;
-                    }
-                    
-                    // Show or hide card
-                    if (showCard) {
-                        card.style.display = 'block';
-                        visibleCards++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                
-                // Show/hide section based on visible cards
-                section.style.display = visibleCards > 0 ? 'block' : 'none';
+// ============================================
+// FIND AN EVENT PAGE INTERACTIVITY
+// ============================================
+
+// ===== 1️⃣ FILTER BUTTONS =====
+const filterButtons = document.querySelectorAll(".filter-btn");
+const eventSections = document.querySelectorAll(".event-section");
+
+filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        // Toggle active visual state
+        button.classList.toggle("active");
+
+        // Get all active filters
+        const activeFilters = [...filterButtons]
+            .filter((btn) => btn.classList.contains("active"))
+            .map((btn) => btn.dataset.filter);
+
+        // Show/hide event sections
+        eventSections.forEach((section) => {
+            const category = section.dataset.category;
+            if (
+                activeFilters.length === 0 ||
+                activeFilters.includes(category)
+            ) {
+                section.style.display = "block";
+                section.classList.add("fade-in");
             } else {
-                section.style.display = 'none';
+                section.style.display = "none";
             }
-        });
-        
-        // Show message if no results
-        checkNoResults();
-    }
-    
-    // Sort events function
-    function sortEvents() {
-        if (!sortSelect) return;
-        
-        const sortValue = sortSelect.value;
-        
-        eventSections.forEach(section => {
-            const grid = section.querySelector('.event-grid');
-            const cards = Array.from(grid.querySelectorAll('.event-card'));
-            
-            // Sort based on selection
-            cards.sort((a, b) => {
-                if (sortValue === 'Most Popular') {
-                    // You could add a data-popularity attribute to cards
-                    // For now, just reverse the order as a demo
-                    return 0; // Keep original order for demo
-                } else if (sortValue === 'Closing Soon') {
-                    // You could add a data-date attribute to cards
-                    return 0; // Keep original order for demo
-                } else {
-                    // Newest - keep original order
-                    return 0;
-                }
-            });
-            
-            // Re-append sorted cards
-            cards.forEach(card => grid.appendChild(card));
-        });
-    }
-    
-    // Check if there are no results and show message
-    function checkNoResults() {
-        const visibleSections = Array.from(eventSections).filter(section => 
-            section.style.display !== 'none'
-        );
-        
-        // Remove any existing "no results" message
-        const existingMessage = document.querySelector('.no-results-message');
-        if (existingMessage) {
-            existingMessage.remove();
-        }
-        
-        // If no visible sections, show message
-        if (visibleSections.length === 0) {
-            const eventsContent = document.querySelector('.events-content');
-            const message = document.createElement('div');
-            message.className = 'no-results-message';
-            message.style.cssText = `
-                text-align: center;
-                padding: 3rem;
-                color: var(--secondary);
-                font-size: 1.1rem;
-                background: linear-gradient(135deg, #ffffff 0%, #f0f9fa 100%);
-                border-radius: 0.618rem;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-                margin-top: 2rem;
-            `;
-            message.innerHTML = `
-                <h3 style="font-family: 'Michroma', sans-serif; color: var(--primary); margin-bottom: 1rem;">No Events Found</h3>
-                <p>Try adjusting your filters or search terms.</p>
-            `;
-            eventsContent.appendChild(message);
-        }
-    }
-    
-    // Add smooth scroll to top when filters change
-    function smoothScrollToResults() {
-        const eventsContent = document.querySelector('.events-content');
-        if (eventsContent) {
-            eventsContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-    
-    // Optional: Add event listener to scroll on filter change
-    eventTypeCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-            setTimeout(smoothScrollToResults, 100);
         });
     });
 });
 
-// Optional: Add labels to checkboxes if they don't exist
-document.addEventListener('DOMContentLoaded', function() {
-    const checkboxes = document.querySelectorAll('.filter-group input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        // Map checkbox labels to section names
-        const labelText = checkbox.parentElement.textContent.trim();
-        checkbox.dataset.eventType = labelText.toLowerCase();
+// ===== 2️⃣ SEARCH BAR FUNCTIONALITY =====
+const searchInput = document.querySelector(".search-sort input");
+
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+
+        document.querySelectorAll(".event-card").forEach((card) => {
+            const text = card.innerText.toLowerCase();
+            card.style.display = text.includes(query) ? "block" : "none";
+        });
+    });
+}
+
+// ===== 3️⃣ MODAL (POPUP) FUNCTIONALITY =====
+
+// Create the modal dynamically
+const modal = document.createElement("div");
+modal.classList.add("event-modal");
+modal.innerHTML = `
+    <div class="modal-content">
+        <button class="close-modal" aria-label="Close">&times;</button>
+        <h2 class="modal-title"></h2>
+        <p class="modal-location"></p>
+        <div class="modal-description"></div>
+        <a href="#" class="modal-link" target="_blank" rel="noopener noreferrer"></a>
+    </div>
+`;
+document.body.appendChild(modal);
+
+// Cache elements
+const modalContent = modal.querySelector(".modal-content");
+const closeModal = modal.querySelector(".close-modal");
+const modalTitle = modal.querySelector(".modal-title");
+const modalLocation = modal.querySelector(".modal-location");
+const modalDescription = modal.querySelector(".modal-description");
+const modalLink = modal.querySelector(".modal-link");
+
+// Open modal on event card click
+const eventCards = document.querySelectorAll(".event-card");
+
+eventCards.forEach((card) => {
+    card.addEventListener("click", () => {
+        const title = card.querySelector("h4")?.innerText || "Untitled Event";
+        const location =
+            card.querySelector("span")?.innerText || "Location TBA";
+        const description = card.querySelector("p")?.innerText || "";
+        const image = card.querySelector("img")?.src || "";
+        const link = card.dataset.link || "https://events.com/register";
+
+        // Populate modal
+        modalTitle.textContent = title;
+        modalLocation.textContent = location;
+        modalDescription.innerHTML = `
+        <p>${description}</p>
+        ${image ? `<img src="${image}" alt="${title}" class="modal-img" />` : ""}
+    `;
+        modalLink.textContent = link.replace("https://", "");
+        modalLink.href = link;
+
+        // Open modal
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
     });
 });
+
+// Close modal (✕ or background)
+closeModal.addEventListener("click", () => closeEventModal());
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeEventModal();
+});
+
+function closeEventModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+// ===== 4️⃣ FADE-IN ANIMATION =====
+const style = document.createElement("style");
+style.textContent = `
+.fade-in {
+    animation: fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+`;
+document.head.appendChild(style);
