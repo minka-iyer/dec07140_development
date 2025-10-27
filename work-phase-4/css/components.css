@@ -140,7 +140,7 @@
 
 .nav-links a {
     color: #ffffff;
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
     font-size: 0.9rem;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -356,7 +356,7 @@
 
     .nav-links a {
         color: #ffffff;
-        font-family: "Michroma", sans-serif;
+        font-family: "Antonio", sans-serif;
         font-size: 0.8rem;
         text-decoration: none;
         transition: all 0.3s ease;
@@ -407,7 +407,7 @@
 }
 
 .hero-content h1 {
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
     color: var(--primary-color);
     font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 1.618rem;
@@ -433,7 +433,7 @@
     padding: 1rem 2.5rem;
     background: linear-gradient(135deg, var(--accent-color-1) 0%, #4dd4e8 100%);
     color: var(--primary-color);
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
     font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
@@ -534,7 +534,7 @@
 }
 
 .card h2 {
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
     color: var(--primary-color);
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -598,7 +598,7 @@
 }
 
 .about-text h2 {
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
     color: var(--primary-color);
     margin-bottom: 1.618rem;
     font-size: 2rem;

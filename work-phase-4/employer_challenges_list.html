@@ -3,18 +3,18 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Lexend:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="css/page_css/employer_challenges_list.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Michroma&display=swap"
-            rel="stylesheet"
-        />
-
         <link
             rel="icon"
             type="image/x-icon"
@@ -327,5 +327,24 @@
             <p>© 2025 Connect Communities Initiative</p>
         </footer>
     <script src="js/employer_challenges.js"></script>
+    <script src="js/employer_challenges_list.js"></script>
+    <!-- Modal -->
+<div id="challengeModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <h2 id="modal-title"></h2>
+            <div class="modal-employer" id="modal-employer"></div>
+            <p id="modal-description"></p>
+            <div class="modal-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                </svg>
+                <a id="modal-link" href="#" target="_blank"></a>
+            </div>
+        </div>
+    </div>
+</div>
     </body>
 </html>

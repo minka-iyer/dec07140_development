@@ -12,7 +12,7 @@
 }
 
 .page-header h1 {
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
     color: var(--primary-color);
     font-size: 2.2rem;
 }
@@ -72,7 +72,7 @@
     color: var(--primary-color);
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
 }
 
 .filter-group h4 {
@@ -227,7 +227,7 @@ challenge-card h3 {
 }
 
 .hero-text h1 {
-    font-family: "Michroma", sans-serif;
+    font-family: "Antonio", sans-serif;
     color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
@@ -359,5 +359,124 @@ challenge-card h3 {
 
     .animated-hero {
         width: 120px;
+    }
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 20, 70, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #e6f7f9 0%, #d9f0f3 100%);
+    border-radius: 2rem;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 3rem 2.5rem;
+    position: relative;
+    animation: modalSlideIn 0.4s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: var(--primary-color);
+}
+
+.modal-body h2 {
+    font-family: "Antonio", sans-serif;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 2rem;
+    background: white;
+    border-radius: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.modal-employer {
+    font-family: "Lexend", sans-serif;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    background: white;
+    border-radius: 3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    display: inline-block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.modal-body p {
+    font-family: "Lexend", sans-serif;
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    background: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.modal-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+}
+
+.modal-link svg {
+    color: var(--secondary-color);
+    width: 28px;
+    height: 28px;
+}
+
+.modal-link a {
+    font-family: "Lexend", sans-serif;
+    color: var(--secondary-color);
+    font-size: 1.05rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.modal-link a:hover {
+    color: var(--accent-color-1);
+    text-decoration: underline;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
