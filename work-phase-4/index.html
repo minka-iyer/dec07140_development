@@ -159,8 +159,87 @@
                     </div>
                 </div>
             </section>
+            <!-- Sign up form -->
+            <section class="form-section">
+            <div class="form-wrapper">
+                <h1>Form Design</h1>
+                <h3 class="form-description">
+                    The “Join the Community” form enables users to easily submit
+                    their details and join the CCI community. It demonstrates
+                    behavioural-level design by providing immediate feedback,
+                    built-in validation, and accessible interaction cues that
+                    build trust and confidence. The form connects to a real API
+                    using modular JavaScript for scalability and
+                    maintainability.
+                </h3>
+                <form id="community-form" enctype="multipart/form-data">
+                    <!-- Full Name -->
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        aria-describedby="nameHelp"
+                    />
+                    <small id="nameHelp"
+                        >Required — please enter your full name.</small
+                    >
+
+                    <!-- Email -->
+                    <label for="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        aria-describedby="emailHelp"
+                    />
+                    <small id="emailHelp"
+                        >Required — must be a valid email address.</small
+                    >
+
+                    <!-- Message -->
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        aria-describedby="messageHelp"
+                    ></textarea>
+                    <small id="messageHelp"
+                        >Optional — include a short introduction or
+                        message.</small
+                    >
+
+                    <!-- Photo Upload -->
+                    <label for="photo">Upload Photo</label>
+                    <input
+                        type="file"
+                        id="photo"
+                        name="photo"
+                        accept="image/*"
+                        aria-describedby="photoHelp"
+                    />
+                    <small id="photoHelp"
+                        >Optional — upload an image file (max 10 MB).</small
+                    >
+
+                    <button type="submit" class="btn btn-primary">
+                        Join the Community
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section id="community-list" class="content-section">
+                <h3> Community Reflections</h3>
+                <p> Below are the voices and messages shared by our community members: </p>
+            </section>
+
+        <!-- Feedback message area -->
+        <p id="form-feedback" aria-live="polite"></p>
         </main>
         <script src="js/navbar.js"></script>
+        <script type="module" src="js/index.js"></script>
         <footer class="site-footer">
             <p>
                 &copy; 2025 Connect Communities |
