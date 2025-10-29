@@ -1,19 +1,25 @@
-export async function postData(formData) {
+const postFormData = async (formEl, endpointUrl, customHeaders = {}) => {
+    const formData = new FormData(formEl);
+
     try {
-        const response = await fetch("http://localhost:3000/community", {
-            method: "POST",
-            body: formData,
+        const response = await fetch(endpointUrl, {
+            method: 'POST',
+            headers: customHeaders,
+            body: formData
         });
 
-        if (!response.ok) {
-            throw new Error(`Server error: ${response.status}`);
-        }
-
         const data = await response.json();
-        console.log("Post success:", data);
-        return data;
+
+        return {
+            success: response.ok && data.status === 'success',
+            data,
+        };
     } catch (error) {
-        console.error("Post failed:", error);
-        throw error;
+        return {
+            success: false,
+            data: { message: 'Network or server error.', error },
+        };
     }
-}
+};
+
+export { postFormData };
