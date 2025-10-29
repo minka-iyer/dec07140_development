@@ -15,6 +15,7 @@ const postFormData = async (formEl, endpointUrl, customHeaders = {}) => {
             data,
         };
     } catch (error) {
+        console.error('Post error:', error);
         return {
             success: false,
             data: { message: 'Network or server error.', error },
