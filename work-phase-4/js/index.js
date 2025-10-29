@@ -1,29 +1,28 @@
-import { initButtons } from "./modules/buttons.js";
+import { postData } from "./postDataIndex.js";
+import { getData } from "./getDataIndex.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-    initButtons();
+// Load existing community data on page load
+window.addEventListener("DOMContentLoaded", () => {
+    getData();
 });
 
-import { postFormData } from './modules/postFormData.js';
-            
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('community-form');
-    const feedback = document.getElementById('form-feedback');
+const form = document.getElementById("community-form");
+const feedback = document.getElementById("form-feedback");
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-        feedback.textContent = 'Submitting...';
-        const { success, data } = await postFormData(form, 'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community/', {
-            'student_number': 's4976074',
-            'uqcloud_zone_id': '2abddf4b',
-        });
+    const formData = new FormData(form);
+    feedback.textContent = "Submitting...";
 
-        if (success) {
-            feedback.textContent = data.message;
-            form.reset();
-        } else {
-            feedback.textContent = data.message || 'Something went wrong.';
-        }
-    });
+    try {
+        await postData(formData);
+        feedback.textContent = "Thank you for joining!";
+
+        form.reset();
+        await getData(); // 🔥 refresh the displayed list
+    } catch (err) {
+        console.error("Form submission failed:", err);
+        feedback.textContent = "Error submitting form. Please try again.";
+    }
 });
