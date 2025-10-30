@@ -4,8 +4,8 @@
 
 /* Header */
 .mentor-header {
-    background: linear-gradient(135deg, #0c1446 0%, #175873 100%);
-    color: white;
+    background: var(--accent-color-2);
+    color: black;
     padding: 2rem 1.5rem;
     text-align: center;
     margin-bottom: 1.5rem;
