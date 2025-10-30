@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/index.css" />
-        <link rel="stylesheet" href="css/page_css/indexform.css"/>
+        <link rel="stylesheet" href="css/page_css/indexform.css" />
         <link
             rel="icon"
             type="image/x-icon"
@@ -93,14 +93,16 @@
                             projects — connecting communities through meaningful
                             opportunities and shared growth.
                         </p>
-                        <a href="#" class="cta-btn">Join the Movement →</a>
+                        <a href="#signup" class="cta-btn"
+                            >Join the Movement →</a
+                        >
                     </div>
                 </div>
             </section>
 
             <!-- Cards Section -->
             <section class="cards-grid">
-                <div class="card">
+                <a href="find_an_event.html" class="card">
                     <h2>Events</h2>
                     <img
                         src="assets/events.png"
@@ -111,8 +113,9 @@
                         Discover and register for upcoming events in your
                         community.
                     </p>
-                </div>
-                <div class="card">
+                </a>
+
+                <a href="employer_challenges.html" class="card">
                     <h2>Challenges</h2>
                     <img
                         src="assets/challenges_updated.png"
@@ -123,8 +126,9 @@
                         Participate in challenges that develop skills and create
                         impact.
                     </p>
-                </div>
-                <div class="card">
+                </a>
+
+                <a href="community_stories.html" class="card">
                     <h2>Stories</h2>
                     <img
                         src="assets/stories.png"
@@ -134,18 +138,21 @@
                     <p>
                         Read inspiring journeys from people making a difference.
                     </p>
-                </div>
-                <div class="card">
-                    <h2>Portfolio Showcase</h2>
+                </a>
+
+                <a href="mentor_directory.html" class="card">
+                    <h2>Mentor Directory</h2>
                     <img
                         src="assets/portfolio.png"
-                        alt="Challenges icon"
+                        alt="Mentor Directory icon"
                         class="card-image"
                     />
-                    <p>Share your work in a way that matters.</p>
-                </div>
+                    <p>
+                        Connect with mentors who can guide you on your journey.
+                    </p>
+                </a>
             </section>
-            
+
             <!-- About Us -->
             <section class="about">
                 <div class="about-inner">
@@ -167,13 +174,14 @@
                     </div>
                 </div>
             </section>
-            
+
             <!-- Sign up form -->
-            <section class="form-section">
+            <section id="signup" class="form-section">
                 <div class="form-wrapper">
                     <h1>Your Story Starts Here.</h1>
                     <h3 class="form-description">
-                        Connect with projects, people, and ideas that make a difference.
+                        Connect with projects, people, and ideas that make a
+                        difference.
                     </h3>
                     <form id="community-form" enctype="multipart/form-data">
                         <!-- Full Name -->
@@ -231,19 +239,22 @@
                             Join the Community
                         </button>
                     </form>
-                    
+
                     <!-- Feedback message area - MOVED HERE -->
                     <p id="form-feedback" aria-live="polite"></p>
                 </div>
             </section>
-            
+
             <!-- Community Reflections List -->
             <section id="community-list" class="content-section">
                 <h3>Community Reflections</h3>
-                <p>Below are the voices and messages shared by our community members:</p>
+                <p>
+                    Below are the voices and messages shared by our community
+                    members:
+                </p>
             </section>
         </main>
-        
+
         <footer class="site-footer">
             <p>
                 &copy; 2025 Connect Communities |
@@ -253,7 +264,7 @@
                 <a href="privacy.html">Privacy Policy</a>
             </p>
         </footer>
-        
+
         <script src="js/navbar.js"></script>
         <script type="module" src="js/index.js"></script>
     </body>
