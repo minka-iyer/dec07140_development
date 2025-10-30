@@ -118,24 +118,29 @@
 
             <div class="challenge-body">
                 <!-- Sidebar Filters -->
-                <aside class="filters">
-                <h3>Filter by</h3>
+                <div class="top-filters">
+                    <div class="filter-group-inline">
+                    <h4>Incentive</h4>
+                    <input type="checkbox" id="monetary" value="monetary">
+                    <label for="monetary">Monetary</label>
 
-                <div class="filter-group">
-                    <h4>Incentive Type</h4>
-                    <label><input type="checkbox" /> Monetary</label>
-                    <label><input type="checkbox" /> Mentorship</label>
-                    <label><input type="checkbox" /> Internship</label>
-                    <label><input type="checkbox" /> Publication</label>
-                </div>
+                    <input type="checkbox" id="mentorship" value="mentorship">
+                    <label for="mentorship">Mentorship</label>
 
-                <div class="filter-group">
-                    <h4>Status</h4>
-                    <label><input type="checkbox" /> Active</label>
-                    <label><input type="checkbox" /> Upcoming</label>
-                    <label><input type="checkbox" /> Completed</label>
-                </div>
-                </aside>
+                    <input type="checkbox" id="internship" value="internship">
+                    <label for="internship">Internship</label>
+                    </div>
+
+                    <div class="filter-group-inline">
+                        <h4>Status:</h4>
+                        <label><input type="checkbox" value="active"> Active</label>
+                        <label><input type="checkbox" value="upcoming"> Upcoming</label>
+                        <label><input type="checkbox" value="completed"> Completed</label>
+                    </div>
+
+                    <button class="reset-btn">Reset Filters</button>
+                    </div>
+
 
                 <!-- Challenge Cards -->
                 <div class="challenge-grid">
