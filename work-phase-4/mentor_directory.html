@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/page_css/mentor_directory.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon-16x16.png">
+    <title>Mentor Directory - CCI</title>
+</head>
+<body>
+    <header>
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/CCI.png" alt="CCI Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="find_an_event.html">Find an Event</a></li>
+                <li><a href="community_stories.html">Community Stories Hub</a></li>
+                <li><a href="employer_challenges.html">Employer Challenges</a></li>
+                <li><a href="portfolio_showcase.html">Portfolio Showcase</a></li>
+                <li><a href="badges_progress_tracking.html">Badges & Progress</a></li>
+            </ul>
+        </nav>
+
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li><a href="find_an_event.html">🗓️</a></li>
+                <li><a href="community_stories.html">🗣️</a></li>
+                <li><a href="employer_challenges.html">🧩</a></li>
+                <li><a href="portfolio_showcase.html">🖼️</a></li>
+                <li><a href="badges_progress_tracking.html">🏅</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="mentor-header">
+            <h1>Mentor Directory</h1>
+            <button class="info-btn" id="info-btn">How This Works</button>
+        </div>
+
+        <div class="mentor-container">
+            <!-- Sidebar - appears on top for mobile -->
+            <aside class="mentor-sidebar">
+                <div class="sidebar-section">
+                    <h3>✨ Shortlisted Mentors</h3>
+                    <div id="shortlist-container">
+                        <p class="empty-state">Click the ♡ to shortlist mentors you'd like to connect with</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>🤝 My Connections</h3>
+                    <div id="connections-container">
+                        <p class="empty-state">Mentors you've connected with will appear here</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Mentors List -->
+            <div class="mentors-grid" id="mentors-grid">
+                <!-- Mentors will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Info Modal -->
+    <div class="modal" id="info-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <h2>How This Works</h2>
+            <p><strong>1. Browse Mentors:</strong> Explore our diverse community of mentors across various expertise areas.</p>
+            <p><strong>2. Shortlist Your Favorites:</strong> Click the ♡ heart icon to add mentors to your "Shortlisted Mentors" list for later review.</p>
+            <p><strong>3. Connect & Build Relationships:</strong> Reach out to mentors via email or LinkedIn. Once connected, move them to your "My Connections" list.</p>
+            <p><strong>Categories:</strong></p>
+            <ul>
+                <li>🌱 Sustainability & Social Impact</li>
+                <li>💻 Technology & Engineering</li>
+                <li>☁️ Cloud, Data & AI</li>
+                <li>🧠 Research & Emerging Sciences</li>
+                <li>🎨 Design, UX & Creative Tech</li>
+                <li>🚀 Innovation & Entrepreneurship</li>
+                <li>🧭 Leadership & Professional Growth</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Connect Communities Initiative</p>
+    </footer>
+
+    <script src="js/mentor_directory.js"></script>
+</body>
+</html>
