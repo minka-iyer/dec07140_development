@@ -43,14 +43,15 @@ function getMockStories() {
             author_name: "Ethan Nguyen",
             post_title: "Building confidence, one presentation at a time",
             description: "Public speaking used to terrify me. But joining an innovation challenge forced me to step up — and now I’ve started volunteering as an event MC. Growth happens outside comfort.",
-            photo1: "https://picsum.photos/id/1060/600/400",
-            photo2: "https://picsum.photos/id/1077/600/400",
+            photo1: "assets/community-stories/ethan-1.jpg",
+            photo2: "assets/community-stories/ethan-2.jpg",
         },
         {
             author_name: "Liam Chen",
             post_title: "From Impostor Syndrome to Innovation",
             description: "My small idea to improve student mental health through an anonymous story-sharing app gained traction. You don’t need to be the loudest voice — just the brave one to start.",
-            photo1: "https://picsum.photos/id/1080/600/400",
+            photo1: "assets/community-stories/liam-1.jpg",
+            photo2: "assets/community-stories/liam-2.jpg",
         },
     ];
 }

@@ -127,6 +127,24 @@
     font-size: 0.85rem;
     font-family: "Antonio", sans-serif;
 }
+#filter-date-btn {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--accent-color-1);
+    color: white;
+    font-family: "Antonio", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#filter-date-btn:hover {
+    background-color: var(--secondary-color);
+}
+
 
 .filter-group select,
 .filter-group input[type="date"] {
