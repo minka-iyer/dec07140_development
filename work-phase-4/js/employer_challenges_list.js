@@ -291,3 +291,19 @@ function showNoResultsMessage() {
         grid.appendChild(msg);
     }
 }
+
+const toggleBtn = document.getElementById("toggle-animation");
+const animatedElements = document.querySelectorAll(
+    ".path-line, .trophy, .head, .runner"
+);
+
+let isPaused = false;
+
+toggleBtn.addEventListener("click", () => {
+    isPaused = !isPaused;
+    animatedElements.forEach(el => {
+        el.style.animationPlayState = isPaused ? "paused" : "running";
+    });
+    toggleBtn.textContent = isPaused ? "▶️" : "⏸️";
+    toggleBtn.setAttribute("aria-label", isPaused ? "Play animation" : "Pause animation");
+});

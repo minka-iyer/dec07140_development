@@ -136,7 +136,11 @@
     line-height: 1.4;
 }
 .view-btn {
-    background: linear-gradient(90deg, var(--accent-color-1), var(--secondary-color));
+    background: linear-gradient(
+        90deg,
+        var(--accent-color-1),
+        var(--secondary-color)
+    );
     color: white;
     border: none;
     padding: 0.5rem 1.2rem;
@@ -147,7 +151,34 @@
 }
 .view-btn:hover {
     transform: scale(1.05);
-    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color-1));
+    background: linear-gradient(
+        90deg,
+        var(--secondary-color),
+        var(--accent-color-1)
+    );
+}
+/* === Play / Pause Button === */
+.pause-btn {
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+.pause-btn:hover {
+    background: var(--accent-color-1);
+    transform: scale(1.1);
 }
 
 /* --- Responsive --- */
@@ -243,20 +274,40 @@
 
 /* --- Keyframes --- */
 @keyframes dashMove {
-    0% { stroke-dashoffset: 0; }
-    100% { stroke-dashoffset: 16; }
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 16;
+    }
 }
 @keyframes trophyGlow {
-    0% { stroke: var(--accent-color-1); filter: drop-shadow(0 0 0 var(--accent-color-1)); }
-    100% { stroke: #ffffff; filter: drop-shadow(0 0 8px var(--accent-color-1)); }
+    0% {
+        stroke: var(--accent-color-1);
+        filter: drop-shadow(0 0 0 var(--accent-color-1));
+    }
+    100% {
+        stroke: #ffffff;
+        filter: drop-shadow(0 0 8px var(--accent-color-1));
+    }
 }
 @keyframes pulseGlow {
-    0%,100% { fill: var(--primary-color); }
-    50% { fill: var(--accent-color-1); }
+    0%,
+    100% {
+        fill: var(--primary-color);
+    }
+    50% {
+        fill: var(--accent-color-1);
+    }
 }
 @keyframes runnerBounce {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 /* --- Button --- */
@@ -281,12 +332,16 @@
         flex-direction: column;
         text-align: center;
     }
-    .hero-text { max-width: 100%; }
+    .hero-text {
+        max-width: 100%;
+    }
     .hero-graphic {
         justify-content: center;
         margin-top: 2rem;
     }
-    .animated-hero { width: 120px; }
+    .animated-hero {
+        width: 120px;
+    }
 }
 
 /* ===== MODAL ===== */
@@ -321,7 +376,9 @@
     color: var(--secondary-color);
     transition: color 0.2s ease;
 }
-.close:hover { color: var(--primary-color); }
+.close:hover {
+    color: var(--primary-color);
+}
 .modal-body h2 {
     font-family: "Antonio", sans-serif;
     color: var(--secondary-color);
@@ -384,8 +441,14 @@
     text-decoration: underline;
 }
 @keyframes modalSlideIn {
-    from { opacity: 0; transform: translateY(-50px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===== NO RESULTS ===== */
