@@ -7,7 +7,7 @@ const mentors = [
         avatar: "👩‍🔬",
         description: "I specialize in AI ethics and can help you navigate responsible AI development, understand bias in machine learning, and design inclusive tech solutions.",
         categories: [
-            { icon: "assets/icons/cloud-ai.png", name: "Cloud, Data & AI" },
+            { icon: "assets/icons/cloud_DATA_ai.png", name: "Cloud, Data & AI" },
             { icon: "assets/icons/research.png", name: "Research & Emerging Sciences" }
         ],
         email: "sarah.chen@stanford.edu",
@@ -20,8 +20,8 @@ const mentors = [
         avatar: "👨‍💻",
         description: "With 15 years in cloud architecture, I can guide you through system design, scalability challenges, and cloud migration strategies.",
         categories: [
-            { icon: "assets/icons/technology.png", name: "Technology & Engineering" },
-            { icon: "assets/icons/cloud-ai.png", name: "Cloud, Data & AI" }
+            { icon: "assets/icons/tech_engineering.png", name: "Technology & Engineering" },
+            { icon: "assets/icons/cloud_DATA_ai.png", name: "Cloud, Data & AI" }
         ],
         email: "marcus.t@google.com",
         linkedin: "https://linkedin.com/in/marcusthompson"
@@ -46,8 +46,8 @@ const mentors = [
         avatar: "🎨",
         description: "As a senior UX designer, I can help you master user research, design thinking, prototyping, and building portfolios that stand out.",
         categories: [
-            { icon: "assets/icons/design.png", name: "Design, UX & Creative Tech" },
-            { icon: "assets/icons/technology.png", name: "Technology & Engineering" }
+            { icon: "assets/icons/design_ux.png", name: "Design, UX & Creative Tech" },
+            { icon: "assets/icons/tech_engineering.png", name: "Technology & Engineering" }
         ],
         email: "alex.rivera@adobe.com",
         linkedin: "https://linkedin.com/in/alexrivera"
@@ -85,8 +85,8 @@ const mentors = [
         avatar: "💾",
         description: "I specialize in data engineering and can mentor you on building data pipelines, working with big data, and transitioning to data science roles.",
         categories: [
-            { icon: "assets/icons/cloud-ai.png", name: "Cloud, Data & AI" },
-            { icon: "assets/icons/technology.png", name: "Technology & Engineering" }
+            { icon: "assets/icons/cloud_DATA_ai.png", name: "Cloud, Data & AI" },
+            { icon: "assets/icons/tech_engineering.png", name: "Technology & Engineering" }
         ],
         email: "raj.patel@microsoft.com",
         linkedin: "https://linkedin.com/in/rajpatel"
@@ -112,7 +112,7 @@ const mentors = [
         description: "I help early-stage founders find product-market fit, build MVPs quickly, and navigate the startup ecosystem.",
         categories: [
             { icon: "assets/icons/innovation.png", name: "Innovation & Entrepreneurship" },
-            { icon: "assets/icons/technology.png", name: "Technology & Engineering" }
+            { icon: "assets/icons/tech_engineering.png", name: "Technology & Engineering" }
         ],
         email: "carlos@ycombinator.com",
         linkedin: "https://linkedin.com/in/carlosmendoza"
@@ -125,7 +125,7 @@ const mentors = [
         description: "I work on space exploration technology and can mentor you on aerospace engineering, robotics, and pursuing STEM research careers.",
         categories: [
             { icon: "assets/icons/research.png", name: "Research & Emerging Sciences" },
-            { icon: "assets/icons/technology.png", name: "Technology & Engineering" }
+            { icon: "assets/icons/tech_engineering.png", name: "Technology & Engineering" }
         ],
         email: "amina.hassan@jpl.nasa.gov",
         linkedin: "https://linkedin.com/in/aminahassan"

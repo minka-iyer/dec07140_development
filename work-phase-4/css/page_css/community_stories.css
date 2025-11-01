@@ -1,20 +1,41 @@
 /* --- Intro Section (clean image-based hero) --- */
 .intro {
     background: none;
-    padding: 0;
-    margin: 0 auto;
+    padding-top: 0.5rem; /* reduces top space */
+    margin-top: -1rem; /* pulls hero closer to nav */
     text-align: center;
     max-width: 100%;
 }
 
 .intro img,
 .intro-banner {
-    width: 90%;
-    max-width: 600px;
+    width: 70%;
+    max-width: 850px;
     height: auto;
-    display: block;
-    margin: 0 auto 2rem; /* Remove top margin completely */
+    display: b lock;
+    margin: 0 auto 1rem;
     border-radius: 1rem;
+}
+.intro-text {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-family: "Lexend", sans-serif;
+}
+
+.intro-text h1 {
+    font-family: "Antonio", sans-serif;
+    font-size: 2.4rem;
+    color: #0c4a6e;
+    margin-bottom: 0.5rem;
+}
+
+.intro-text p {
+    font-size: 1.05rem;
+    color: #124c63;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 /* Mobile-first adjustments */
@@ -172,7 +193,7 @@
     font-family: "Lexend", sans-serif;
     font-size: 0.95rem;
     width: 100%;
-    
+
     /* collapsed */
     max-height: 0;
     opacity: 0;
@@ -403,7 +424,11 @@ textarea {
 
 .submit-btn {
     width: 100%;
-    background: linear-gradient(135deg, #7dd3c0 0%, #3bd6e8 100%); /* 30% secondary + 10% accent gradient */
+    background: linear-gradient(
+        135deg,
+        #7dd3c0 0%,
+        #3bd6e8 100%
+    ); /* 30% secondary + 10% accent gradient */
     color: #fff;
     border: none;
     border-radius: 0.5rem;
@@ -545,4 +570,29 @@ textarea {
         font-size: 0.85rem;
         padding: 0.35rem 0.9rem;
     }
+}
+/* --- Fix top spacing on Community Stories page --- */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb {
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0 !important;
+}
+
+main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+.intro {
+    margin-top: -3rem !important; /* pull image up closer to nav */
+    padding-top: 0 !important;
+}
+
+header, nav {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
