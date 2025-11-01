@@ -14,7 +14,10 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/badges_progress_tracking.css" />
+        <link
+            rel="stylesheet"
+            href="css/page_css/badges_progress_tracking.css"
+        />
         <link
             rel="icon"
             type="image/x-icon"
@@ -23,59 +26,75 @@
         <title>Work Phase 4</title>
     </head>
     <header>
-            <!-- MOBILE NAV -->
-            <!-- HEADER -->
-                <!-- DESKTOP NAV -->
-                <nav id="nav-desktop" aria-label="Main Navigation">
-                    <a href="index.html" class="nav-logo">
-                            <img src="assets/CCI.png" alt="CCI Logo" />
-                        </a>
-                        <ul class="nav-links">
-                            <li>
-                                <a href="find_an_event.html">Find an Event</a>
-                            </li>
-                            <li>
-                                <a href="community_stories.html"
-                                    >Community Stories Hub</a
-                                >
-                            </li>
-                            <li>
-                                <a href="employer_challenges.html"
-                                    >Employer Challenges</a
-                                >
-                            </li>
-                            <li>
-                                <a href="portfolio_showcase.html"
-                                    >Portfolio Showcase</a
-                                >
-                            </li>
-                            <li>
-                                <a href="badges_progress_tracking.html"
-                                    >Badges & Progress</a
-                                >
-                            </li>
-                        </ul>
-                </nav>
+        <!-- MOBILE NAV -->
+        <!-- HEADER -->
+        <!-- DESKTOP NAV -->
+        <nav id="nav-desktop" aria-label="Main Navigation">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/CCI.png" alt="CCI Logo" />
+            </a>
+            <ul class="nav-links">
+                <li>
+                    <a href="find_an_event.html">Find an Event</a>
+                </li>
+                <li>
+                    <a href="community_stories.html">Community Stories Hub</a>
+                </li>
+                <li>
+                    <a href="employer_challenges.html">Employer Challenges</a>
+                </li>
+                <li>
+                    <a href="portfolio_showcase.html">Portfolio Showcase</a>
+                </li>
+                <li>
+                    <a href="badges_progress_tracking.html"
+                        >Badges & Progress</a
+                    >
+                </li>
+            </ul>
+        </nav>
 
-                <!-- MOBILE NAV -->
-                <nav id="nav-mobile" aria-label="Main Navigation">
-                    <ul>
-                        <li><a href="find_an_event.html">🗓️</a></li>
-                        <li><a href="community_stories.html">🗣️</a></li>
-                        <li><a href="employer_challenges.html">🧩</a></li>
-                        <li><a href="portfolio_showcase.html">🖼️</a></li>
-                        <li><a href="badges_progress_tracking.html">🏅</a></li>
-                    </ul>
-                </nav>
-        </header>
+        <!-- MOBILE NAV -->
+        <nav id="nav-mobile" aria-label="Main Navigation">
+            <ul>
+                <li><a href="find_an_event.html">🗓️</a></li>
+                <li><a href="community_stories.html">🗣️</a></li>
+                <li><a href="employer_challenges.html">🧩</a></li>
+                <li><a href="portfolio_showcase.html">🖼️</a></li>
+                <li><a href="badges_progress_tracking.html">🏅</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <body>
         <!-- ===== HERO SECTION ===== -->
         <section class="hero">
             <h1>Badges and Progress Tracking</h1>
             <div class="cta-buttons">
-                <button class="badge-info-btn"><a href = "employer_challenges_list.html">
-                    What do these badges mean?</button></a>
+                <button id="badge-info-btn" class="btn-outline">
+                    What do these badges mean?
+                </button>
+            </div>
+            <div id="badge-info-box" class="info-box hidden">
+                <h3>What These Badges Mean</h3>
+                <p>⚙️ <strong>Beta Tester:</strong>  
+                    You’re among the first to experiment with new challenges and features — fearless in testing ideas that shape what comes next.</p>
+
+                    <p>💡 <strong>Early Adopter:</strong>  
+                    You dive in early, exploring opportunities before they trend. Always curious, always one step ahead of the crowd.</p>
+
+                    <p>🧠 <strong>Hacker Mode:</strong>  
+                    You find creative, efficient ways to solve problems — blending logic, innovation, and hustle to make complex things simple.</p>
+
+                    <p>🔥 <strong>Disruptor:</strong>  
+                    You challenge the status quo, push boundaries, and introduce fresh ways of thinking that move communities and industries forward.</p>
+
+                    <p>🚀 <strong>Moonshot Thinker:</strong>  
+                    You dream big and take bold leaps — your projects don’t just solve problems, they inspire change on a larger scale.</p>
+
+                    <p>🦄 <strong>Unicorn Builder:</strong>  
+                    You’ve mastered the process — turning vision into reality through creativity, persistence, and impact that lasts.</p>
+            </div>
             </div>
         </section>
 
@@ -84,55 +103,80 @@
             <!-- Progress bar -->
             <h2>My progress</h2>
             <div class="progress-container">
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: 60%;"></div>
-            </div>
-            <div class="progress-text">6 / 15 challenges completed (60%)</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%"></div>
+                </div>
+                <div class="progress-text">
+                    6 / 15 challenges completed (60%)
+                </div>
             </div>
 
             <div class="badge-grid">
-                <div class="badge" data-info="Earned after completing 1 challenge.">
-                <img src="assets/badges/1.png" alt="Beta Tester Badge" >
-                <p>Beta Tester</p>
+                <div
+                    class="badge"
+                    data-info="Earned after completing 1 challenge."
+                >
+                    <img src="assets/badges/1.png" alt="Beta Tester Badge" />
+                    <p>Beta Tester</p>
                 </div>
 
-                <div class="badge" data-info="Earned after completing 3 challenges.">
-                <img src="assets/badges/2.png" alt="Early Adopter Badge">
-                <p>Early Adopter</p>
+                <div
+                    class="badge"
+                    data-info="Earned after completing 3 challenges."
+                >
+                    <img src="assets/badges/2.png" alt="Early Adopter Badge" />
+                    <p>Early Adopter</p>
                 </div>
 
-                <div class="badge" data-info="Earned after completing 6 challenges.">
-                <img src="assets/badges/3.png" alt="Hacker Mode Badge">
-                <p>Hacker Mode</p>
+                <div
+                    class="badge"
+                    data-info="Earned after completing 6 challenges."
+                >
+                    <img src="assets/badges/3.png" alt="Hacker Mode Badge" />
+                    <p>Hacker Mode</p>
                 </div>
 
-                <div class="badge" data-info="Earned after completing 10 challenges.">
-                <img src="assets/badges/4.png" alt="Disruptor Badge">
-                <p>Disruptor</p>
+                <div
+                    class="badge"
+                    data-info="Earned after completing 10 challenges."
+                >
+                    <img src="assets/badges/4.png" alt="Disruptor Badge" />
+                    <p>Disruptor</p>
                 </div>
 
                 <!-- Locked badge -->
-                <div class="badge locked" data-info="Earned after completing 15 challenges."
-                data-hover="Complete 2 more challenges to unlock">
-                <img src="assets/badges/5.png" alt="Moonshot Thinker Badge">
-                <p>Moonshot Thinker</p>
+                <div
+                    class="badge locked"
+                    data-info="Earned after completing 15 challenges."
+                    data-hover="Complete 2 more challenges to unlock"
+                >
+                    <img
+                        src="assets/badges/5.png"
+                        alt="Moonshot Thinker Badge"
+                    />
+                    <p>Moonshot Thinker</p>
                 </div>
 
                 <!-- Locked badge -->
-                <div class="badge locked" data-info="Earned after completing 15 challenges."
-                data-hover="Complete 12 more challenges to unlock">
-                <img src="assets/badges/6.png" alt="Unicorn Builder Badge">
-                <p>Unicorn Builder</p>
+                <div
+                    class="badge locked"
+                    data-info="Earned after completing 15 challenges."
+                    data-hover="Complete 12 more challenges to unlock"
+                >
+                    <img
+                        src="assets/badges/6.png"
+                        alt="Unicorn Builder Badge"
+                    />
+                    <p>Unicorn Builder</p>
                 </div>
             </div>
         </section>
 
-
-
         <footer>
             <p>© 2025 Connect Communities Initiative</p>
         </footer>
-    <script src="js/navbar.js"></script>
-    <script src="js/employer_challenges.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/employer_challenges.js"></script>
+        <script src="js/badges_progress_tracking.js"></script>
     </body>
 </html>

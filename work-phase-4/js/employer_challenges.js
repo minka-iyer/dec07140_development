@@ -16,3 +16,15 @@ window.addEventListener("click", (event) => {
         event.target.style.display = "none";
     }
 });
+// === HOW THIS WORKS TOGGLE ===
+const howBtn = document.getElementById("how-this-works-btn");
+const infoBox = document.getElementById("how-this-works-box");
+
+if (howBtn && infoBox) {
+    howBtn.addEventListener("click", () => {
+        const isVisible = infoBox.classList.contains("show");
+        infoBox.classList.toggle("show", !isVisible);
+        infoBox.classList.toggle("hidden", isVisible);
+        howBtn.textContent = isVisible ? "How This Works" : "Hide Info";
+    });
+}

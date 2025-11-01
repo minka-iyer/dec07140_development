@@ -143,3 +143,15 @@
     background-color: var(--secondary-color);
     transform: translateY(-2px);
 }
+
+#badge-info-box p {
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    padding: 1rem 1.2rem;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+#badge-info-box p:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
