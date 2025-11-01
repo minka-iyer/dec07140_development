@@ -160,8 +160,9 @@
 /* === Play / Pause Button === */
 .pause-btn {
     position: absolute;
-    bottom: -1.5rem;
+    top: 0;
     right: 0;
+    transform: translate(50%, -50%);
     background: var(--secondary-color);
     color: white;
     border: none;
@@ -175,10 +176,11 @@
     justify-content: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    z-index: 10;
 }
 .pause-btn:hover {
     background: var(--accent-color-1);
-    transform: scale(1.1);
+    transform: translate(50%, -50%) scale(1.1);
 }
 
 /* --- Responsive --- */
