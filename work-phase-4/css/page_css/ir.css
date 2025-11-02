@@ -1,3 +1,7 @@
+/* ===================================== */
+/* IMPLEMENTATION RATIONALE PAGE STYLES */
+/* ===================================== */
+
 .ir-header {
     background: linear-gradient(
         135deg,
@@ -55,32 +59,159 @@ p,
 li {
     font-size: 1rem;
     margin-bottom: 0.8rem;
+    line-height: 1.6;
 }
 
 ul {
     padding-left: 1.5rem;
+    font-family: Lexend, sans-serif;
 }
 
+/* ===================================== */
+/* ACCESSIBILITY AUDIT TABLE STYLES */
+/* ===================================== */
+
+/* Container for the accessibility scan image/table */
+.accessibility-scan-container {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.accessibility-scan-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+
+/* Enhanced table styling for accessibility reports */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-th,
-td {
-    border: 1px solid #ccc;
-    padding: 0.75rem 1rem;
-    text-align: left;
+/* Table header styling */
+thead {
+    background: #4a3b5c;
+    color: white;
 }
 
 th {
-    background-color: var(--accent-color-2);
+    background-color: #4a3b5c;
+    color: white;
+    font-weight: 600;
+    padding: 1rem;
+    text-align: left;
+    font-family: "Lexend", sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+/* Table body styling */
+td {
+    background-color: #fff;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+    font-family: "Lexend", sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Alternating row colors for better readability */
+tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+tbody tr:hover {
+    background-color: #f0f9fa;
+    transition: background-color 0.2s ease;
+}
+
+/* Summary row styling */
+.summary-header {
+    background: #4a3b5c !important;
+    color: white !important;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Color-coded cells for scan results */
+.violations-cell {
+    background-color: #fee2e2 !important;
+    color: #991b1b;
     font-weight: 600;
 }
 
-td {
-    background-color: #fff;
+.needs-review-cell {
+    background-color: #fef3c7 !important;
+    color: #92400e;
+    font-weight: 600;
+}
+
+.recommendations-cell {
+    background-color: #dbeafe !important;
+    color: #1e40af;
+    font-weight: 600;
+}
+
+.hidden-cell {
+    background-color: #f3f4f6 !important;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+/* Issues count cell */
+.issues-cell {
+    background-color: #1f2937 !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+/* Responsive table wrapper */
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+}
+
+/* Ensure tables are responsive */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+    
+    th,
+    td {
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .accessibility-scan-container {
+        padding: 1rem;
+    }
+}
+
+/* Mobile: Stack table or allow horizontal scroll */
+@media (max-width: 640px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    th,
+    td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
 }
 
 .ir-footer {
@@ -94,6 +225,7 @@ td {
     .ir-header h1 {
         font-size: 2.2rem;
     }
+    
     section {
         padding: 1.5rem;
     }

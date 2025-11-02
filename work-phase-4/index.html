@@ -32,132 +32,87 @@
     </head>
 
     <body>
-        <header>
-            <!-- MOBILE NAV -->
-            <!-- HEADER -->
+        <header role="banner">
             <!-- DESKTOP NAV -->
-            <nav id="nav-desktop" aria-label="Main Navigation">
-                <a href="index.html" class="nav-logo">
+            <nav id="nav-desktop" aria-label="Primary site navigation">
+                <a href="index.html" class="nav-logo" aria-label="Go to homepage">
                     <img src="assets/CCI.png" alt="CCI Logo" />
                 </a>
                 <ul class="nav-links">
-                    <li>
-                        <a href="find_an_event.html">Find an Event</a>
-                    </li>
-                    <li>
-                        <a href="community_stories.html"
-                            >Community Stories Hub</a
-                        >
-                    </li>
-                    <li>
-                        <a href="employer_challenges.html"
-                            >Employer Challenges</a
-                        >
-                    </li>
-                    <li>
-                        <a href="mentor_directory.html">Mentor Directory</a>
-                    </li>
-                    <li>
-                        <a href="badges_progress_tracking.html"
-                            >Badges & Progress</a
-                        >
-                    </li>
-                    <li>
-                        <a href="implementation_rationale.html"
-                            >Implementation Rationale</a
-                        >
-                    </li>
+                    <li><a href="find_an_event.html" aria-label="Find an Event page">Find an Event</a></li>
+                    <li><a href="community_stories.html" aria-label="Community Stories Hub page">Community Stories Hub</a></li>
+                    <li><a href="employer_challenges.html" aria-label="Employer Challenges page">Employer Challenges</a></li>
+                    <li><a href="mentor_directory.html" aria-label="Mentor Directory page">Mentor Directory</a></li>
+                    <li><a href="badges_progress_tracking.html" aria-label="Badges and Progress Tracking page">Badges & Progress</a></li>
+                    <li><a href="implementation_rationale.html" aria-label="Implementation Rationale page">Implementation Rationale</a></li>
+                    <li><a href="gen_ai_acknowledgement.html" aria-label="Generative AI and Machine Translation Acknowledgement page">GenAI & MT Acknowledgement</a></li>
                 </ul>
             </nav>
 
             <!-- MOBILE NAV -->
-            <nav id="nav-mobile" aria-label="Main Navigation">
+            <nav id="nav-mobile" aria-label="Mobile navigation menu">
                 <ul>
-                    <li><a href="find_an_event.html">🗓️</a></li>
-                    <li><a href="community_stories.html">🗣️</a></li>
-                    <li><a href="employer_challenges.html">🧩</a></li>
-                    <li><a href="mentor_directory.html">🧭</a></li>
-                    <li><a href="badges_progress_tracking.html">🏅</a></li>
-                    <li><a href="implementation_rationale.html">🧠</a></li>
+                    <li><a href="find_an_event.html" aria-label="Find an Event">🗓️</a></li>
+                    <li><a href="community_stories.html" aria-label="Community Stories">🗣️</a></li>
+                    <li><a href="employer_challenges.html" aria-label="Employer Challenges">🧩</a></li>
+                    <li><a href="mentor_directory.html" aria-label="Mentor Directory">🧭</a></li>
+                    <li><a href="badges_progress_tracking.html" aria-label="Badges and Progress Tracking">🏅</a></li>
+                    <li><a href="implementation_rationale.html" aria-label="Implementation Rationale">🧠</a></li>
+                    <li><a href="gen_ai_acknowledgement.html" aria-label="Generative AI and Machine Translation Acknowledgement">🧾</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
+
+        <main id="main-content">
             <!-- Hero -->
-            <section class="hero">
+            <section class="hero" aria-labelledby="hero-heading">
                 <div class="hero-inner">
                     <div class="hero-content">
-                        <h1>Connected Communities Initiative</h1>
+                        <h1 id="hero-heading">Connected Communities Initiative</h1>
                         <p>
                             A platform that bridges people, purpose, and
                             projects — connecting communities through meaningful
                             opportunities and shared growth.
                         </p>
-                        <a href="#signup" class="cta-btn"
-                            >Join the Movement →</a
-                        >
+                        <a href="#signup" class="cta-btn" aria-label="Skip to sign up form">
+                            Join the Movement →
+                        </a>
                     </div>
                 </div>
             </section>
 
             <!-- Cards Section -->
-            <section class="cards-grid">
-                <a href="find_an_event.html" class="card">
+            <section class="cards-grid" aria-label="Main feature navigation cards">
+                <a href="find_an_event.html" class="card" aria-label="Find and explore community events">
                     <h2>Events</h2>
-                    <img
-                        src="assets/events.png"
-                        alt="Challenges icon"
-                        class="card-image"
-                    />
-                    <p>
-                        Discover and register for upcoming events in your
-                        community.
-                    </p>
+                    <img src="assets/events.png" alt="Calendar representing events" class="card-image" />
+                    <p>Discover and register for upcoming events in your community.</p>
                 </a>
 
-                <a href="employer_challenges.html" class="card">
+                <a href="employer_challenges.html" class="card" aria-label="Participate in employer challenges">
                     <h2>Challenges</h2>
-                    <img
-                        src="assets/challenges_updated.png"
-                        alt="Challenges icon"
-                        class="card-image"
-                    />
-                    <p>
-                        Participate in challenges that develop skills and create
-                        impact.
-                    </p>
+                    <img src="assets/challenges_updated.png" alt="Puzzle piece symbol for challenges" class="card-image" />
+                    <p>Participate in challenges that develop skills and create impact.</p>
                 </a>
 
-                <a href="community_stories.html" class="card">
+                <a href="community_stories.html" class="card" aria-label="Read community stories">
                     <h2>Stories</h2>
-                    <img
-                        src="assets/stories.png"
-                        alt="Challenges icon"
-                        class="card-image"
-                    />
-                    <p>
-                        Read inspiring journeys from people making a difference.
-                    </p>
+                    <img src="assets/stories.png" alt="Speech bubble symbol for community stories" class="card-image" />
+                    <p>Read inspiring journeys from people making a difference.</p>
                 </a>
 
-                <a href="mentor_directory.html" class="card">
+                <a href="mentor_directory.html" class="card" aria-label="Browse the mentor directory">
                     <h2>Mentor Directory</h2>
-                    <img
-                        src="assets/portfolio.png"
-                        alt="Mentor Directory icon"
-                        class="card-image"
-                    />
-                    <p>
-                        Connect with mentors who can guide you on your journey.
-                    </p>
+                    <img src="assets/portfolio.png" alt="Compass icon for mentor guidance" class="card-image" />
+                    <p>Connect with mentors who can guide you on your journey.</p>
                 </a>
             </section>
 
             <!-- About Us -->
-            <section class="about">
+            <section class="about" aria-labelledby="about-heading">
                 <div class="about-inner">
                     <div class="about-text">
-                        <h2>About Us</h2>
+                        <h2 id="about-heading">About Us</h2>
                         <p>
                             We empower communities by fostering collaboration
                             between individuals, local businesses, and
@@ -167,23 +122,20 @@
                         </p>
                     </div>
                     <div class="about-image">
-                        <img
-                            src="assets/about_new.png"
-                            alt="Community illustration"
-                        />
+                        <img src="assets/about_new.png" alt="Illustration of connected community" />
                     </div>
                 </div>
             </section>
 
             <!-- Sign up form -->
-            <section id="signup" class="form-section">
+            <section id="signup" class="form-section" aria-labelledby="signup-heading">
                 <div class="form-wrapper">
-                    <h1>Your Story Starts Here.</h1>
+                    <h1 id="signup-heading">Your Story Starts Here.</h1>
                     <h3 class="form-description">
                         Connect with projects, people, and ideas that make a
                         difference.
                     </h3>
-                    <form id="community-form" enctype="multipart/form-data">
+                    <form id="community-form" enctype="multipart/form-data" aria-label="Community sign-up form">
                         <!-- Full Name -->
                         <label for="name">Full Name</label>
                         <input
@@ -191,11 +143,10 @@
                             id="name"
                             name="name"
                             required
+                            aria-required="true"
                             aria-describedby="nameHelp"
                         />
-                        <small id="nameHelp"
-                            >Required — please enter your full name.</small
-                        >
+                        <small id="nameHelp">Required — please enter your full name.</small>
 
                         <!-- Email -->
                         <label for="email">Email</label>
@@ -204,11 +155,10 @@
                             id="email"
                             name="email"
                             required
+                            aria-required="true"
                             aria-describedby="emailHelp"
                         />
-                        <small id="emailHelp"
-                            >Required — must be a valid email address.</small
-                        >
+                        <small id="emailHelp">Required — must be a valid email address.</small>
 
                         <!-- Message -->
                         <label for="message">Message</label>
@@ -217,10 +167,9 @@
                             name="message"
                             aria-describedby="messageHelp"
                         ></textarea>
-                        <small id="messageHelp"
-                            >Optional — include a short introduction or
-                            message.</small
-                        >
+                        <small id="messageHelp">
+                            Optional — include a short introduction or message.
+                        </small>
 
                         <!-- Photo Upload -->
                         <label for="photo">Upload Photo</label>
@@ -231,23 +180,22 @@
                             accept="image/*"
                             aria-describedby="photoHelp"
                         />
-                        <small id="photoHelp"
-                            >Optional — upload an image file (max 10 MB).</small
-                        >
+                        <small id="photoHelp">
+                            Optional — upload an image file (max 10 MB).
+                        </small>
 
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" aria-label="Submit sign-up form">
                             Join the Community
                         </button>
                     </form>
 
-                    <!-- Feedback message area - MOVED HERE -->
                     <p id="form-feedback" aria-live="polite"></p>
                 </div>
             </section>
 
             <!-- Community Reflections List -->
-            <section id="community-list" class="content-section">
-                <h3>Community Reflections</h3>
+            <section id="community-list" class="content-section" aria-labelledby="community-reflections-heading">
+                <h3 id="community-reflections-heading">Community Reflections</h3>
                 <p>
                     Below are the voices and messages shared by our community
                     members:
@@ -255,13 +203,11 @@
             </section>
         </main>
 
-        <footer class="site-footer">
+        <footer class="site-footer" role="contentinfo">
             <p>
                 &copy; 2025 Connect Communities |
-                <a href="terms.html" aria-label="View Terms of Service"
-                    >Terms of Service</a
-                >
-                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html" aria-label="View Terms of Service">Terms of Service</a>
+                <a href="privacy.html" aria-label="View Privacy Policy">Privacy Policy</a>
             </p>
         </footer>
 

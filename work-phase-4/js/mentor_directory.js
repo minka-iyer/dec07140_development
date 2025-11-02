@@ -132,14 +132,63 @@ const mentors = [
     }
 ];
 
+// All available categories
+const allCategories = [
+    "Sustainability & Social Impact",
+    "Technology & Engineering",
+    "Cloud, Data & AI",
+    "Research & Emerging Sciences",
+    "Design, UX & Creative Tech",
+    "Innovation & Entrepreneurship",
+    "Leadership & Professional Growth"
+];
+
 let shortlist = JSON.parse(localStorage.getItem('mentorShortlist') || '[]');
 let connections = JSON.parse(localStorage.getItem('mentorConnections') || '[]');
+let activeFilter = null;
+
+// Render category filters
+function renderFilters() {
+    const filterContainer = document.getElementById('category-filters');
+    
+    filterContainer.innerHTML = `
+        <button class="filter-btn ${activeFilter === null ? 'active' : ''}" 
+                onclick="filterByCategory(null)">
+            All Mentors
+        </button>
+        ${allCategories.map(category => `
+            <button class="filter-btn ${activeFilter === category ? 'active' : ''}" 
+                    onclick="filterByCategory('${category}')">
+                ${category}
+            </button>
+        `).join('')}
+    `;
+}
+
+// Filter mentors by category
+function filterByCategory(category) {
+    activeFilter = category;
+    renderFilters();
+    renderMentors();
+}
 
 // Render mentors
 function renderMentors() {
     const grid = document.getElementById('mentors-grid');
     
-    grid.innerHTML = mentors.map(mentor => `
+    // Filter mentors based on active category
+    const filteredMentors = activeFilter === null 
+        ? mentors 
+        : mentors.filter(mentor => 
+            mentor.categories.some(cat => cat.name === activeFilter)
+        );
+    
+    if (filteredMentors.length === 0) {
+        grid.innerHTML = '<p class="no-results">No mentors found in this category.</p>';
+        return;
+    }
+    
+    grid.innerHTML = filteredMentors.map(mentor => `
         <article class="mentor-card" data-id="${mentor.id}">
             <div class="mentor-card-header">
                 <div class="mentor-avatar">${mentor.avatar}</div>
@@ -288,6 +337,7 @@ function closeModal() {
 // Event listeners
 document.addEventListener('DOMContentLoaded', () => {
     // Render initial content
+    renderFilters();
     renderMentors();
     renderSidebar();
 
