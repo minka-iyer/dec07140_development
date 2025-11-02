@@ -14,7 +14,10 @@
     gap: 1rem;
     margin-top: 1.5rem;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 10; /* CRITICAL FIX: Ensures buttons are above other elements */
 }
+
 /* === Button Styling === */
 #badge-info-btn {
     background-color: var(--accent-color-1);
@@ -28,6 +31,9 @@
     cursor: pointer;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 10; /* CRITICAL FIX: Button needs proper stacking */
+    pointer-events: auto; /* CRITICAL FIX: Ensures button is clickable */
 }
 
 #badge-info-btn:hover {
@@ -40,7 +46,6 @@
     transform: scale(0.98);
 }
 
-
 /* === Info Box === */
 .info-box {
     max-width: 800px;
@@ -54,64 +59,8 @@
     text-align: left;
     line-height: 1.6;
     transition: all 0.4s ease;
-}
-
-.info-box.hidden {
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-}
-
-.info-box.show {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeSlideIn 0.4s ease;
-}
-
-@keyframes fadeSlideIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.info-box h3 {
-    font-family: "Antonio", sans-serif;
-    color: var(--primary-color);
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-/* ===== HERO SECTION ===== */
-.hero {
-    text-align: center;
-    padding: 7rem 1rem 3rem;
-    background: var(--background-color-2);
-    border-bottom: 2px solid var(--accent-color-1);
     position: relative;
-    z-index: 1;
-}
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-}
-
-/* === Info Box === */
-.info-box {
-    max-width: 800px;
-    margin: 2rem auto;
-    background: var(--accent-color-2);
-    border-radius: 1.5rem;
-    padding: 2rem 2.5rem;
-    color: var(--text-color);
-    font-family: "Lexend", sans-serif;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    line-height: 1.6;
-    transition: all 0.4s ease;
+    z-index: 5; /* CRITICAL FIX: Ensures info box doesn't cover buttons */
 }
 
 .info-box.hidden {
@@ -147,119 +96,7 @@
     padding: 1rem 1.2rem;
     transition: transform 0.2s ease, background 0.3s ease;
 }
-#badge-info-box p:hover {
-    background: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-}
 
-/* ===== PROGRESS SECTION ===== */
-.progress-section {
-    text-align: center;
-    font-family: "Lexend", sans-serif;
-    background-color: #dff5f2;
-    padding: 3rem 1.5rem;
-}
-
-.progress-container {
-    width: 60%;
-    margin: 0 auto 2rem;
-    text-align: center;
-}
-
-.progress-bar {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    overflow: hidden;
-    height: 14px;
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
-
-.progress-fill {
-    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color-1));
-    height: 100%;
-    border-radius: 20px;
-    transition: width 0.6s ease;
-}
-
-.progress-text {
-    font-size: 0.9rem;
-    color: var(--primary-color);
-    opacity: 0.9;
-}
-
-/* ===== BADGE GRID ===== */
-.badge-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-    margin-top: 2rem;
-}
-
-.badge {
-    position: relative;
-    text-align: center;
-    cursor: default;
-    opacity: 0;
-    transform: translateY(10px);
-    animation: fadeIn 1.5s ease forwards;
-}
-
-.badge img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-/* Normal hover for unlocked badges */
-.badge:not(.locked):hover img {
-    transform: scale(1.05);
-}
-
-.badge::after {
-    content: attr(data-info);
-    position: absolute;
-    bottom: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(12, 20, 70, 0.9);
-    color: #fff;
-    font-size: 0.75rem;
-    padding: 0.3rem 0.5rem;
-    border-radius: 6px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    white-space: nowrap;
-}
-
-.badge:hover::after {
-    opacity: 1;
-}
-
-
-.badge p {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #333;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-#badge-info-box p {
-    margin-bottom: 1rem;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 1rem;
-    padding: 1rem 1.2rem;
-    transition: transform 0.2s ease, background 0.3s ease;
-}
 #badge-info-box p:hover {
     background: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
@@ -385,7 +222,6 @@
     opacity: 1;
     backdrop-filter: blur(4px);
 }
-
 
 .badge p {
     margin-top: 0.5rem;
