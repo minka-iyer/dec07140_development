@@ -4,10 +4,12 @@
 .events-hero {
     position: relative;
     width: 100%;
-    margin: 5rem 1rem 2rem;
+    margin: 1rem auto 2rem !important; /* ↓ reduced top margin */
     text-align: center;
     border-radius: 1rem;
     overflow: hidden;
+    max-width: 1100px; /* keeps layout consistent with others */
+    padding-top: 0 !important;
 }
 
 .events-hero img {
@@ -21,6 +23,10 @@
     margin-top: 1rem;
     text-align: center;
     padding: 0 1rem;
+    font-family: "Antonio", sans-serif;
+    font-size: 2.4rem;
+    color: #0c4a6e;
+    margin-bottom: 0.5rem;
 }
 
 .hero-subtext h2 {
@@ -546,4 +552,28 @@
         font-size: 2rem;
         letter-spacing: 2px;
     }
+}
+/* --- Fix excessive white space under navbar and breadcrumb --- */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb {
+    margin-bottom: 0.5rem !important;
+    padding-bottom: 0 !important;
+}
+
+main {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+header, nav {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.events-hero {
+    margin-top: -2.5rem !important; /* pull image closer to navbar */
 }
