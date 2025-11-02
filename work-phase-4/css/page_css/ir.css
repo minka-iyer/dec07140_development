@@ -66,6 +66,12 @@ ul {
     padding-left: 1.5rem;
     font-family: Lexend, sans-serif;
 }
+a {
+    color: var(--accent-color-1);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    font-family: Lexend, sans-serif;
+}
 
 /* ===================================== */
 /* ACCESSIBILITY AUDIT TABLE STYLES */
